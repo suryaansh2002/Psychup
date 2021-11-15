@@ -1,0 +1,132 @@
+.articles-main {
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f2f3f6;
+}
+.domain-container {
+  background-color: #f2f3f6;
+}
+.all-heading {
+  padding-left: 5rem;
+  padding-top: 3rem;
+}
+
+.center-articles {
+  margin: 0;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.articles-header {
+  text-align: center;
+  color: rgb(0, 0, 255, 0.5);
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+
+.card-img {
+  height: 10rem;
+  border-radius: 5px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.article-card-container {
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0rem;
+}
+
+.card-by {
+  color: rgb(100, 100, 100, 0.9);
+  font-size: 0.8rem;
+  text-align: right;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.card-duration {
+  width: 40%;
+  text-align: left;
+  display: inline-block;
+  color: rgb(60, 60, 60);
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  margin-left: -1rem;
+}
+.clock {
+  margin: 0.2rem;
+  margin-top: -0.5rem;
+}
+
+.card-date {
+  margin-top: 0.5rem;
+
+  width: 45%;
+  display: inline-block;
+  text-align: right;
+  color: rgb(60, 60, 60);
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.card-content {
+  text-align: left;
+  margin: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.checkout-all {
+  background-color: rgba(0, 0, 255, 0.6);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  transition: 0.5s;
+  margin-bottom: 1rem;
+}
+
+.checkout-all:hover {
+  transform: scale(1.05);
+}
+
+.button-container {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-card {
+  background-color: white;
+  margin: 1rem 2rem;
+  display: inline-block;
+  max-width: 350px;
+  border-radius: 25px;
+  padding: 0.2rem;
+  display: inline-block;
+  height: 30rem;
+  vertical-align: top;
+}
+.card-category {
+  margin-top: -0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 520px) {
+  .checkout-all {
+    font-size: 1rem;
+  }
+}

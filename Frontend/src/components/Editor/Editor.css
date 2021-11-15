@@ -1,0 +1,230 @@
+*:focus {
+  outline: 0;
+}
+.editor-outer-container {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+.editor-container {
+  min-height: calc(100vh - 5rem);
+  width: 80%;
+}
+
+.article-submit {
+  background-color: rgba(0, 0, 255, 0.6);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  margin: 1rem 0rem;
+  transition: 0.5s;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.editor-title {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 750;
+  margin-top: 4rem;
+  border: none;
+  margin-bottom: -2rem;
+  padding: 0;
+}
+
+.editor-title textarea {
+  height: 2rem;
+  outline: none;
+}
+
+.main-editor {
+  margin-top: 2rem;
+}
+
+.hover-divs {
+  color: grey;
+  background-color: #eeeeee;
+  height: 4rem;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 20rem;
+  padding: 1rem;
+  margin-left: calc(50% - 10rem);
+  margin-top:2rem ;
+}
+.hash-box{
+  color: grey;
+  background-color: #eeeeee;
+  height: auto;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 20rem;
+  padding: 1rem;
+  margin-left: calc(50% - 10rem);
+  margin-top:2rem ;
+
+}
+.hash-div{
+  background-color: #bbbb;
+  color: black;
+  width: auto;
+  border-radius: 10px;
+  padding: 0.2rem 1rem;
+  font-size: 0.9rem;
+  margin: 0.5rem 2rem;
+
+  font-family:'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+}
+.form-div{
+  width: 20rem;
+  height: auto;
+  margin-bottom: -1rem;
+}
+.hash-submit{
+  background-color: rgb(134, 125, 125,0.5);
+  border: none;
+  margin: -1rem;
+  font-weight: 600;
+  margin-top: -1rem;
+}
+.hash-submit:hover{
+  background-color: rgb(0, 0, 0,0.5);
+  color: white;
+}
+
+
+
+.hover-divs:hover {
+  color: rgb(85, 81, 81);
+}
+
+.editor-line {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 1rem;
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+.editor-line a {
+  color: black;
+  font-weight: 600;
+}
+
+.editor-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.editor-input {
+  width: 14rem;
+  padding: 0.4rem 1rem;
+  background: transparent;
+  border-radius: 10px;
+  border: 1px solid rgba(99, 93, 93, 0.5);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: black
+}
+::placeholder {
+  color: rgb(85, 81, 81);;
+}
+
+.file {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.editor-select {
+  font-size: 0.9rem;
+  background: transparent;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  color: black;
+  margin-bottom: 1.5rem;
+}
+
+.editor-select option {
+  color: rgba(99, 93, 93, 0.5);
+}
+.hashcontainer {
+  margin: 1rem;
+  color: white;
+  font-size: 00.9rem;
+}
+
+.hash-input {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.input-container {
+  width: 60%;
+  margin-bottom: 2rem;
+  margin-left: 20%;
+  background-color: rgba(0, 0, 255, 0.6);
+  border: none;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+textarea::-webkit-input-placeholder {
+  color: rgb(114, 108, 108);
+}
+
+textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color:rgb(114, 108, 108);
+}
+
+textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgb(114, 108, 108);
+}
+
+textarea:-ms-input-placeholder {
+  color: rgb(114, 108, 108);
+}
+
+textarea::placeholder {
+  color: rgb(114, 108, 108);
+}
+
+.article-t{
+  text-align: center;
+  margin: 2rem;
+  font-weight: 700;
+  color: rgb(0, 0, 0,0.7);
+}
+.editor-line{
+  background-color: #eeeeee;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 520px) {
+.editor-line{
+  width: 120%;
+  margin-left: -10%;
+  font-size: 0.9rem;
+}
+.article-submit{
+ font-size: 0.9rem;
+ padding: 0.8rem;
+}
+}

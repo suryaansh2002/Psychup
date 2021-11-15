@@ -1,0 +1,109 @@
+#home-h {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+.home-main {
+  height: calc(100vh - 5rem);
+  display: flex;
+  justify-content: center;
+  word-spacing: 1px;
+  padding: 5rem;
+}
+
+.intro-title h1 {
+  color: #31343c;
+  background-color: #fff;
+  font-weight: 730;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  text-align: left;
+  font-size: 45px;
+}
+
+.intro-line {
+  font-size: 20px;
+  margin-top: 2rem;
+}
+
+.explore {
+  padding: 0.5rem;
+  width: 13rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  background-color: rgba(0, 0, 255, 0.6);
+}
+.home-img {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 1000px) {
+  .intro-title {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .home-img {
+    width: 80%;
+    margin-left: 10%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  .home-main {
+    height: auto;
+  }
+  .intro-title h1{
+    font-size: 2rem;
+  }
+  .intro-line {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+  
+}
+@media only screen and (max-width: 620px) {
+  .intro-title h1{
+    font-size: 1.6rem;
+  }
+  .home-img {
+    width: 100%;
+    margin-left: 0%;
+    align-items: center;
+    justify-content: center;
+  }
+  .intro-line {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+  }
+  .explore{
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    width: 10rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  
+  }
+
+}
+@media only screen and (max-width: 520px) {
+  .home-main{
+    padding: 1.5rem;
+    padding-top: 4rem;
+    min-height: calc(100vh - 5rem);
+  }
+  .intro-title h1{
+    font-size: 1.6rem;
+  }
+  .explore{
+    font-size: 1rem;
+    padding: 0.4rem;
+    width: 8rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  
+  }
+.initials-container{
+  z-index: 10;
+}
+}

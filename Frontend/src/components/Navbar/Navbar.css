@@ -1,0 +1,167 @@
+.nav-main {
+  height: 5rem;
+  width: 100%;
+  border-bottom: 2px solid rgb(100, 100, 100, 0.2);
+  background-color: rgba(240, 240, 240, 0.5);
+}
+.navbar-header {
+  position: absolute;
+  left: 10px;
+  font-size: 2rem;
+  font-weight: 900;
+  color: red;
+}
+
+.nav-box {
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.nav-link {
+  margin: 0.5rem 2.5rem;
+  font-size: 1.1rem;
+  background: -webkit-linear-gradient(rgb(156, 178, 189), rgb(21, 6, 85));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+.nav-button {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+.nav-logreg {
+  position: absolute;
+  right: 10px;
+}
+.log-button {
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  margin: 0rem 1rem;
+  color: blue;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.reg-button {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  margin: 0rem 1rem;
+  color: blue;
+  border: 1px solid blue;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+
+
+.initials-button {
+  border-radius: 50%;
+  border: none;
+  background-color: blue;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700; 
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  position: absolute;
+  right: 10px;
+  top:-20px;
+}
+.initials-container{
+
+  position: absolute;
+  top: 65px;
+  right: 20px;
+  background-color: rgba(220, 220, 220, 1);
+  border-radius: 10px;
+  border: 2px solid rgb(150, 150, 150,0.5);
+  box-shadow: 2px 1px 1px rgb(150, 150, 150,0.5);
+  padding: 0.5em;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.top-button{
+  width: 11rem;
+  font-weight: bold;
+  margin: 0.5rem;
+}
+.logout-button {
+  background: white;
+  border: none;
+  width: 90%;
+  margin: 0.5rem;
+  color: blue;
+  border: 1px solid blue;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.top-button-2{
+  width: 17rem;
+  font-weight: bold;
+  margin: 0.5rem;
+}
+
+.psych{
+  color: blue;
+  font-weight: 700;
+}
+
+.modal-text-area{
+  width: 90%;
+}
+.send-modal{
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.hide{
+  position: absolute;
+  z-index: -1;
+}
+@media only screen and (max-width: 520px) {
+.log-button,.reg-button{
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+  margin-top: 0.4rem;
+
+}
+.nav-box{
+  padding-top: 3rem;
+}
+}
+
+@media (max-width: 990px) {
+  .initials-button{
+    position: absolute;
+    right: 10px;
+    top: 0px;
+  }
+  
+  
+    .navbar-header {
+      position: relative;
+      justify-content: center;
+      width: 100%;
+    }
+    .nav-main {
+      min-height: 5rem;
+      padding-bottom: 1.4rem;
+      height: auto;
+    }
+    .nav-logreg {
+      position: absolute;
+      right: 60px;
+      top: 15px;
+    }
+  }
+  
