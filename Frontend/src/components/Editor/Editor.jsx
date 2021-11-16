@@ -1,4 +1,4 @@
-import { React, useState, useEffect, useRef } from "react";
+import { React, useState, useEffect, Fragment } from "react";
 import ReactMde from "react-mde";
 import ReactDOM from "react-dom";
 import * as Showdown from "showdown";
@@ -6,6 +6,9 @@ import "react-mde/lib/styles/css/react-mde-all.css";
 import "./Editor.css";
 import marked from "marked";
 import { useCookies } from "react-cookie";
+import { BiImage,BiCategory } from 'react-icons/bi';
+import { AiFillDownCircle } from 'react-icons/ai';
+
 
 import axios from "axios";
 import Input from "./Input";
@@ -56,6 +59,8 @@ export default function Editor(props) {
   const [hashCookie, setHashCookie, removeHashCookie] = useCookies(["hash"]);
 
   const [category, setCategory] = useState("");
+  const [visibility, setVisibility] = useState(false);
+
   // const [duration, setDuration] = useState(0);
   const [hashContainer, setHashContainer] = useState([]);
 
@@ -134,15 +139,73 @@ export default function Editor(props) {
   // }
   async function addHash() {
     //setHashContainer([...hashContainer,hash])
-    await hashContainer.push(hash);
-    await setHashCookie("hash", hashContainer);
-    console.log(hashCookie["hash"]);
+    if (hash){
+      await hashContainer.push(hash);
+      await setHashCookie("hash", hashContainer);
+      console.log(hashCookie["hash"]);
+    
+    }
+    }
+  function upload(){
+    const inp=document.getElementById('file-inp');
+    inp.click();
   }
   return (
     <div className="editor-outer-container">
       <div className="editor-container">
-      <h2 className="article-t">Add An Article</h2>
-      {/* <div className="editor-line">
+      <div className="editor-h">
+      <div className="row">
+        <button className="up-btn" onClick={()=>upload()}><BiImage className="icon"/> Upload cover image</button>
+        <input type="file" id="file-inp"/>
+        <select
+                  className="category-select"
+                  name="hash"
+                  onChange={(e) => setCategory(e.target.value)}
+                >
+                  <option value={""}> Choose A Category</option>
+                  <option value={"Gender"}>Gender Psychology</option>
+                  <option value={"Behaviour"}>Behaviour Psycholody</option>
+                  <option value={"Mental"}>Mental Health</option>
+                  <option value={4}>Domain 4</option>
+                  <option value={5}>Domain 5</option>
+                </select>
+                <form className="myform">
+                  <input
+                    className="hash-text"
+                    type="text"
+                    placeholder="Add a hashtag"
+                    onChange={(e) => setHash(e.target.value)}
+                    required
+                  ></input>
+                  <button
+                    type="submit"
+                    className="  submit-hash"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      addHash();
+                    }}
+                    disabled={hashContainer.length > 4}
+                  >
+                    Add Hashtag
+                  </button>
+                </form>
+                <button className={visibility ? "inst-btn set-z":"inst-btn"} onClick={()=>setVisibility(!visibility)}>Instructions <AiFillDownCircle className="right-icon"/></button>
+                      
+                  
+      </div>
+      </div>
+
+      <div className="row hashes">
+      {hashCookie["hash"] && <div className="">
+                <h5 className="hash-title">Your Hashtags are:</h5>
+                {hashCookie["hash"] &&
+                  hashCookie["hash"].map((hash) => (
+                    <div className="div-hash">{hash}</div>
+                  ))}
+              </div>}
+
+      </div>
+      {visibility&&<div className="editor-box"> <div className="editor-line">
         You can use the editor to add a new article, using markdown
         syntaxt, such as # for h1, ## for h2, etc. If you are not familiar with
         markdown syntaxt you can checkout{" "}
@@ -163,9 +226,9 @@ export default function Editor(props) {
         <a href="mailto: psychupcontact13@gmail.com" target="_blank">
           contact@psychup.com{" "}
         </a>
-      </div> */}
+      </div></div> }
 
-        <div className="editor-header">
+        {/* <div className="editor-header">
           <div className="row">
             <div className="col-lg-6">
               <div className="hover-divs ">
@@ -229,14 +292,14 @@ export default function Editor(props) {
               </div>}
             </div>
           </div>
-        </div>
+        </div> */}
 
         <textarea
           className="editor-title"
           placeholder="Title..."
           onChange={(e) => setTitle(e.target.value)}
         ></textarea>
-
+<div className="editor-c">
         <div className="main-editor">
           <ReactMde
             value={value}
@@ -253,6 +316,7 @@ export default function Editor(props) {
               },
             }}
           />
+        </div>
         </div>
         <div className="button-container">
           <button className="article-submit" type="button" onClick={getDisplay}>

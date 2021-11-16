@@ -134,7 +134,7 @@ export default function Sidebar(props) {
               </a>
             </button>
             <div className="change-form">
-              New to ___ ? <button onClick={toggleform}>Register</button>
+              New to <span className="psych">PsychUp</span> ? <button onClick={toggleform}>Register</button>
             </div>
             <div className="welcome">Welcome back</div>
             {logSucess && logMsg != "" ? (
