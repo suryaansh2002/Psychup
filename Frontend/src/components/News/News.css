@@ -1,0 +1,46 @@
+.news-h{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1.5rem;
+}
+.container4{
+  background-color: #f2f3f6;
+
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.card-container{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+width: 20rem;
+height: 26rem;
+background-color: white;
+border: none;
+border-radius: 10px;
+display: inline-block;
+margin: 1rem 2rem;
+vertical-align: top;
+padding: 1rem 0.5rem;
+}
+
+.card-title{
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+.card-img{
+    width: 20rem;
+    height: 10rem;
+    margin-left: -5px;
+}
+
+.card a{
+    color: black;
+    text-decoration: none;
+}

@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=2.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no"/>
+
+
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -56,12 +59,18 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="owl-carousel/owl.theme.css">
-    <meta name="viewport" content= "width=device-width, user-scalable=no">
-    <script>
-      screen.lockOrientation("orientation");
-
-    </script>
   </head>
+  <style>
+    html{
+      width: 100vw;
+      overflow-x: hidden;
+    }
+    @media screen and (max-width: 767px){
+    html,body{
+      overflow-x: hidden;
+    }
+    }
+  </style>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>

@@ -34,8 +34,8 @@ export default function Comments(props) {
     const data = {
       text,
       parentId,
-      userId: props.user.id,
-      username: props.user.name,
+      userId: props.user ? props.user.id: null,
+      username: props.user ? props.user.name:null,
       postId: props.post._id,
     };
     axios
@@ -94,7 +94,7 @@ export default function Comments(props) {
           setActiveComment={setActiveComment}
           addComment={addComment}
           updateComment={updateComment}
-          user={props.user}
+          user={props.user ? props.user : null}
 
         />
       </div>

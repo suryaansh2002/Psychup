@@ -8,6 +8,8 @@ import Articles from "./components/Articles/Articles";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import DomainPage from "./components/DomainPage/DomainPage";
+import axios from "axios";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -20,6 +22,7 @@ import SinglePost from "./components/SinglePost/SinglePost";
 import { useCookies } from "react-cookie";
 import AllArticles from "./components/Articles/AllArticles";
 import AboutUs from "./components/AboutUs/AboutUs";
+import News from "./components/News/News";
 
 function App() {
   const [side, setSide] = useState(false);
@@ -82,6 +85,7 @@ function App() {
             )}
           />
           <Route path="/articles" exact component={() => <AllArticles />} />
+          <Route path="/news" exact component={() => <News/>} />
 
           <Route
             path="/articles/:domain"

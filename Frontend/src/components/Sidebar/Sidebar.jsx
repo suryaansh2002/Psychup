@@ -122,6 +122,11 @@ export default function Sidebar(props) {
   }
 
   return (
+    <>
+    {
+      props.side &&     <div className="overlay"></div>
+
+    }
     <div
       className={props.side ? "sidebar-container isopen" : "sidebar-container"}
     >
@@ -267,5 +272,6 @@ export default function Sidebar(props) {
         )}
       </div>
     </div>
+    </>
   );
 }

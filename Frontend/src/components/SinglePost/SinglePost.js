@@ -103,9 +103,9 @@ export default function SinglePost(props) {
                 </div>
 
                 <div className="author">
-                  <button className="initials-button-2 author-image">
+                  {/* <button className="initials-button-2 author-image">
                     {getInitials(article.author)}
-                  </button>
+                  </button> */}
                   {
                     <div className="author-details">
                       <div className="author-container-name">
@@ -130,7 +130,7 @@ export default function SinglePost(props) {
                   />
                 </div>
               </div>
-
+              {/* 
               <div className="icons">
                 <button className="social-button">
                   <a target="_blank" href="#">
@@ -147,11 +147,14 @@ export default function SinglePost(props) {
                     <HiThumbUp className="like-icons" />
                   </a>
                 </button>
-              </div>
+              </div> */}
             </div>
 
-            {/* <Comments user={props.cookie.user} post={article} /> */}
-
+            {props.cookie.user ? (
+              <Comments user={props.cookie.user} post={article} />
+            ) : 
+            <Comments  post={article} />
+            }
             {/* <div className="comment-container">
               <div className="comment-header">
                 Comments ({article.comments.length})

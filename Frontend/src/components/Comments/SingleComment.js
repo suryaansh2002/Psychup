@@ -10,9 +10,14 @@ export default function SingleComment(props) {
   const fiveMinutes = 300000;
   const timePassed =
     new Date() - new Date(props.comment.createdAt) > fiveMinutes;
-  const canReply = Boolean(props.user);
-  const canEdit = props.user.id === props.comment.userId && !timePassed;
-  const canDelete = props.user.id === props.comment.userId && !timePassed;
+    var canReply;
+    var canEdit;
+    var canDelete;
+  if(props.user){
+     canReply = Boolean(props.user);
+     canEdit = props.user.id === props.comment.userId && !timePassed;
+     canDelete = props.user.id === props.comment.userId && !timePassed;  
+  }  
   const getInitials = (name) => {
     let initials = name.split(" ");
 

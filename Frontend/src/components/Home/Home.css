@@ -12,12 +12,12 @@
 
 .intro-title h1 {
   color: #31343c;
-  background-color: #fff;
   font-weight: 730;
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   text-align: left;
   font-size: 45px;
+  z-index: 1;
 }
 
 .intro-line {

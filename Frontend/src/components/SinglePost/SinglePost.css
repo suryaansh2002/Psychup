@@ -47,6 +47,12 @@
   font-size: 1.2rem;
   font-family: "Inter", sans-serif;
   line-height: 200%;
+  margin-top: 1.5rem;
+}
+.article-content h1{
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0.5rem 0rem;
 }
 
 .share {
@@ -194,6 +200,7 @@ p {
 .img-article img {
   width: 100%;
   margin: 1rem 0rem;
+  height: 24rem;
 }
 .author-image {
   display: inline;

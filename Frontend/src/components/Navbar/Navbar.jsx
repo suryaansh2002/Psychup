@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import "./Navbar.css";
 import { HashLink as Link } from "react-router-hash-link";
 
 export default function NavBar(props) {
+  
   const [toggleInit, setToggleInit] = useState(false);
   const handleLog = () => {
     props.setSide(true);
@@ -35,6 +36,10 @@ export default function NavBar(props) {
       window.location.reload();
     } catch (error) {}
   };
+  useEffect(() => {
+    props.setSide(true);
+    props.setSide(false);
+  }, [])
   return (
     <>
       <Navbar variant="light" expand="lg" className="nav-main">
