@@ -41,7 +41,7 @@ function App() {
           removeCookie={removeCookie}
           setCookie={setCookie}
         />
-        <Sidebar
+        {/* <Sidebar
           side={side}
           setSide={setSide}
           logToggle={logToggle}
@@ -49,11 +49,11 @@ function App() {
           cookie={cookie}
           removeCookie={removeCookie}
           setCookie={setCookie}
-        />
+        /> */}
 
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home logToggle={logToggle} setLogToggle={setLogToggle} />
             <Domains />
             <AboutUs />
             <Articles />
@@ -85,7 +85,7 @@ function App() {
             )}
           />
           <Route path="/articles" exact component={() => <AllArticles />} />
-          <Route path="/news" exact component={() => <News/>} />
+          <Route path="/news" exact component={() => <News />} />
 
           <Route
             path="/articles/:domain"

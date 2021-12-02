@@ -3,11 +3,19 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #f2f3f6;
+  z-index: 5;
+  background-image: url('../../images/img1.png');
+  background-size: cover;
+
 }
-.domain-container {
-  background-color: #f2f3f6;
+
+.slider{
+  background-image: url('../../images/img1.png');
+  background-size: cover;
+
 }
+
+
 .all-heading {
   padding-left: 5rem;
   padding-top: 3rem;
@@ -26,15 +34,26 @@
   padding-bottom: 2rem;
 }
 
-.card-img {
-  height: 10rem;
-  border-radius: 5px;
+#card-img {
+ height: 150px;
+ border-radius: 5px;
+width: 100%;
+
+}
+.img-d{
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
 }
 
-.card-title {
-  font-size: 1.2rem;
+#card-title {
+  font-size: 1.4rem;
   font-weight: 700;
   text-align: center;
+  margin: 1rem 0rem;
 }
 
 .article-card-container {
@@ -43,8 +62,14 @@
   align-items: center;
   justify-content: center;
   margin: 1.5rem 0rem;
-}
 
+}
+#all{
+  background-color: black;
+  background-image: url('../../images/img1.png');
+  background-size: cover;
+
+}
 .card-by {
   color: rgb(100, 100, 100, 0.9);
   font-size: 0.8rem;
@@ -85,13 +110,13 @@
 }
 
 .checkout-all {
-  background-color: rgba(0, 0, 255, 0.6);
+  background-color: rgba(9, 9, 54, 0.9);
   color: white;
   text-align: center;
   padding: 1rem;
   font-weight: 700;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 1.2rem;
   margin-top: 1rem;
   transition: 0.5s;
@@ -109,20 +134,30 @@
 }
 
 .article-card {
-  background-color: white;
-  margin: 1rem 2rem;
+  background-color: rgb(190, 174, 174);
+  margin: 1.5rem 2rem;
   display: inline-block;
   max-width: 350px;
   border-radius: 25px;
   padding: 0.2rem;
   display: inline-block;
-  height: 30rem;
+  height: 25rem;
   vertical-align: top;
+  /* background-image: url('../../images/img6.png');
+  background-size: cover;
+  opacity: 0.5; */
+  /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("../../images/img6.png"); */
+
 }
+
 .card-category {
   margin-top: -0.5rem;
   font-size: 0.9rem;
   font-weight: 600;
+}
+.main-title h2{
+  padding-top: 1.5rem;
+  font-weight: 700;
 }
 
 @media only screen and (max-width: 520px) {

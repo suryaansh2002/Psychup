@@ -53,7 +53,7 @@ export default function About() {
     <div id="domains-h">
       <div className="domain-main">
         <div className="domain-title">
-          <h2>Explore the vast Multitude of Psychological Domains</h2>
+          <h2>Psychological Multiverse</h2>
           <div className="domain-text">
             Do you think Psychology spans to only Mental Health? Well, you have
             come to the right place to delve into this multivaried domain.

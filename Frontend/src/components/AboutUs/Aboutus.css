@@ -3,7 +3,10 @@
 .aboutus-main {
   height: 100vh;
   word-spacing: 1px;
-  padding: 5rem;
+  background-color:  #bfe6ff;
+  background-image: url('../../images/img1.png');
+  background-size: cover;
+
 }
 
 
@@ -11,13 +14,16 @@
   font-size: 35px;
   color: #31343c;
   font-weight: 700;
+  text-align: center;
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   padding: 0;
+  padding-top: 1rem;
 }
 
 .aboutus-text {
-  font-size: 19px;
+  font-size: 15px;
+  text-align: center;
 }
 
 .explore2 {
@@ -25,6 +31,29 @@
   width: 9rem;
   font-size: 1.2rem;
   margin-top: 2rem;
+}
+
+.about-container{
+  padding: 1.5rem;
+  /* background-color: #bfe6ff; */
+  margin-top: 1rem;
+  width: 80%;
+  background-image: url('../../images/img9.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0.9rem;
+  color: #044e52;
+  font-weight: 600;
+  font-style: italic;
+  background-position: center;
+padding-bottom: 2rem;
+height: 80vh;
+}
+.c-2{
+  margin: 0rem 5rem;
+  margin-top: 5rem;
+  margin-left: 4.5rem;
+
 }
 @media only screen and (max-width: 520px) {
   .aboutus-text {
@@ -57,4 +86,73 @@ margin-bottom: 1.2rem;
     align-items: center;
   }
   
+}
+
+.psych{
+  color:white;
+}
+.serv-img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 350px;
+}
+.temp{
+  /* background-color: #044e52; */
+  padding-left: 2rem;
+  padding-top: 1rem;
+  display: inline-block;
+
+}
+
+.bc{
+  /* background-color: #bfe6ff; */
+  width: 50%;
+  display: inline-block;
+  height: 90vh;
+  position: absolute;
+  right: -10px;
+  padding-top: 2rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-top: 6rem;
+  padding-left: 0;
+
+}
+.serv-card{
+  display: inline-block;
+  background-color: #10686d9a;
+  color: white;
+  border-radius: 15px;
+  width: 20rem;
+  height: 8rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-weight: 700;
+  margin: 1.5rem 1rem;
+  box-shadow: 2px 5px 5px;
+  font-size: 1.3rem;
+}
+
+.serv-desc{
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.services-img{
+  width: 180px;
+  
+  display: inline-block;
+  margin:1rem 3rem ;
+}
+#s-i-1{
+  margin-left: -10rem;
+}
+.s-img-c{
+  margin-left: -5rem;
+  padding-left: 0;
+  width: 80%;
 }

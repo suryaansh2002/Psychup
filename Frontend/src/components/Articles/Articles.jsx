@@ -33,8 +33,8 @@ export default function Articles() {
   }
 
   for (var i = 0; i < articles2.length; i++) {
-    articles2[i].desc_short = articles2[i].desc.slice(0, 300) + "...";
-    articles2[i].desc_short = removeTags(articles2[i].desc_short);
+    articles2[i].desc_short=removeTags(articles2[i].desc)
+    articles2[i].desc_short = articles2[i].desc_short.slice(0, 100) + "...";
   }
   console.log(articleList);
   const [carSettings,setCarSettings]=useState()
@@ -45,7 +45,7 @@ export default function Articles() {
     speed: 500,
     slidesToShow: 3,
     autoplay: true,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     dragable: true,
     centerPadding: "100px",
     centerMode: true,
@@ -57,7 +57,7 @@ export default function Articles() {
     speed: 500,
     slidesToShow: 1,
     autoplay: true,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     dragable: true,
     centerPadding: "20px",
     pauseOnHover: false,
@@ -70,7 +70,7 @@ export default function Articles() {
     speed: 500,
     slidesToShow: 2,
     autoplay: true,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     dragable: true,
     centerPadding: "20px",
     pauseOnHover: false,
@@ -92,7 +92,7 @@ export default function Articles() {
               <h2>Featured Articles</h2>
             </div>
             <div className="article-card-container">
-              <Slider {...carSettings}>
+              <Slider className="slider" {...carSettings}>
                 {articles2.map((article) => (
                   <div>
                     <ArticleCard

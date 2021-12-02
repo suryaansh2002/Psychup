@@ -1,30 +1,104 @@
 #home-h {
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin: 0;
 }
-.home-main {
+.home-main2 {
   height: calc(100vh - 5rem);
-  display: flex;
-  justify-content: center;
   word-spacing: 1px;
-  padding: 5rem;
+  background-color:  #bfe6ff;
+  background-color: #ffc7a1;
+
 }
+.home-main{
+  height: calc(100vh - 5rem);
+  background-image: url('../../images/img1.png');
+  background-size: cover;
+
+}
+.leftimage{
+  position: absolute;
+  top: 180px;
+height: 60%;
+  left: -150px;
+}
+.rightimage{
+  position: absolute;
+  top: 190px;
+  height: calc(60% - 25px);
+  right: -150px;
+
+}
+
 
 .intro-title h1 {
   color: #31343c;
   font-weight: 730;
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  text-align: left;
-  font-size: 45px;
+  text-align: center;
+  font-size: 40px;
   z-index: 1;
+  width: 100%;
+  margin-top: 20rem;
+  margin-left: -2rem;
 }
 
 .intro-line {
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 2rem;
+  text-align: center;
+
+}
+.home-main{
+ 
+}
+.lineimage{
+  top: 100px;
+  left: 100px;
+  width: 50%;
+  position: absolute;
 }
 
+
+.circle {
+  background: radial-gradient(#7dd9f9, #0065bb);
+  width: 12.5px;
+  height: 12.5px;
+  border-radius: 50%;
+  animation: x-axis 7s infinite ease-in-out;
+}
+.wrapper {
+  position: absolute;
+  top: 100px;
+  left: 80px;
+  animation: y-axis 2s infinite ease-in-out;
+}
+
+@keyframes x-axis {
+  50% {
+    transform: translateX(1300px);
+  }
+}
+@keyframes y-axis {
+  50% {
+    transform: translateY(100px);
+  }
+}
+
+.wrapper .circle:nth-child(2) { animation-delay: .1s }
+.wrapper .circle:nth-child(3) { animation-delay: .2s }
+.wrapper .circle:nth-child(4) { animation-delay: .3s }
+.wrapper .circle:nth-child(5) { animation-delay: .4s }
+
+.wrapper .circle:nth-child(6) { animation-delay: 3.5s }
+.wrapper .circle:nth-child(7) { animation-delay: 3.6s }
+.wrapper .circle:nth-child(8) { animation-delay: 3.7s }
+.wrapper .circle:nth-child(9) { animation-delay: 3.8s }
+.wrapper .circle:nth-child(10) { animation-delay: 3.9s }
+
+
+
+
+/*
 .explore {
   padding: 0.5rem;
   width: 13rem;
@@ -106,4 +180,4 @@
 .initials-container{
   z-index: 10;
 }
-}
+} */

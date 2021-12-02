@@ -7,26 +7,34 @@ margin-left: 0rem;
 
 .domain-main {
   height: 100vh;
-  background-color:  #f2f3f6;
 
   justify-content: center;
   word-spacing: 1px;
   padding: 5rem;
   width: 100%;
+  background-color: #8cd3ffc7;
+  background-image: url('../../images/img1.png');
+  background-size: cover;
+
+
+
 }
 
 .domain-title h2 {
   font-size: 35px;
   color: #31343c;
   font-weight: 700;
+  text-align: center;
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .domain-text {
   font-size: 19px;
-  width: 70%;
+  width: 100%;
   margin-top: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .explore2 {
@@ -43,8 +51,10 @@ margin-left: 0rem;
 }
 
 .item {
-  background-color: white;
+  /* background: linear-gradient(#45d0ca, #dea7dd); */
+  background-color: rgba(129, 194, 191, 0.548);
   border-radius: 15px;
+  box-shadow: 4px 10px 10px rgba(35, 58, 57, 0.959);
   padding: 1rem;
   width: 20rem;
   height: 22rem;
@@ -57,6 +67,7 @@ margin-left: 0rem;
   font-size: 1.2rem;
   font-weight: 700;
   padding: 0.5rem;
+  text-align: center;
 }
 
 .item-about {

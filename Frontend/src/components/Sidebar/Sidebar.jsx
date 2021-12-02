@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 import axios from "axios";
 
-import "./Sidebar.css";
 import { ImCross } from "react-icons/im";
 
 export default function Sidebar(props) {

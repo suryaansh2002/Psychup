@@ -42,8 +42,8 @@ function removeTags(str) {
 
 
 for(var i=0;i<articles2.length;i++){
-  articles2[i].desc_short=articles2[i].desc.slice(0,300)+'...'
-  articles2[i].desc_short=removeTags(articles2[i].desc_short)
+  articles2[i].desc_short=removeTags(articles2[i].desc)
+  articles2[i].desc_short = articles2[i].desc_short.slice(0, 100) + "...";
 }
   return (
     <div id="articles-h">
@@ -53,7 +53,7 @@ for(var i=0;i<articles2.length;i++){
             <div className="main-title">
               <h2>All our Articles:</h2>
             </div>
-            <div className="article-card-container">
+            <div className="article-card-container" id="all">
               {articles2.map((article) => (
                 <ArticleCard
                   imgSrc={article.imgSrc}

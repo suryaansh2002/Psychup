@@ -4,7 +4,7 @@ import "./News.css";
 
 export default function News() {
   const [articles, setArticles] = useState([]);
-  const query = "Psychology";
+  const query = "psychology";
 
 //   const splitArr = window.location.pathname.split("/");
 //   const domain = splitArr[2];
@@ -33,7 +33,7 @@ export default function News() {
 
 useEffect(() => {
     // GET request using axios inside useEffect React hook
-    axios.get('http://newsapi.org/v2/everything?q='+query+'&apiKey=a6b2736115464642a67216804d7aeb1b')
+    axios.get('http://newsapi.org/v2/everything?q='+query+'&from=2021-11-20&to=2021-11-28&apiKey=a6b2736115464642a67216804d7aeb1b')
         .then((response) =>(console.log(response.data.articles), setArticles(response.data.articles),console.log(articles)));
 }, []);
 

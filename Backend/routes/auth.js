@@ -27,7 +27,7 @@ router.post("/login", async (req, res) => {
     return res.json({ status: "email error", error: "Enter a valid email id" });
   }
   if (!password || typeof password !== "string") {
-    return res.json({ status: "pass error", error: "Invalid a valid password" });
+    return res.json({ status: "pass error", error: "Enter a valid password" });
   }
 
   const user = await Users.findOne({ email }).lean();

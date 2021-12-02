@@ -8,6 +8,9 @@
   display: flex;
   word-spacing: 1px;
   padding: 5rem;
+  background-image: url('../../images/img1.png');
+  background-size: cover;
+
 }
 
 .contact-img-content {
