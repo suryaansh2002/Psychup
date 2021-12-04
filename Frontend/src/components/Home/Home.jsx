@@ -6,27 +6,43 @@ import leftimg from "../../images/img3.png";
 import rightimg from "../../images/img4.png";
 // import lineImg from "../../images/img5.png";
 
-export default function Home() {
+export default function Home(props) {
+  const handleLog = () => {
+    props.setSide(true);
+    props.setLogToggle(true);
+  };
   return (
     <div className="home-main">
       {/* <div className="leftC"> */}
       <img src={leftimg} className="leftimage" />
       <img src={rightimg} className="rightimage" />
       {/* <img src={lineImg} className="lineimage" /> */}
+      {props.cookie.user ? (
+        <div></div>
+      ) : (
+        <button
+          className="log-button"
+          onClick={handleLog}
+          data-toggle="modal"
+          data-target="#logModal"
+          className="login-button"
+        >
+          Enter Our Community
+        </button>
+      )}
+
       <div class="wrapper">
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle"></div>
-        
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
 
-
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
       </div>
 
       <div className="row">
@@ -39,7 +55,6 @@ export default function Home() {
               Be it mental health, or be core Psychology, we have got it all
               covered!
             </div>
-            
           </div>
         </div>
       </div>

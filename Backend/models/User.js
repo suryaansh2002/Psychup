@@ -1,4 +1,3 @@
-
 const mongoose = require("mongoose");
 
 const User2Schema = new mongoose.Schema(

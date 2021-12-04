@@ -1,6 +1,7 @@
 import { React, useState, useEffect, useRef } from "react";
 import axios from "axios";
-import "./SinglePost.css";
+// import "./SinglePost.css";
+import "./new.css";
 import { ImShare2 } from "react-icons/im";
 import { FaWhatsapp, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { AiFillClockCircle, AiFillTrophy } from "react-icons/ai";
@@ -80,10 +81,45 @@ export default function SinglePost(props) {
 
   return (
     <>
-      <div>
+      <div className="s-a-main">
         {article ? (
           <div>
-            <div className="outer-article-container">
+            <div className="col-lg-12">
+              <div className="row">
+                <div className="col-lg-6">
+                  <div>
+                    <img src={article.imgSrc} className="s-a-img"></img>
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <div className="s-a-title">{article.title}</div>
+                  <div className="s-a-author">-by {article.author}</div>
+                  <div className="s-a-domain">
+                    Domain: {article.categoryName}
+                  </div>
+                  <div className="hash-c">
+                    {article.hashContainer.map((tag) => (
+                      <div className="hash-box">#{tag}</div>
+                    ))}
+                  </div>
+                  <div className="row a-row">
+                    <div className="col-lg-6 date">
+                      Published on: {article.date}
+                    </div>
+                    <div className="col-lg-6 duration">
+                      {article.duration} min read.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="row">
+                <div
+                  className="a-content"
+                  dangerouslySetInnerHTML={{ __html: article.desc }}
+                ></div>
+              </div>
+            </div>
+            {/* <div className="outer-article-container">
               <div className="single-article-container">
                 <div className="img-container">
                   <div className="img-article">
@@ -105,7 +141,7 @@ export default function SinglePost(props) {
                 <div className="author">
                   {/* <button className="initials-button-2 author-image">
                     {getInitials(article.author)}
-                  </button> */}
+                  </button> 
                   {
                     <div className="author-details">
                       <div className="author-container-name">
@@ -130,7 +166,7 @@ export default function SinglePost(props) {
                   />
                 </div>
               </div>
-              {/* 
+              
               <div className="icons">
                 <button className="social-button">
                   <a target="_blank" href="#">
@@ -147,7 +183,7 @@ export default function SinglePost(props) {
                     <HiThumbUp className="like-icons" />
                   </a>
                 </button>
-              </div> */}
+              </div> 
             </div>
 
             {props.cookie.user ? (
@@ -155,37 +191,7 @@ export default function SinglePost(props) {
             ) : 
             <Comments  post={article} />
             }
-            {/* <div className="comment-container">
-              <div className="comment-header">
-                Comments ({article.comments.length})
-              </div>
-              {article.comments.map((comment) => (
-                <div className="comment-box">
-                  <div className="comment-user">{comment.user}</div>
-                  <div className="comment-message">{comment.message}</div>
-                </div>
-              ))}
-
-              <div>
-                {props.cookie.user ? (
-                  <form>
-                    <input
-                      className="comment-input"
-                      type="text"
-                      onChange={(e) => setComment(e.target.value)}
-                    ></input>
-                    <button
-                      className="comment-submit btn btn-primary"
-                      type="submit"
-                      onClick={(e) => addComment(e)}
-                    >
-                      Add a comment
-                    </button>
-                  </form>
-                ) : null}
-              </div>
-            </div>
- */}
+          
             <div className="article-card-container">
               <div className="main-title all-heading">
                 <h2>Checkout Our Other Articles</h2>
@@ -202,7 +208,7 @@ export default function SinglePost(props) {
                   id={article._id}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
         ) : null}
       </div>

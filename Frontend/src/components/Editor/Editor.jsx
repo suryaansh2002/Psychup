@@ -6,9 +6,8 @@ import "react-mde/lib/styles/css/react-mde-all.css";
 import "./Editor.css";
 import marked from "marked";
 import { useCookies } from "react-cookie";
-import { BiImage,BiCategory } from 'react-icons/bi';
-import { AiFillDownCircle } from 'react-icons/ai';
-
+import { BiImage, BiCategory } from "react-icons/bi";
+import { AiFillDownCircle } from "react-icons/ai";
 
 import axios from "axios";
 import Input from "./Input";
@@ -115,7 +114,7 @@ export default function Editor(props) {
       categoryName: map[category],
       hashContainer: hashContainer,
       duration,
-      date:dateString,
+      date: dateString,
     };
 
     console.log(data);
@@ -139,94 +138,107 @@ export default function Editor(props) {
   // }
   async function addHash() {
     //setHashContainer([...hashContainer,hash])
-    if (hash){
+    if (hash) {
       await hashContainer.push(hash);
       await setHashCookie("hash", hashContainer);
       console.log(hashCookie["hash"]);
-    
     }
-    }
-  function upload(){
-    const inp=document.getElementById('file-inp');
+  }
+  function upload() {
+    const inp = document.getElementById("file-inp");
     inp.click();
   }
   return (
     <div className="editor-outer-container">
       <div className="editor-container">
-      <div className="editor-h">
-      <div className="row">
-        <button className="up-btn" onClick={()=>upload()}><BiImage className="icon"/> Upload cover image</button>
-        <input type="file" id="file-inp"/>
-        <select
-                  className="category-select"
-                  name="hash"
-                  onChange={(e) => setCategory(e.target.value)}
-                >
-                  <option value={""}> Choose A Category</option>
-                  <option value={"Gender"}>Gender Psychology</option>
-                  <option value={"Behaviour"}>Behaviour Psycholody</option>
-                  <option value={"Mental"}>Mental Health</option>
-                  <option value={4}>Domain 4</option>
-                  <option value={5}>Domain 5</option>
-                </select>
-                <form className="myform">
-                  <input
-                    className="hash-text"
-                    type="text"
-                    placeholder="Add a hashtag"
-                    onChange={(e) => setHash(e.target.value)}
-                    required
-                  ></input>
-                  <button
-                    type="submit"
-                    className="  submit-hash"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      addHash();
-                    }}
-                    disabled={hashContainer.length > 4}
-                  >
-                    Add Hashtag
-                  </button>
-                </form>
-                <button className={visibility ? "inst-btn set-z":"inst-btn"} onClick={()=>setVisibility(!visibility)}>Instructions <AiFillDownCircle className="right-icon"/></button>
-                      
-                  
-      </div>
-      </div>
+        <div className="editor-h">
+          <div className="row">
+            <button className="up-btn" onClick={() => upload()}>
+              <BiImage className="icon" /> Upload cover image
+            </button>
+            <input type="file" id="file-inp" />
+            <select
+              className="category-select"
+              name="hash"
+              onChange={(e) => setCategory(e.target.value)}
+            >
+              <option value={""}> Choose A Category</option>
+              <option value={"Gender"}>Gender Psychology</option>
+              <option value={"Behaviour"}>Behaviour Psycholody</option>
+              <option value={"Mental"}>Mental Health</option>
+              <option value={4}>Domain 4</option>
+              <option value={5}>Domain 5</option>
+            </select>
+            <form className="myform">
+              <input
+                className="hash-text"
+                type="text"
+                placeholder="Add a hashtag"
+                onChange={(e) => setHash(e.target.value)}
+                required
+              ></input>
+              <button
+                type="submit"
+                className="  submit-hash"
+                onClick={(e) => {
+                  e.preventDefault();
+                  addHash();
+                }}
+                disabled={hashContainer.length > 4}
+              >
+                Add Hashtag
+              </button>
+            </form>
+            <button
+              className={visibility ? "inst-btn set-z" : "inst-btn"}
+              onClick={() => setVisibility(!visibility)}
+            >
+              Instructions <AiFillDownCircle className="right-icon" />
+            </button>
+          </div>
+        </div>
 
-      <div className="row hashes">
-      {hashCookie["hash"] && <div className="">
-                <h5 className="hash-title">Your Hashtags are:</h5>
-                {hashCookie["hash"] &&
-                  hashCookie["hash"].map((hash) => (
-                    <div className="div-hash">{hash}</div>
-                  ))}
-              </div>}
-
-      </div>
-      {visibility&&<div className="editor-box"> <div className="editor-line">
-        You can use the editor to add a new article, using markdown
-        syntaxt, such as # for h1, ## for h2, etc. If you are not familiar with
-        markdown syntaxt you can checkout{" "}
-        <a target="_blank" href="https://www.markdownguide.org/basic-syntax/">
-          Markdown Syntaxt
-        </a>{" "}
-        to better help write your article. If you have already written your
-        Article in .doc or .docx file you can use{" "}
-        <a target="_blank" href="https://word2md.com/">
-          Word to Markdown Converter
-        </a>{" "}
-        to convert your article in markdown format and then paste the contents
-        below. Please upload a cover image for your article. You can also
-        include hashtags along with your article for users to better understand
-        the topics your article pertains too. You can include upto a maximum of
-        5 hashtags to each article. For any queries or issues regarding the same
-        to reach out to us at{" "}
-        <a href="mailto: psychupcontact13@gmail.com" target="_blank">
-          contact@psychup.com{" "}
-        </a>
-      </div></div> }
+        <div className="row hashes">
+          {hashCookie["hash"] && (
+            <div className="">
+              <h5 className="hash-title">Your Hashtags are:</h5>
+              {hashCookie["hash"] &&
+                hashCookie["hash"].map((hash) => (
+                  <div className="div-hash">{hash}</div>
+                ))}
+            </div>
+          )}
+        </div>
+        {visibility && (
+          <div className="editor-box">
+            {" "}
+            <div className="editor-line">
+              You can use the editor to add a new article, using markdown
+              syntaxt, such as # for h1, ## for h2, etc. If you are not familiar
+              with markdown syntaxt you can checkout{" "}
+              <a
+                target="_blank"
+                href="https://www.markdownguide.org/basic-syntax/"
+              >
+                Markdown Syntaxt
+              </a>{" "}
+              to better help write your article. If you have already written
+              your Article in .doc or .docx file you can use{" "}
+              <a target="_blank" href="https://word2md.com/">
+                Word to Markdown Converter
+              </a>{" "}
+              to convert your article in markdown format and then paste the
+              contents below. Please upload a cover image for your article. You
+              can also include hashtags along with your article for users to
+              better understand the topics your article pertains too. You can
+              include upto a maximum of 5 hashtags to each article. For any
+              queries or issues regarding the same to reach out to us at{" "}
+              <a href="mailto: psychupcontact13@gmail.com" target="_blank">
+                contact@psychup.com{" "}
+              </a>
+            </div>
+          </div>
+        )}
 
         {/* <div className="editor-header">
           <div className="row">
@@ -299,24 +311,24 @@ export default function Editor(props) {
           placeholder="Title..."
           onChange={(e) => setTitle(e.target.value)}
         ></textarea>
-<div className="editor-c">
-        <div className="main-editor">
-          <ReactMde
-            value={value}
-            onChange={setValue}
-            selectedTab={selectedTab}
-            onTabChange={setSelectedTab}
-            generateMarkdownPreview={(markdown) =>
-              Promise.resolve(converter.makeHtml(markdown))
-            }
-            loadSuggestions={loadSuggestions}
-            childProps={{
-              writeButton: {
-                tabIndex: -1,
-              },
-            }}
-          />
-        </div>
+        <div className="editor-c">
+          <div className="main-editor">
+            <ReactMde
+              value={value}
+              onChange={setValue}
+              selectedTab={selectedTab}
+              onTabChange={setSelectedTab}
+              generateMarkdownPreview={(markdown) =>
+                Promise.resolve(converter.makeHtml(markdown))
+              }
+              loadSuggestions={loadSuggestions}
+              childProps={{
+                writeButton: {
+                  tabIndex: -1,
+                },
+              }}
+            />
+          </div>
         </div>
         <div className="button-container">
           <button className="article-submit" type="button" onClick={getDisplay}>

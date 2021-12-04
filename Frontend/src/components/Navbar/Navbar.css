@@ -1,16 +1,13 @@
 .nav-main {
   height: 5rem;
   width: 100%;
-  background-color:  #a1ebe6e3;
+  background-color: #a1ebe6e3;
   background-color: #84dad49f;
-  background-color:  #fcde67;
+  background-color: #fcde67;
 
-  background-color:  #bfe6ff;
-  background-image: url('../../images/img1.png');
+  background-color: #bfe6ff;
+  background-image: url("../../images/img1.png");
   background-size: cover;
-
-
-
 }
 .navbar-header {
   position: absolute;
@@ -38,16 +35,18 @@
   -webkit-text-fill-color: transparent;
   font-weight: 600;
   transition: 0.5s;
-  background: linear-gradient(180deg, rgba(46, 69, 201, 1) 0%, rgba(1, 7, 59, 1) 52.33%, rgba(0, 255, 234, 0.6) 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-  
-  
+  background: linear-gradient(
+    180deg,
+    rgba(46, 69, 201, 1) 0%,
+    rgba(1, 7, 59, 1) 52.33%,
+    rgba(0, 255, 234, 0.6) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   transform: scale(1.2);
-
 }
 .nav-button {
   position: absolute;
@@ -79,38 +78,35 @@
   font-size: 1.2rem;
 }
 
-
-
 .initials-button {
   border-radius: 50%;
   border: none;
   background: rgba(3, 88, 84, 0.534);
   color: white;
   font-size: 1.1rem;
-  font-weight: 700; 
+  font-weight: 700;
   height: auto;
   padding: 0.5rem 0.75rem;
   position: absolute;
   right: 10px;
-  top:-20px;
+  top: -20px;
 }
-.initials-container{
-
+.initials-container {
   position: absolute;
   top: 65px;
   right: 20px;
   background-color: rgba(220, 220, 220, 1);
   border-radius: 10px;
-  border: 2px solid rgb(150, 150, 150,0.5);
-  box-shadow: 2px 1px 1px rgb(150, 150, 150,0.5);
+  border: 2px solid rgb(150, 150, 150, 0.5);
+  box-shadow: 2px 1px 1px rgb(150, 150, 150, 0.5);
   padding: 0.5em;
   text-align: center;
   align-items: center;
   justify-content: center;
-z-index: 10;
+  z-index: 10;
 }
 
-.top-button{
+.top-button {
   width: 11rem;
   font-weight: bold;
   margin: 0.5rem;
@@ -127,114 +123,113 @@ z-index: 10;
   font-size: 1.1rem;
 }
 
-.top-button-2{
+.top-button-2 {
   width: 17rem;
   font-weight: bold;
   color: white;
   margin: 0.5rem;
   background: rgba(3, 88, 84, 0.534);
   border: rgba(3, 88, 84, 0.534);
-
 }
 
-.psych{
+.psych {
   color: blue;
   font-weight: 700;
 }
 
-.modal-text-area{
+.modal-text-area {
   width: 90%;
 }
-.send-modal{
+.send-modal {
   width: 100%;
   font-size: 1.2rem;
   font-weight: 600;
   color: white;
   background-color: rgba(3, 88, 84, 0.534);
 }
-.hide{
+.hide {
   position: absolute;
   z-index: -1;
 }
 
 @media only screen and (max-width: 520px) {
-.log-button,.reg-button{
-  font-size: 1rem;
-  padding: 0.4rem 1rem;
-  margin-top: 0.4rem;
-
-}
-.nav-box{
-  padding-top: 3rem;
-}
+  .log-button,
+  .reg-button {
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+    margin-top: 0.4rem;
+  }
+  .nav-box {
+    padding-top: 3rem;
+  }
 }
 
 @media (max-width: 990px) {
-  .initials-button{
+  .initials-button {
     position: absolute;
     right: 10px;
     top: 0px;
   }
-  
-  
-    .navbar-header {
-      position: relative;
-      justify-content: center;
-      width: 100%;
-    }
-    .nav-main {
-      min-height: 5rem;
-      padding-bottom: 1.4rem;
-      height: auto;
-    }
-    .nav-logreg {
-      position: absolute;
-      right: 60px;
-      top: 15px;
-    }
-  }
-  
 
-  
-.modal-link{
+  .navbar-header {
+    position: relative;
+    justify-content: center;
+    width: 100%;
+  }
+  .nav-main {
+    min-height: 5rem;
+    padding-bottom: 1.4rem;
+    height: auto;
+  }
+  .nav-logreg {
+    position: absolute;
+    right: 60px;
+    top: 15px;
+  }
+}
+
+.modal-link {
   color: rgba(3, 51, 49, 0.897);
   font-weight: 600;
-
 }
-.modal-link:hover{
+.modal-link:hover {
   cursor: pointer;
 }
-.modal-link-c{
+.modal-link-c {
   font-size: 1.1rem;
   text-align: center;
   margin-bottom: 1rem;
 }
-.close{
+.close {
   position: absolute;
   top: 0;
   right: 10px;
 }
-.modal-title{
+.modal-title {
   text-align: center;
   font-weight: 700;
 }
 
-.modal-content{
-background-image: url('../../images/img8.png');
-background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("../../images/img8.png");
+.modal-content {
+  background-image: url("../../images/img8.png");
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../../images/img8.png");
 
-background-size: cover;
-padding: 3rem;
+  background-size: cover;
+  padding: 3rem;
 }
 
-.form-contact{
+.form-contact {
   border-radius: 10px;
   padding: 0;
   padding: 1rem;
 }
-.login-button{
+.login-button {
   position: absolute;
-  top:80vh;
+  top: 80vh;
   left: 0;
   width: 300px;
   z-index: 100;
@@ -242,14 +237,14 @@ padding: 3rem;
   border: none;
   border-radius: 10px;
   background: rgba(3, 88, 84, 0.534);
-box-shadow: 2px 4px 4px rgba(60, 63, 63, 0.884);
-color: white;
+  box-shadow: 2px 4px 4px rgba(60, 63, 63, 0.884);
+  color: white;
   padding: 1rem;
   font-size: 1.2rem;
   font-weight: 600;
   transition: 0.5s;
 }
 
-.login-button:hover{
+.login-button:hover {
   transform: scale(1.1);
 }

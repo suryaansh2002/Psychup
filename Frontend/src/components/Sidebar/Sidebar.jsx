@@ -122,155 +122,155 @@ export default function Sidebar(props) {
 
   return (
     <>
-    {
-      props.side &&     <div className="overlay"></div>
+      {props.side && <div className="overlay"></div>}
+      <div
+        className={
+          props.side ? "sidebar-container isopen" : "sidebar-container"
+        }
+      >
+        <div className="content-container">
+          {props.logToggle ? (
+            <div className="upper-div">
+              <button className="cross" onClick={() => props.setSide(false)}>
+                <a>
+                  <ImCross />
+                </a>
+              </button>
+              <div className="change-form">
+                New to <span className="psych">PsychUp</span> ?{" "}
+                <button onClick={toggleform}>Register</button>
+              </div>
+              <div className="welcome">Welcome back</div>
+              {logSucess && logMsg != "" ? (
+                <div className="success">{logMsg}</div>
+              ) : null}
 
-    }
-    <div
-      className={props.side ? "sidebar-container isopen" : "sidebar-container"}
-    >
-      <div className="content-container">
-        {props.logToggle ? (
-          <div className="upper-div">
-            <button className="cross" onClick={() => props.setSide(false)}>
-              <a>
-                <ImCross />
-              </a>
-            </button>
-            <div className="change-form">
-              New to <span className="psych">PsychUp</span> ? <button onClick={toggleform}>Register</button>
+              <form className="form-contact" method="POST" name="myForm">
+                <div className="form-label">
+                  <label>Email:</label>
+                </div>
+                <div className="input-div">
+                  <input
+                    className="form-input"
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    onChange={(e) => setEmail(e.target.value)}
+                  ></input>
+                  {emailErr && logMsg != "" ? (
+                    <div className="error">{logMsg}</div>
+                  ) : null}
+                </div>
+                <div className="form-label">
+                  <label>Password:</label>
+                </div>
+                <div className="input-div">
+                  <input
+                    className="form-input"
+                    type="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    onChange={(e) => setPassword(e.target.value)}
+                  ></input>
+                  {passErr && logMsg != "" ? (
+                    <div className="error">{logMsg}</div>
+                  ) : null}
+                </div>
+                <div>
+                  <button
+                    className="submit-button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleLogin();
+                    }}
+                  >
+                    Login
+                  </button>
+                </div>
+              </form>
+              <div className="or">OR</div>
+              <div>Add Login with google button here</div>
             </div>
-            <div className="welcome">Welcome back</div>
-            {logSucess && logMsg != "" ? (
-              <div className="success">{logMsg}</div>
-            ) : null}
+          ) : (
+            <div className="upper-div">
+              <button className="cross" onClick={() => props.setSide(false)}>
+                <a>
+                  <ImCross />
+                </a>
+              </button>
+              <div className="change-form">
+                Already a user? <button onClick={toggleform}>Login</button>
+              </div>
+              <div className="welcome">Welcome</div>
+              {suSucess && suMsg != "" ? (
+                <div className="success">{suMsg}</div>
+              ) : null}
 
-            <form className="form-contact" method="POST" name="myForm">
-              <div className="form-label">
-                <label>Email:</label>
-              </div>
-              <div className="input-div">
-                <input
-                  className="form-input"
-                  type="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  onChange={(e) => setEmail(e.target.value)}
-                ></input>
-                {emailErr && logMsg != "" ? (
-                  <div className="error">{logMsg}</div>
-                ) : null}
-              </div>
-              <div className="form-label">
-                <label>Password:</label>
-              </div>
-              <div className="input-div">
-                <input
-                  className="form-input"
-                  type="password"
-                  name="password"
-                  placeholder="Enter your password"
-                  onChange={(e) => setPassword(e.target.value)}
-                ></input>
-                {passErr && logMsg != "" ? (
-                  <div className="error">{logMsg}</div>
-                ) : null}
-              </div>
-              <div>
-                <button
-                  className="submit-button"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleLogin();
-                  }}
-                >
-                  Login
-                </button>
-              </div>
-            </form>
-            <div className="or">OR</div>
-            <div>Add Login with google button here</div>
-          </div>
-        ) : (
-          <div className="upper-div">
-            <button className="cross" onClick={() => props.setSide(false)}>
-              <a>
-                <ImCross />
-              </a>
-            </button>
-            <div className="change-form">
-              Already a user? <button onClick={toggleform}>Login</button>
+              <form className="form-contact" method="POST">
+                <div className="form-label">
+                  <label>Name:</label>
+                </div>
+                <div className="input-div">
+                  <input
+                    className="form-input"
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                    onChange={(e) => setName(e.target.value)}
+                  ></input>
+                  {nameErr && suMsg != "" ? (
+                    <div className="error">{suMsg}</div>
+                  ) : null}
+                </div>
+
+                <div className="form-label">
+                  <label>Email:</label>
+                </div>
+                <div className="input-div">
+                  <input
+                    className="form-input"
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    onChange={(e) => setEmail(e.target.value)}
+                  ></input>
+                  {emailErr && suMsg != "" ? (
+                    <div className="error">{suMsg}</div>
+                  ) : null}
+                </div>
+                <div className="form-label">
+                  <label>Password:</label>
+                </div>
+                <div className="input-div">
+                  <input
+                    className="form-input"
+                    type="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    onChange={(e) => setPassword(e.target.value)}
+                  ></input>
+                  {passErr && suMsg != "" ? (
+                    <div className="error">{suMsg}</div>
+                  ) : null}
+                </div>
+                <div>
+                  <button
+                    className="submit-button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleSignup();
+                    }}
+                  >
+                    Sign Up
+                  </button>
+                </div>
+              </form>
+              <div className="or">OR</div>
+              <div>Add Login with google button here</div>
             </div>
-            <div className="welcome">Welcome</div>
-            {suSucess && suMsg != "" ? (
-              <div className="success">{suMsg}</div>
-            ) : null}
-
-            <form className="form-contact" method="POST">
-              <div className="form-label">
-                <label>Name:</label>
-              </div>
-              <div className="input-div">
-                <input
-                  className="form-input"
-                  type="text"
-                  name="name"
-                  placeholder="Enter your name"
-                  onChange={(e) => setName(e.target.value)}
-                ></input>
-                {nameErr && suMsg != "" ? (
-                  <div className="error">{suMsg}</div>
-                ) : null}
-              </div>
-
-              <div className="form-label">
-                <label>Email:</label>
-              </div>
-              <div className="input-div">
-                <input
-                  className="form-input"
-                  type="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  onChange={(e) => setEmail(e.target.value)}
-                ></input>
-                {emailErr && suMsg != "" ? (
-                  <div className="error">{suMsg}</div>
-                ) : null}
-              </div>
-              <div className="form-label">
-                <label>Password:</label>
-              </div>
-              <div className="input-div">
-                <input
-                  className="form-input"
-                  type="password"
-                  name="password"
-                  placeholder="Enter your password"
-                  onChange={(e) => setPassword(e.target.value)}
-                ></input>
-                {passErr && suMsg != "" ? (
-                  <div className="error">{suMsg}</div>
-                ) : null}
-              </div>
-              <div>
-                <button
-                  className="submit-button"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleSignup();
-                  }}
-                >
-                  Sign Up
-                </button>
-              </div>
-            </form>
-            <div className="or">OR</div>
-            <div>Add Login with google button here</div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
-    </div>
     </>
   );
 }

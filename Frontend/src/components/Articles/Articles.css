@@ -3,18 +3,18 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  z-index: 5;
-  background-image: url('../../images/img1.png');
+  z-index: 20;
+  background-image: url("../../images/img1.png");
   background-size: cover;
-
 }
 
-.slider{
-  background-image: url('../../images/img1.png');
+.slider {
+  background-color: transparent;
+  height: 100vh;
+  padding-top: 10rem;
+  background-image: url("../../images/img1.png");
   background-size: cover;
-
 }
-
 
 .all-heading {
   padding-left: 5rem;
@@ -35,18 +35,24 @@
 }
 
 #card-img {
- height: 150px;
- border-radius: 5px;
-width: 100%;
-
+  height: 130px;
+  border-radius: 5px;
+  width: 90%;
+  margin-top: 1rem;
 }
-.img-d{
+.title-a h2 {
+  position: absolute;
+  left: 50%;
+  /* -webkit-transform: translateX(-50%); */
+  transform: translateX(-50%);
+  z-index: 100;
+}
+.img-d {
   width: 100%;
   text-align: center;
   align-items: center;
   display: flex;
   justify-content: center;
-
 }
 
 #card-title {
@@ -62,13 +68,11 @@ width: 100%;
   align-items: center;
   justify-content: center;
   margin: 1.5rem 0rem;
-
 }
-#all{
+#all {
   background-color: black;
-  background-image: url('../../images/img1.png');
+  background-image: url("../../images/img1.png");
   background-size: cover;
-
 }
 .card-by {
   color: rgb(100, 100, 100, 0.9);
@@ -134,7 +138,7 @@ width: 100%;
 }
 
 .article-card {
-  background-color: rgb(190, 174, 174);
+  background-color: rgba(8, 121, 121, 0.171);
   margin: 1.5rem 2rem;
   display: inline-block;
   max-width: 350px;
@@ -143,11 +147,11 @@ width: 100%;
   display: inline-block;
   height: 25rem;
   vertical-align: top;
+  box-shadow: 4px 4px 7.5px rgba(9, 94, 87, 0.5);
   /* background-image: url('../../images/img6.png');
   background-size: cover;
   opacity: 0.5; */
   /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("../../images/img6.png"); */
-
 }
 
 .card-category {
@@ -155,7 +159,7 @@ width: 100%;
   font-size: 0.9rem;
   font-weight: 600;
 }
-.main-title h2{
+.main-title h2 {
   padding-top: 1.5rem;
   font-weight: 700;
 }

@@ -33,12 +33,12 @@ export default function Articles() {
   }
 
   for (var i = 0; i < articles2.length; i++) {
-    articles2[i].desc_short=removeTags(articles2[i].desc)
+    articles2[i].desc_short = removeTags(articles2[i].desc);
     articles2[i].desc_short = articles2[i].desc_short.slice(0, 100) + "...";
   }
   console.log(articleList);
-  const [carSettings,setCarSettings]=useState()
-  
+  const [carSettings, setCarSettings] = useState();
+
   var settings = {
     dots: true,
     infinite: true,
@@ -62,7 +62,6 @@ export default function Articles() {
     centerPadding: "20px",
     pauseOnHover: false,
     centerMode: true,
-
   };
   var settings3 = {
     dots: true,
@@ -75,20 +74,21 @@ export default function Articles() {
     centerPadding: "20px",
     pauseOnHover: false,
     centerMode: true,
-
   };
-  useEffect(()=>{
-
-    window.innerWidth>1000?setCarSettings(settings):window.innerWidth>800?setCarSettings(settings3): setCarSettings(settings2)
-
-  },[window.innerWidth])
+  useEffect(() => {
+    window.innerWidth > 1000
+      ? setCarSettings(settings)
+      : window.innerWidth > 800
+      ? setCarSettings(settings3)
+      : setCarSettings(settings2);
+  }, [window.innerWidth]);
 
   return (
     <div id="articles-h">
       {articles2 ? (
         <div className="articles-main">
           <div className="main-content-container">
-            <div className="main-title">
+            <div className="main-title title-a">
               <h2>Featured Articles</h2>
             </div>
             <div className="article-card-container">
@@ -110,11 +110,11 @@ export default function Articles() {
               </Slider>
             </div>
 
-            <Link to={"/articles"}>
+            {/* <Link to={"/articles"}>
               <button className="checkout-all">
                 Checkout All Our Articles
               </button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       ) : null}

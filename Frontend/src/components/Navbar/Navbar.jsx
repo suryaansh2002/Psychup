@@ -3,7 +3,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import "./Sidebar.css";
 import "./Navbar.css";
 
-import axios from 'axios';
+import axios from "axios";
 import { useHistory, Link } from "react-router-dom";
 
 import { HashLink as Link2 } from "react-router-hash-link";
@@ -44,11 +44,6 @@ export default function NavBar(props) {
     props.setSide(true);
     props.setSide(false);
   }, []);
-
-
-
-
-
 
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -165,8 +160,6 @@ export default function NavBar(props) {
       .catch((err) => console.log(err.message));
   }
 
-
-
   return (
     <>
       <Navbar variant="light" expand="lg" className="nav-main">
@@ -179,19 +172,31 @@ export default function NavBar(props) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="nav-box">
             <Nav.Link href="/" className="nav-link">
-              <Link2 className="n-l" to={"/"}>Home</Link2>
+              <Link2 className="n-l" to={"/"}>
+                Home
+              </Link2>
             </Nav.Link>
             <Nav.Link href="#domains-h" className="nav-link">
-              <Link2 className="n-l" to={"/#domains-h"}> Domains</Link2>
+              <Link2 className="n-l" to={"/#domains-h"}>
+                {" "}
+                Domains
+              </Link2>
             </Nav.Link>
             <Nav.Link href="#about-h" className="nav-link">
-              <Link2 className="n-l" to={"/#about-h"}> About</Link2>
+              <Link2 className="n-l" to={"/#about-h"}>
+                {" "}
+                About
+              </Link2>
             </Nav.Link>
             <Nav.Link href="#articles-h" className="nav-link">
-              <Link2  className="n-l" to={"/#articles-h"}>Articles</Link2>
+              <Link2 className="n-l" to={"/#articles-h"}>
+                Articles
+              </Link2>
             </Nav.Link>
             <Nav.Link href="#contact-h" className="nav-link">
-              <Link2 className="n-l" to={"/#contact-h"}>Contact</Link2>
+              <Link2 className="n-l" to={"/#contact-h"}>
+                Contact
+              </Link2>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
@@ -206,26 +211,10 @@ export default function NavBar(props) {
               </button>
             </div>
           ) : (
-            <div>
-            </div>
+            <div></div>
           )}
-
         </Nav>
-        
       </Navbar>
-      {
-        props.cookie.user?<div></div>:
-        <button
-                className="log-button"
-                onClick={handleLog}
-                data-toggle="modal"
-                data-target="#logModal"
-                className="login-button"
-              >
-                Enter Our Community
-              </button>
-
-      }
 
       {toggleInit ? (
         <div className="initials-container">
@@ -273,10 +262,11 @@ export default function NavBar(props) {
         aria-hidden="true"
       >
         <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
+          <div class="modal-content" id="m-c">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLongTitle">
-                Apply to contribute to <span className="psych">PsychUp!</span>
+                {/* Apply to contribute to <span className="psych">PsychUp!</span> */}
+                Your Contribution Can Bring About Change 😄
               </h5>
               <button
                 type="button"
@@ -312,12 +302,16 @@ export default function NavBar(props) {
               ) : null}
 
               <div class="modal-body">
-                <div className="modal-text">
+                {/* <div className="modal-text">
                   Mention in brief how you think you can contribute to{" "}
                   <span className="psych">PsychUp</span> and look forward to
                   hearing from us at the earliest!
-                </div>
-                <textarea className="modal-text-area" rows="5"></textarea>
+                </div> */}
+                <textarea
+                  className="modal-text-area"
+                  rows="5"
+                  placeholder="Brief Your Ideas..."
+                ></textarea>
               </div>
               <div class="modal-footer">
                 <button type="submit" class="btn send-modal ">
@@ -353,62 +347,60 @@ export default function NavBar(props) {
                 <span aria-hidden="true">&times;</span>
               </button>
               <div class="modal-body">
-              {logSucess && logMsg != "" ? (
-              <div className="success">{logMsg}</div>
-            ) : null}
+                {logSucess && logMsg != "" ? (
+                  <div className="success">{logMsg}</div>
+                ) : null}
 
-            <form className="form-contact" method="POST" name="myForm">
-              {/* <div className="form-label">
+                <form className="form-contact" method="POST" name="myForm">
+                  {/* <div className="form-label">
                 <label>Email:</label>
               </div> */}
-              <div className="input-div">
-                <input
-                  className="form-input"
-                  type="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  onChange={(e) => setEmail(e.target.value)}
-                ></input>
-                {emailErr && logMsg != "" ? (
-                  <div className="error">{logMsg}</div>
-                ) : null} 
-              </div>
-              {/* <div className="form-label">
+                  <div className="input-div">
+                    <input
+                      className="form-input"
+                      type="email"
+                      name="email"
+                      placeholder="Enter your email"
+                      onChange={(e) => setEmail(e.target.value)}
+                    ></input>
+                    {emailErr && logMsg != "" ? (
+                      <div className="error">{logMsg}</div>
+                    ) : null}
+                  </div>
+                  {/* <div className="form-label">
                 <label>Password:</label>
               </div> */}
-              <div className="input-div">
-                <input
-                  className="form-input"
-                  type="password"
-                  name="password"
-                  placeholder="Enter your password"
-                  onChange={(e) => setPassword(e.target.value)}
-                ></input>
-                {passErr && logMsg != "" ? (
-                  <div className="error">{logMsg}</div>
-                ) : null}
+                  <div className="input-div">
+                    <input
+                      className="form-input"
+                      type="password"
+                      name="password"
+                      placeholder="Enter your password"
+                      onChange={(e) => setPassword(e.target.value)}
+                    ></input>
+                    {passErr && logMsg != "" ? (
+                      <div className="error">{logMsg}</div>
+                    ) : null}
+                  </div>
+                  <div className="submit-c">
+                    <button
+                      className="submit-button"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleLogin();
+                      }}
+                    >
+                      Login
+                    </button>
+                  </div>
+                </form>
+                <div className="modal-link-c">
+                  New to PsychUp?{" "}
+                  <a className="" onClick={() => props.setLogToggle(false)}>
+                    <span className="modal-link">Register Now!</span>
+                  </a>
+                </div>
               </div>
-              <div className="submit-c">
-                <button
-                  className="submit-button"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleLogin();
-                  }}
-                >
-                  Login
-                </button>
-              </div>
-            </form>
-            <div className="modal-link-c">
-                New to PsychUp?{" "}
-                <a className="" onClick={() => props.setLogToggle(false)}>
-                  <span className="modal-link">Register Now!</span>
-                </a>
-              </div>
-
-              </div>
-         
             </div>
           ) : (
             <div class="modal-content">
@@ -425,72 +417,68 @@ export default function NavBar(props) {
                 <span aria-hidden="true">&times;</span>
               </button>
               <div class="modal-body">
-
-              {suSucess && suMsg != "" ? (
-              <div className="success">{suMsg}</div>
-            ) : null}
-
-            <form className="form-contact" method="POST">
-            
-              <div className="input-div">
-                <input
-                  className="form-input"
-                  type="text"
-                  name="name"
-                  placeholder="Enter your name"
-                  onChange={(e) => setName(e.target.value)}
-                ></input>
-                {nameErr && suMsg != "" ? (
-                  <div className="error">{suMsg}</div>
+                {suSucess && suMsg != "" ? (
+                  <div className="success">{suMsg}</div>
                 ) : null}
-              </div>
 
-              <div className="input-div">
-                <input
-                  className="form-input"
-                  type="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  onChange={(e) => setEmail(e.target.value)}
-                ></input>
-                {emailErr && suMsg != "" ? (
-                  <div className="error">{suMsg}</div>
-                ) : null}
-              </div>
-            
-              <div className="input-div">
-                <input
-                  className="form-input"
-                  type="password"
-                  name="password"
-                  placeholder="Enter your password"
-                  onChange={(e) => setPassword(e.target.value)}
-                ></input>
-                {passErr && suMsg != "" ? (
-                  <div className="error">{suMsg}</div>
-                ) : null}
-              </div>
-              <div className="submit-c">
-                <button
-                  className="submit-button"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleSignup();
-                  }}
-                >
-                  Sign Up
-                </button>
-              </div>
-            </form>
-            <div className="modal-link-c">
-                Already a user?{" "}
-                <a className="" onClick={() => props.setLogToggle(true)}>
-                  <span className="modal-link">Login Now!</span>
-                </a>
-              </div>
+                <form className="form-contact" method="POST">
+                  <div className="input-div">
+                    <input
+                      className="form-input"
+                      type="text"
+                      name="name"
+                      placeholder="Enter your name"
+                      onChange={(e) => setName(e.target.value)}
+                    ></input>
+                    {nameErr && suMsg != "" ? (
+                      <div className="error">{suMsg}</div>
+                    ) : null}
+                  </div>
 
+                  <div className="input-div">
+                    <input
+                      className="form-input"
+                      type="email"
+                      name="email"
+                      placeholder="Enter your email"
+                      onChange={(e) => setEmail(e.target.value)}
+                    ></input>
+                    {emailErr && suMsg != "" ? (
+                      <div className="error">{suMsg}</div>
+                    ) : null}
+                  </div>
+
+                  <div className="input-div">
+                    <input
+                      className="form-input"
+                      type="password"
+                      name="password"
+                      placeholder="Enter your password"
+                      onChange={(e) => setPassword(e.target.value)}
+                    ></input>
+                    {passErr && suMsg != "" ? (
+                      <div className="error">{suMsg}</div>
+                    ) : null}
+                  </div>
+                  <div className="submit-c">
+                    <button
+                      className="submit-button"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleSignup();
+                      }}
+                    >
+                      Sign Up
+                    </button>
+                  </div>
+                </form>
+                <div className="modal-link-c">
+                  Already a user?{" "}
+                  <a className="" onClick={() => props.setLogToggle(true)}>
+                    <span className="modal-link">Login Now!</span>
+                  </a>
+                </div>
               </div>
-          
             </div>
           )}
         </div>

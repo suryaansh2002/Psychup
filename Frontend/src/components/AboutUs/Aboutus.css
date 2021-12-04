@@ -1,14 +1,10 @@
-
-
 .aboutus-main {
-  height: 100vh;
+  height: 110vh;
   word-spacing: 1px;
-  background-color:  #bfe6ff;
-  background-image: url('../../images/img1.png');
+  background-color: #bfe6ff;
+  background-image: url("../../images/img1.png");
   background-size: cover;
-
 }
-
 
 .aboutus-title h2 {
   font-size: 35px;
@@ -33,12 +29,12 @@
   margin-top: 2rem;
 }
 
-.about-container{
+.about-container {
   padding: 1.5rem;
   /* background-color: #bfe6ff; */
   margin-top: 1rem;
   width: 80%;
-  background-image: url('../../images/img9.png');
+  background-image: url("../../images/img9.png");
   background-repeat: no-repeat;
   background-size: contain;
   font-size: 0.9rem;
@@ -46,14 +42,13 @@
   font-weight: 600;
   font-style: italic;
   background-position: center;
-padding-bottom: 2rem;
-height: 80vh;
+  padding-bottom: 2rem;
+  height: 80vh;
 }
-.c-2{
+.c-2 {
   margin: 0rem 5rem;
   margin-top: 5rem;
   margin-left: 4.5rem;
-
 }
 @media only screen and (max-width: 520px) {
   .aboutus-text {
@@ -62,50 +57,44 @@ height: 80vh;
   .aboutus-main {
     padding: 2rem;
     padding-top: 5rem;
-}
+  }
 
-.aboutus-title h2 {
-font-size: 1.6rem;
-margin-bottom: 1.2rem;
-}
-  
+  .aboutus-title h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
 }
 
 @media only screen and (max-width: 420px) {
   .aboutus-text {
     font-size: 1rem;
-margin-bottom: 1.2rem;
-    
+    margin-bottom: 1.2rem;
   }
-
 }
 @media only screen and (max-width: 1200px) {
-  
   .aboutus-main {
     justify-content: center;
     align-items: center;
   }
-  
 }
 
-.psych{
-  color:white;
+.psych {
+  color: white;
 }
-.serv-img{
+.serv-img {
   position: absolute;
   bottom: 0;
   right: 0;
   height: 350px;
 }
-.temp{
+.temp {
   /* background-color: #044e52; */
   padding-left: 2rem;
   padding-top: 1rem;
   display: inline-block;
-
 }
 
-.bc{
+.bc {
   /* background-color: #bfe6ff; */
   width: 50%;
   display: inline-block;
@@ -118,9 +107,8 @@ margin-bottom: 1.2rem;
   align-items: center;
   padding-top: 6rem;
   padding-left: 0;
-
 }
-.serv-card{
+.serv-card {
   display: inline-block;
   background-color: #10686d9a;
   color: white;
@@ -136,23 +124,24 @@ margin-bottom: 1.2rem;
   font-size: 1.3rem;
 }
 
-.serv-desc{
+.serv-desc {
   padding-top: 1rem;
   font-size: 0.9rem;
   font-weight: 400;
 }
 
-.services-img{
-  width: 180px;
-  
+.services-img {
+  width: 220px;
   display: inline-block;
-  margin:1rem 3rem ;
+  margin: 1rem 3rem;
 }
-#s-i-1{
+#s-i-1 {
   margin-left: -10rem;
 }
-.s-img-c{
-  margin-left: -5rem;
+.s-img-c {
+  margin-left: -10rem;
   padding-left: 0;
-  width: 80%;
+  width: 100%;
+  margin-top: -5rem;
+  /* background-color: #044e52; */
 }

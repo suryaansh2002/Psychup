@@ -1,6 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import './Carousel.css';
+import "./Carousel.css";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -22,10 +22,10 @@ const responsive = {
 };
 export default function CarouselCard(props) {
   return (
-      <div className="item">
-        <div className="item-title">{props.domain}</div>
-        <div className="item-about">{props.about}</div>
-        <div>{/*Homane will come here*/}</div>
-      </div>
+    <div className="item">
+      <div className="item-title">{props.domain}</div>
+      <div className="item-about">{props.about}</div>
+      <div>{/*Homane will come here*/}</div>
+    </div>
   );
 }

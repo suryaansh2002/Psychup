@@ -5,7 +5,7 @@ export default function Input(props) {
     <div className="hashcontainer">
       Enter Hashtag Number {props.num}:{" "}
       <div>
-      <input type="text" className="hash-input" ref={props.refrence}></input>
+        <input type="text" className="hash-input" ref={props.refrence}></input>
       </div>
     </div>
   );

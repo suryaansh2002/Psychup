@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import CarouselCard from "./CarouselCard";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
-
 export default function About() {
   var settings = {
     dots: true,
@@ -34,47 +33,43 @@ export default function About() {
         <div>
           <Slider {...settings}>
             <div>
-            <Link to={"/articles/Gender"} className="domain-link">
-              <CarouselCard
-                domain="Gender Psychology"
-                about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
-              />
+              <Link to={"/articles/Gender"} className="domain-link">
+                <CarouselCard
+                  domain="Gender Psychology"
+                  about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
+                />
               </Link>
             </div>
             <div>
-            <Link to={"/articles/Behaviour"} className="domain-link">
-
-              <CarouselCard
-                domain="Behaviour Psychology"
-                about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
-              />
+              <Link to={"/articles/Behaviour"} className="domain-link">
+                <CarouselCard
+                  domain="Behaviour Psychology"
+                  about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
+                />
               </Link>
             </div>
             <div>
-            <Link to={"/articles/Mental"} className="domain-link">
-
-              <CarouselCard
-                domain="Mental Health"
-                about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
-              />
+              <Link to={"/articles/Mental"} className="domain-link">
+                <CarouselCard
+                  domain="Mental Health"
+                  about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
+                />
               </Link>
             </div>
             <div>
-            <Link to={"/articles/domain4"} className="domain-link">
-
-              <CarouselCard
-                domain="Domain 4"
-                about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
-              />
+              <Link to={"/articles/domain4"} className="domain-link">
+                <CarouselCard
+                  domain="Domain 4"
+                  about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
+                />
               </Link>
             </div>
             <div>
-            <Link to={"/articles/domain5"} className="domain-link">
-            
-              <CarouselCard
-                domain="Domain 5"
-                about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
-              />
+              <Link to={"/articles/domain5"} className="domain-link">
+                <CarouselCard
+                  domain="Domain 5"
+                  about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
+                />
               </Link>
             </div>
           </Slider>

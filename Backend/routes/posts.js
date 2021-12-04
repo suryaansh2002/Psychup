@@ -3,7 +3,6 @@ const router = require("express").Router();
 const User = require("../models/User");
 const Post = require("../models/Post");
 
-
 router.get("/", async (req, res) => {
   try {
     const posts = await Post.find();
@@ -12,7 +11,6 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 
 //CREATE POST
 router.post("/", async (req, res) => {
@@ -23,10 +21,9 @@ router.post("/", async (req, res) => {
     author: req.body.author,
     categoryKey: req.body.categoryKey,
     categoryName: req.body.categoryName,
-    hashContainer:req.body.hashContainer,
-    duration:req.body.duration,
-    date:req.body.date
-
+    hashContainer: req.body.hashContainer,
+    duration: req.body.duration,
+    date: req.body.date,
   });
   console.log(newPost);
   try {
@@ -92,7 +89,6 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-
 //GET POSTS FOR A USER
 router.get("/:username", async (req, res) => {
   const username = req.params.username;
@@ -113,7 +109,6 @@ router.get("/:username", async (req, res) => {
 
 //GET POSTS FOR A CATEGORY
 router.get("/:category", async (req, res) => {
-  
   const catName = req.params.category;
   try {
     let posts;

@@ -1,9 +1,8 @@
-.react-multi-carousel-item  {
-    background-image: url('./humaan.png');
-    max-width: 20rem;
-    height: 22rem;
-    background-size: 100% 100%;
-    margin-right: 3rem;
-    border-radius: 10px;
-
+.react-multi-carousel-item {
+  background-image: url("./humaan.png");
+  max-width: 20rem;
+  height: 22rem;
+  background-size: 100% 100%;
+  margin-right: 3rem;
+  border-radius: 10px;
 }

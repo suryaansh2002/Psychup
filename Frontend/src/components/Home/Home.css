@@ -4,30 +4,26 @@
 .home-main2 {
   height: calc(100vh - 5rem);
   word-spacing: 1px;
-  background-color:  #bfe6ff;
+  background-color: #bfe6ff;
   background-color: #ffc7a1;
-
 }
-.home-main{
+.home-main {
   height: calc(100vh - 5rem);
-  background-image: url('../../images/img1.png');
+  background-image: url("../../images/img1.png");
   background-size: cover;
-
 }
-.leftimage{
+.leftimage {
   position: absolute;
   top: 180px;
-height: 60%;
+  height: 60%;
   left: -150px;
 }
-.rightimage{
+.rightimage {
   position: absolute;
   top: 190px;
   height: calc(60% - 25px);
   right: -150px;
-
 }
-
 
 .intro-title h1 {
   color: #31343c;
@@ -46,18 +42,15 @@ height: 60%;
   font-size: 18px;
   margin-top: 2rem;
   text-align: center;
-
 }
-.home-main{
- 
+.home-main {
 }
-.lineimage{
+.lineimage {
   top: 100px;
   left: 100px;
   width: 50%;
   position: absolute;
 }
-
 
 .circle {
   background: radial-gradient(#7dd9f9, #0065bb);
@@ -84,19 +77,34 @@ height: 60%;
   }
 }
 
-.wrapper .circle:nth-child(2) { animation-delay: .1s }
-.wrapper .circle:nth-child(3) { animation-delay: .2s }
-.wrapper .circle:nth-child(4) { animation-delay: .3s }
-.wrapper .circle:nth-child(5) { animation-delay: .4s }
+.wrapper .circle:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.wrapper .circle:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.wrapper .circle:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.wrapper .circle:nth-child(5) {
+  animation-delay: 0.4s;
+}
 
-.wrapper .circle:nth-child(6) { animation-delay: 3.5s }
-.wrapper .circle:nth-child(7) { animation-delay: 3.6s }
-.wrapper .circle:nth-child(8) { animation-delay: 3.7s }
-.wrapper .circle:nth-child(9) { animation-delay: 3.8s }
-.wrapper .circle:nth-child(10) { animation-delay: 3.9s }
-
-
-
+.wrapper .circle:nth-child(6) {
+  animation-delay: 3.5s;
+}
+.wrapper .circle:nth-child(7) {
+  animation-delay: 3.6s;
+}
+.wrapper .circle:nth-child(8) {
+  animation-delay: 3.7s;
+}
+.wrapper .circle:nth-child(9) {
+  animation-delay: 3.8s;
+}
+.wrapper .circle:nth-child(10) {
+  animation-delay: 3.9s;
+}
 
 /*
 .explore {

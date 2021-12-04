@@ -1,8 +1,9 @@
 import React from "react";
 import "./Aboutus.css";
 import services from "../../images/img10.png";
-import articles from "../../images/img12.png";
-
+import articles from "../../images/img14.png";
+import news from "../../images/img15.png";
+import pt from "../../images/img16.png";
 
 export default function AboutUs() {
   return (
@@ -33,7 +34,7 @@ export default function AboutUs() {
           </div>
 
           <div className="col-lg-6 bc">
-            <div className="serv-card">
+            {/* <div className="serv-card">
               Articles
               <div className="serv-desc">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
@@ -53,16 +54,14 @@ export default function AboutUs() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
                 bibendum.
               </div>
-            </div>
-            {/* <div className="s-img-c">
-            <img src={articles}  className="services-img"/>
-            <img src={articles} className="services-img"/>
-            <img src={articles}  className="services-img"/>
-            
             </div> */}
+            <div className="s-img-c">
+              <img src={articles} className="services-img" />
+              <img src={news} className="services-img" />
+              <img src={pt} className="services-img" />
+            </div>
 
-            <img src={services}   className="serv-img" />
-
+            <img src={services} className="serv-img" />
           </div>
         </div>
       </div>

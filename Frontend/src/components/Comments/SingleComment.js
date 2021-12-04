@@ -3,21 +3,20 @@ import "./comments.css";
 import axios from "axios";
 import { FaRegUserCircle } from "react-icons/fa";
 import CommentForm from "./CommentForm";
-import { FaRegComment } from 'react-icons/fa';
-
+import { FaRegComment } from "react-icons/fa";
 
 export default function SingleComment(props) {
   const fiveMinutes = 300000;
   const timePassed =
     new Date() - new Date(props.comment.createdAt) > fiveMinutes;
-    var canReply;
-    var canEdit;
-    var canDelete;
-  if(props.user){
-     canReply = Boolean(props.user);
-     canEdit = props.user.id === props.comment.userId && !timePassed;
-     canDelete = props.user.id === props.comment.userId && !timePassed;  
-  }  
+  var canReply;
+  var canEdit;
+  var canDelete;
+  if (props.user) {
+    canReply = Boolean(props.user);
+    canEdit = props.user.id === props.comment.userId && !timePassed;
+    canDelete = props.user.id === props.comment.userId && !timePassed;
+  }
   const getInitials = (name) => {
     let initials = name.split(" ");
 
@@ -60,11 +59,19 @@ export default function SingleComment(props) {
   const replyId = props.comment._id;
   return (
     <div className="single-comment-container">
-    <div>
-    <div className="user-button-c"><button className="user-button">{getInitials(props.comment.username)}</button></div>
-      <div className="comment-user">{props.comment.username}
-      <div>{ new Date(props.comment.createdAt).toLocaleDateString() }  { new Date(props.comment.createdAt).toLocaleTimeString()}</div>
-      </div>
+      <div>
+        <div className="user-button-c">
+          <button className="user-button">
+            {getInitials(props.comment.username)}
+          </button>
+        </div>
+        <div className="comment-user">
+          {props.comment.username}
+          <div>
+            {new Date(props.comment.createdAt).toLocaleDateString()}{" "}
+            {new Date(props.comment.createdAt).toLocaleTimeString()}
+          </div>
+        </div>
       </div>
       {/* <div className="comment-time">{props.comment.createdAt}</div> */}
 
@@ -93,7 +100,8 @@ export default function SingleComment(props) {
               })
             }
           >
-            <FaRegComment className="comment-icon"/>Reply
+            <FaRegComment className="comment-icon" />
+            Reply
           </button>
         ) : null}
         {canEdit ? (

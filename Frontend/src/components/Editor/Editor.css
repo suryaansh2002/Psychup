@@ -27,8 +27,6 @@
   justify-content: center;
 }
 
-
-
 .editor-title {
   text-align: left;
   font-size: 2rem;
@@ -51,7 +49,7 @@
   text-align: center;
   justify-content: center;
 }
-.editor-c{
+.editor-c {
   width: 80%;
   margin-left: 10%;
 }
@@ -67,9 +65,9 @@
   width: 20rem;
   padding: 1rem;
   margin-left: calc(50% - 10rem);
-  margin-top:2rem ;
+  margin-top: 2rem;
 }
-.hash-box{
+.hash-box {
   color: grey;
   background-color: #eeeeee;
   height: auto;
@@ -80,10 +78,9 @@
   width: 20rem;
   padding: 1rem;
   margin-left: calc(50% - 10rem);
-  margin-top:2rem ;
-
+  margin-top: 2rem;
 }
-.hash-div{
+.hash-div {
   background-color: #bbbb;
   color: black;
   width: auto;
@@ -92,27 +89,25 @@
   font-size: 0.9rem;
   margin: 0.5rem 2rem;
 
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 0.9rem;
 }
-.form-div{
+.form-div {
   width: 20rem;
   height: auto;
   margin-bottom: -1rem;
 }
-.hash-submit{
-  background-color: rgb(134, 125, 125,0.5);
+.hash-submit {
+  background-color: rgb(134, 125, 125, 0.5);
   border: none;
   margin: -1rem;
   font-weight: 600;
   margin-top: -1rem;
 }
-.hash-submit:hover{
-  background-color: rgb(0, 0, 0,0.5);
+.hash-submit:hover {
+  background-color: rgb(0, 0, 0, 0.5);
   color: white;
 }
-
-
 
 .hover-divs:hover {
   color: rgb(85, 81, 81);
@@ -127,38 +122,37 @@
   top: 125px;
   left: 0px;
   z-index: 100;
-  
 }
 .editor-line a {
   color: black;
   font-weight: 600;
 }
-.editor-box{
+.editor-box {
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 90;
-  background-color: rgb(0, 0, 0,0.2);
+  background-color: rgb(0, 0, 0, 0.2);
 }
 
-.set-z{
+.set-z {
   z-index: 100;
 }
-.set-z:hover{
+.set-z:hover {
   background-color: rgb(0, 0, 0);
 }
-.div-hash{
+.div-hash {
   display: inline-block;
-  background-color: rgb(0, 0, 0,0.2);
+  background-color: rgb(0, 0, 0, 0.2);
   padding: 0.4rem 1rem;
   border-radius: 8px;
   margin: 0rem 0.4rem;
   font-size: 0.9rem;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
-.hash-title{
+.hash-title {
   display: inline-block;
   font-size: 1rem;
   font-weight: 600;
@@ -179,10 +173,10 @@
   border: 1px solid rgba(99, 93, 93, 0.5);
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
-  color: black
+  color: black;
 }
 ::placeholder {
-  color: rgb(85, 81, 81);;
+  color: rgb(85, 81, 81);
 }
 
 .file {
@@ -232,7 +226,7 @@ textarea::-webkit-input-placeholder {
 
 textarea:-moz-placeholder {
   /* Firefox 18- */
-  color:rgb(114, 108, 108);
+  color: rgb(114, 108, 108);
 }
 
 textarea::-moz-placeholder {
@@ -248,13 +242,13 @@ textarea::placeholder {
   color: rgb(114, 108, 108);
 }
 
-.article-t{
+.article-t {
   text-align: center;
   margin: 2rem;
   font-weight: 700;
-  color: rgb(0, 0, 0,0.7);
+  color: rgb(0, 0, 0, 0.7);
 }
-.editor-line{
+.editor-line {
   background-color: #eeeeee;
   padding: 1rem;
   border-radius: 10px;
@@ -262,88 +256,83 @@ textarea::placeholder {
 }
 
 @media only screen and (max-width: 520px) {
-.editor-line{
-  font-size: 0.9rem;
-  top: 0px;
-  right: 0px;
-}
-.article-submit{
- font-size: 0.9rem;
- padding: 0.8rem;
-}
+  .editor-line {
+    font-size: 0.9rem;
+    top: 0px;
+    right: 0px;
+  }
+  .article-submit {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
 }
 
-
-
-.icon2{
+.icon2 {
   display: inline;
 }
-.up-btn{
+.up-btn {
   border: none;
   width: auto;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: gray;
   background: transparent;
   display: inline;
   font-size: 1rem;
 }
-.up-btn:hover{
-  background-color:rgba(211, 211, 211, 0.384);
+.up-btn:hover {
+  background-color: rgba(211, 211, 211, 0.384);
   color: black;
 }
 
-.inst-btn{
+.inst-btn {
   border: none;
   width: auto;
   margin-top: 1.2rem;
   padding: 0.5rem 1rem;
   border-radius: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: gray;
   background: transparent;
   display: inline;
   font-size: 1rem;
-  
 }
-.inst-btn:hover{
-  background-color:rgba(211, 211, 211, 0.384);
+.inst-btn:hover {
+  background-color: rgba(211, 211, 211, 0.384);
   color: black;
 }
 
-
-.category-select{
+.category-select {
   display: inline;
   width: auto;
   font-size: 1rem;
   color: gray;
   border: none;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   margin-top: 1rem;
 }
 
-.category-select:hover{
-  background-color:rgba(211, 211, 211, 0.384);
+.category-select:hover {
+  background-color: rgba(211, 211, 211, 0.384);
   color: black;
   padding-right: 0.5rem;
   border-radius: 10px;
-
 }
 
-.hash-text{
+.hash-text {
   display: inline;
   width: auto;
   border: none;
-  margin-top:1.5rem ;
-  border-bottom: 1.5px solid rgb(0, 0, 0,0.2);
+  margin-top: 1.5rem;
+  border-bottom: 1.5px solid rgb(0, 0, 0, 0.2);
   margin-left: 1rem;
 }
-.submit-hash{
-  background-color: rgb(0, 0, 0,0.2);
+.submit-hash {
+  background-color: rgb(0, 0, 0, 0.2);
   font-size: 0.8rem;
   display: inline;
   border: none;
@@ -352,28 +341,27 @@ textarea::placeholder {
   border-radius: 10px;
   transition: 0.3s;
 }
-.submit-hash:hover{
-background-color: rgb(0, 0, 0,0.7);
-color: whitesmoke;
+.submit-hash:hover {
+  background-color: rgb(0, 0, 0, 0.7);
+  color: whitesmoke;
 }
-.myform{
+.myform {
   display: inline;
   width: auto;
-
 }
 
-#file-inp{
+#file-inp {
   position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
   visibility: hidden;
 }
-.right-icon{
+.right-icon {
   font-size: 1.3rem;
   margin-top: -0.2rem;
 }
-.editor-h{
+.editor-h {
   display: flex;
   align-items: center;
   text-align: center;
@@ -381,76 +369,70 @@ color: whitesmoke;
   justify-content: left;
 }
 @media only screen and (max-width: 620px) {
-.editor-h{
-  width: 100%;
-  padding-left: 5rem;
-}
-.hashes{
-  display: block;
-  width: 100%;
-  margin-top: 1rem;
-
-}  
-.hash-div{
-  margin-top: 1.5rem;
-}
-.hash-text{
-  margin-left: -1rem;
-}
+  .editor-h {
+    width: 100%;
+    padding-left: 5rem;
+  }
+  .hashes {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .hash-div {
+    margin-top: 1.5rem;
+  }
+  .hash-text {
+    margin-left: -1rem;
+  }
 }
 
 @media only screen and (max-width: 450px) {
-  .editor-h{
+  .editor-h {
     width: 100%;
     padding-left: 3.5rem;
   }
-  
-  .editor-c{
+
+  .editor-c {
     width: 100%;
     margin-left: 0%;
   }
-  .hash-text{
+  .hash-text {
     margin-left: -2rem;
     font-size: 0.8rem;
   }
- .hash-submit{
-  font-size: 0.8rem;
- 
-}
-.category-select{
-  font-size: 0.9rem;
-  padding: 0.5rem 0rem;
-}
-.up-btn{
-  font-size: 0.9rem;
-}
-.inst-btn{
-  font-size: 0.9rem;
-}
-.right-icon{
-  font-size: 1rem;
-}
+  .hash-submit {
+    font-size: 0.8rem;
+  }
+  .category-select {
+    font-size: 0.9rem;
+    padding: 0.5rem 0rem;
+  }
+  .up-btn {
+    font-size: 0.9rem;
+  }
+  .inst-btn {
+    font-size: 0.9rem;
+  }
+  .right-icon {
+    font-size: 1rem;
+  }
 }
 @media only screen and (max-width: 420px) {
-
-
 }
 
 @media only screen and (max-width: 1050px) {
-.editor-line{
-  top: 180px;
-}
+  .editor-line {
+    top: 180px;
+  }
 }
 @media only screen and (max-width: 610px) {
-  .editor-line{
+  .editor-line {
     top: 240px;
   }
-  
 }
 
 @media only screen and (max-width: 560px) {
-  .editor-line{
+  .editor-line {
     top: 270px;
   }
-  
 }

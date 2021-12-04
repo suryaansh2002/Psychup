@@ -45,7 +45,7 @@ router.post("/login", async (req, res) => {
           id: user._id,
           name: user.name,
           email: user.email,
-          editorial:user.editorial
+          editorial: user.editorial,
         },
         JWT_SECRET
       );
@@ -87,16 +87,18 @@ router.post("/signup", async (req, res) => {
       email,
       password,
     });
-    const user={
+    const user = {
       name,
       email,
-    }
-    return res.json({ status: "success", error: "",data:user });
+    };
+    return res.json({ status: "success", error: "", data: user });
   } catch (error) {
-    console.log(error)
+    console.log(error);
     if ((error.code = 11000)) {
-      
-      return res.json({ status: "email error", error: "Email ID already used." });
+      return res.json({
+        status: "email error",
+        error: "Email ID already used.",
+      });
     }
     throw error;
   }

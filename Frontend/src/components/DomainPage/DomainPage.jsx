@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import ArticleCard from "../Articles/ArticleCard";
 import "../Articles/Articles.css";
+import "./DomainPage.css";
 
 export default function DomainPage() {
   const [articleList, setArticleList] = useState([]);
@@ -27,7 +28,11 @@ export default function DomainPage() {
         console.log(error);
       });
   }, [domain]);
-
+  const map = {
+    Gender: "Gender Psychology",
+    Mental: "Mental Health",
+    Behaviour: "Behaviour Psychology",
+  };
   const length = articleList.length;
   const articles2 = [];
   for (var i = 0; i < length; i++) {
@@ -44,15 +49,15 @@ export default function DomainPage() {
   }
 
   for (var i = 0; i < articles2.length; i++) {
-    articles2[i].desc_short=removeTags(articles2[i].desc)
+    articles2[i].desc_short = removeTags(articles2[i].desc);
     articles2[i].desc_short = articles2[i].desc_short.slice(0, 100) + "...";
-    }
+  }
   return (
     <div id="articles-h">
       {articles2 ? (
         <div className="articles-main">
           <div className="main-content-container">
-            <div className="main-title">
+            <div className="main-title title-a">
               <h2>{d}:</h2>
             </div>
             <div className="article-card-container" id="all">

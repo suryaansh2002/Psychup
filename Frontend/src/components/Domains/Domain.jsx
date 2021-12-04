@@ -1,11 +1,11 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./Domain.css";
 import Slider from "react-slick";
 import CarouselCard from "./CarouselCard";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 export default function About() {
-  const [carSettings,setCarSettings]=useState()
-  
+  const [carSettings, setCarSettings] = useState();
+
   var settings = {
     dots: true,
     infinite: true,
@@ -29,7 +29,6 @@ export default function About() {
     centerPadding: "20px",
     pauseOnHover: false,
     centerMode: true,
-
   };
   var settings3 = {
     dots: true,
@@ -42,13 +41,14 @@ export default function About() {
     centerPadding: "20px",
     pauseOnHover: false,
     centerMode: true,
-
   };
-  useEffect(()=>{
-
-    window.innerWidth>1000?setCarSettings(settings):window.innerWidth>800?setCarSettings(settings3): setCarSettings(settings2)
-
-  },[window.innerWidth])
+  useEffect(() => {
+    window.innerWidth > 1000
+      ? setCarSettings(settings)
+      : window.innerWidth > 800
+      ? setCarSettings(settings3)
+      : setCarSettings(settings2);
+  }, [window.innerWidth]);
   return (
     <div id="domains-h">
       <div className="domain-main">

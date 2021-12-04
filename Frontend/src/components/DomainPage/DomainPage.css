@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 
 .article-heading {
@@ -20,7 +20,6 @@
 }
 
 .article-card:hover {
-  transform: scale(1.08); /* Equal to scaleX(0.7) scaleY(0.7) */
 }
 
 .card-container {
@@ -62,4 +61,12 @@
   padding: 1rem;
   font-family: "Inter", sans-serif;
   opacity: 0.8;
+} */
+
+.main-title h2 {
+  padding-top: 5rem;
+}
+#all {
+  min-height: 100vh;
+  padding-top: 10rem;
 }

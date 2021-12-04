@@ -1,10 +1,10 @@
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
 
 export default function Footer() {
-    return (
-        <div className="footer-main">
-            <div>Footer</div>
-        </div>
-    )
+  return (
+    <div className="footer-main">
+      <div>Footer</div>
+    </div>
+  );
 }

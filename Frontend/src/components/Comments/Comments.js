@@ -34,8 +34,8 @@ export default function Comments(props) {
     const data = {
       text,
       parentId,
-      userId: props.user ? props.user.id: null,
-      username: props.user ? props.user.name:null,
+      userId: props.user ? props.user.id : null,
+      username: props.user ? props.user.name : null,
       postId: props.post._id,
     };
     axios
@@ -76,28 +76,30 @@ export default function Comments(props) {
         it functional, spent 2 days on this! Cheers!
       </div> */}
       <div className="comment-header">Comments ({postComments.length})</div>
-      {props.user?<div>
-      <CommentForm submitLabel="Submit" handleSubmit={addComment} placeholder="Add a comment..."/>
-      </div>
-      :null
-      }
+      {props.user ? (
+        <div>
+          <CommentForm
+            submitLabel="Submit"
+            handleSubmit={addComment}
+            placeholder="Add a comment..."
+          />
+        </div>
+      ) : null}
       {rootComments.map((rootComment) => (
         <div className="comment-box">
-        
-        <SingleComment
-          key={rootComment.id}
-          comment={rootComment}
-          replies={getReplies(rootComment._id)}
-          currentUserId={currentUserId}
-          deleteComment={deleteComment}
-          activeComment={activeComment}
-          setActiveComment={setActiveComment}
-          addComment={addComment}
-          updateComment={updateComment}
-          user={props.user ? props.user : null}
-
-        />
-      </div>
+          <SingleComment
+            key={rootComment.id}
+            comment={rootComment}
+            replies={getReplies(rootComment._id)}
+            currentUserId={currentUserId}
+            deleteComment={deleteComment}
+            activeComment={activeComment}
+            setActiveComment={setActiveComment}
+            addComment={addComment}
+            updateComment={updateComment}
+            user={props.user ? props.user : null}
+          />
+        </div>
       ))}
     </div>
   );

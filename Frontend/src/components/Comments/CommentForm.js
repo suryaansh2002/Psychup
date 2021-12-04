@@ -6,7 +6,7 @@ export default function CommentForm({
   handleSubmit,
   submitLabel,
   handleCancel,
-  placeholder
+  placeholder,
 }) {
   const [text, setText] = useState(initialText);
   const isDisabled = text.length === 0;
@@ -23,7 +23,11 @@ export default function CommentForm({
         onChange={(e) => setText(e.target.value)}
         placeholder={placeholder}
       ></textarea>
-      <button className="btn btn-primary form-button" type="submit" disabled={isDisabled}>
+      <button
+        className="btn btn-primary form-button"
+        type="submit"
+        disabled={isDisabled}
+      >
         {submitLabel}
       </button>
       {hasCancelButton ? (

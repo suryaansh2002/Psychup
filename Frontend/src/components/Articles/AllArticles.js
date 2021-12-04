@@ -13,10 +13,9 @@ import ArticleCard from "./ArticleCard";
 export default function AllArticles() {
   const [articleList, setArticleList] = useState([]);
 
-  const splitArr = window.location.pathname.split('/')
-  const domain=splitArr[2];
-  console.log(domain)
- 
+  const splitArr = window.location.pathname.split("/");
+  const domain = splitArr[2];
+  console.log(domain);
 
   useEffect(() => {
     axios
@@ -29,22 +28,19 @@ export default function AllArticles() {
       });
   }, [domain]);
 
-const length=articleList.length
+  const length = articleList.length;
 
-const articles2=articleList
+  const articles2 = articleList;
 
-function removeTags(str) {
-  
-  str = str.toString();
-  return str.replace( /(<([^>]+)>)/ig, '');
+  function removeTags(str) {
+    str = str.toString();
+    return str.replace(/(<([^>]+)>)/gi, "");
+  }
 
-}
-
-
-for(var i=0;i<articles2.length;i++){
-  articles2[i].desc_short=removeTags(articles2[i].desc)
-  articles2[i].desc_short = articles2[i].desc_short.slice(0, 100) + "...";
-}
+  for (var i = 0; i < articles2.length; i++) {
+    articles2[i].desc_short = removeTags(articles2[i].desc);
+    articles2[i].desc_short = articles2[i].desc_short.slice(0, 100) + "...";
+  }
   return (
     <div id="articles-h">
       {articles2 ? (
@@ -64,12 +60,9 @@ for(var i=0;i<articles2.length;i++){
                   desc={removeTags(article.desc_short)}
                   categoryName={article.categoryName}
                   id={article._id}
-
                 />
-              ))
-               }
-</div>
-        
+              ))}
+            </div>
           </div>
         </div>
       ) : null}

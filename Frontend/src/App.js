@@ -53,7 +53,15 @@ function App() {
 
         <Switch>
           <Route exact path="/">
-            <Home logToggle={logToggle} setLogToggle={setLogToggle} />
+            <Home
+              side={side}
+              setSide={setSide}
+              logToggle={logToggle}
+              setLogToggle={setLogToggle}
+              cookie={cookie}
+              removeCookie={removeCookie}
+              setCookie={setCookie}
+            />
             <Domains />
             <AboutUs />
             <Articles />

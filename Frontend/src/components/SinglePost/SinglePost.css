@@ -49,7 +49,7 @@
   line-height: 200%;
   margin-top: 1.5rem;
 }
-.article-content h1{
+.article-content h1 {
   font-size: 1.6rem;
   font-weight: 600;
   margin: 0.5rem 0rem;
@@ -302,7 +302,7 @@ h3 {
   outline: none;
 }
 
-.article-domain{
+.article-domain {
   font-size: 1.2rem;
   margin: 1rem 0rem;
   font-weight: 700;

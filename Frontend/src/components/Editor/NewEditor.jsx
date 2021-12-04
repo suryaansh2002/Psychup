@@ -121,33 +121,28 @@ export default function Editor(props) {
   return (
     <div className="container">
       <div className="editor-header">
-
-      <div className="div">Add cover photo</div>
-      <div className="div">Add Hashtags</div>
-      
-      
-      
-      
+        <div className="div">Add cover photo</div>
+        <div className="div">Add Hashtags</div>
       </div>
       <ReactMde
-      value={value}
-      onChange={setValue}
-      selectedTab={selectedTab}
-      onTabChange={setSelectedTab}
-      generateMarkdownPreview={(markdown) =>
-        Promise.resolve(converter.makeHtml(markdown))
-      }
-      loadSuggestions={loadSuggestions}
-      childProps={{
-        writeButton: {
-          tabIndex: -1,
-        },
-      }}
-    />
+        value={value}
+        onChange={setValue}
+        selectedTab={selectedTab}
+        onTabChange={setSelectedTab}
+        generateMarkdownPreview={(markdown) =>
+          Promise.resolve(converter.makeHtml(markdown))
+        }
+        loadSuggestions={loadSuggestions}
+        childProps={{
+          writeButton: {
+            tabIndex: -1,
+          },
+        }}
+      />
       <div className="editor-line">
-        You can use the editor to add a new article, using markdown
-        syntaxt, such as # for h1, ## for h2, etc. If you are not familiar with
-        markdown syntaxt you can checkout{" "}
+        You can use the editor to add a new article, using markdown syntaxt,
+        such as # for h1, ## for h2, etc. If you are not familiar with markdown
+        syntaxt you can checkout{" "}
         <a target="_blank" href="https://www.markdownguide.org/basic-syntax/">
           Markdown Syntaxt
         </a>{" "}
@@ -195,77 +190,71 @@ export default function Editor(props) {
 
         <div className="row">
           <div className="col-lg-6">
-          <label className="editor-label">ENTER TODAY'S DATE:</label>
-        <div>
-          <input
-            className="editor-input"
-            type="text"
-            placeholder="Enter today's date"
-            onChange={(e) => setDate(e.target.value)}
-          ></input>
-        </div>
-
+            <label className="editor-label">ENTER TODAY'S DATE:</label>
+            <div>
+              <input
+                className="editor-input"
+                type="text"
+                placeholder="Enter today's date"
+                onChange={(e) => setDate(e.target.value)}
+              ></input>
+            </div>
           </div>
           <div className="col-lg-6">
-          <label className="editor-label">
-          HOW MANY HASHTAGS WOULD YOU LIKE TO ADD?
-        </label>
-        <div>
-          <select
-            className="editor-select"
-            name="hash"
-            onChange={(e) => setHash(e.target.value)}
-          >
-            <option value={0}>0</option>
-            <option value={1}>1</option>
-            <option value={2}>2</option>
-            <option value={3}>3</option>
-            <option value={4}>4</option>
-            <option value={5}>5</option>
-          </select>
-          {hashcontainer}
-        </div>
-
+            <label className="editor-label">
+              HOW MANY HASHTAGS WOULD YOU LIKE TO ADD?
+            </label>
+            <div>
+              <select
+                className="editor-select"
+                name="hash"
+                onChange={(e) => setHash(e.target.value)}
+              >
+                <option value={0}>0</option>
+                <option value={1}>1</option>
+                <option value={2}>2</option>
+                <option value={3}>3</option>
+                <option value={4}>4</option>
+                <option value={5}>5</option>
+              </select>
+              {hashcontainer}
+            </div>
           </div>
-
         </div>
         <div className="row">
           <div className="col-lg-6">
-          <label className="editor-label">
-          CHOOSE A CATEGORY FOR YOUR ARTICLE:
-        </label>
-        <div>
-          <select
-            className="editor-select"
-            name="hash"
-            onChange={(e) => setCategory(e.target.value)}
-          >
-            <option value={""}>Choose A Category</option>
-            <option value={"Gender"}>Gender Psychology</option>
-            <option value={"Behaviour"}>Behaviour Psycholody</option>
-            <option value={"Mental"}>Mental Health</option>
-            <option value={4}>Domain 4</option>
-            <option value={5}>Domain 5</option>
-          </select>
-        </div>
-
+            <label className="editor-label">
+              CHOOSE A CATEGORY FOR YOUR ARTICLE:
+            </label>
+            <div>
+              <select
+                className="editor-select"
+                name="hash"
+                onChange={(e) => setCategory(e.target.value)}
+              >
+                <option value={""}>Choose A Category</option>
+                <option value={"Gender"}>Gender Psychology</option>
+                <option value={"Behaviour"}>Behaviour Psycholody</option>
+                <option value={"Mental"}>Mental Health</option>
+                <option value={4}>Domain 4</option>
+                <option value={5}>Domain 5</option>
+              </select>
+            </div>
           </div>
           <div className="col-lg-6">
-          <label className="editor-label">ARTICLE DURATION:</label>
-        <div>
-          <input
-            type="number"
-            placeholder="Enter Article Duration"
-            onChange={(e) => setDuration(e.target.value)}
-            className="editor-input"
-          ></input>
-        </div>
-
+            <label className="editor-label">ARTICLE DURATION:</label>
+            <div>
+              <input
+                type="number"
+                placeholder="Enter Article Duration"
+                onChange={(e) => setDuration(e.target.value)}
+                className="editor-input"
+              ></input>
+            </div>
           </div>
-
         </div>
       </div>
-     
+
       <div className="button-container">
         <button className="article-submit" type="button" onClick={getDisplay}>
           Submit Article
