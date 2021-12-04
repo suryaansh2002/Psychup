@@ -137,7 +137,7 @@ export default function Editor(props) {
     <div className="editor-outer-container">
       <div className="editor-container">
         <div className="editor-h">
-          <div className="row">
+          <div className="row top-row">
             <button className="up-btn" onClick={() => upload()}>
               <BiImage className="icon" /> Upload cover image
             </button>
@@ -174,19 +174,23 @@ export default function Editor(props) {
                 Add Hashtag
               </button>
             </form>
-            {/* <button
-              className={visibility ? "inst-btn set-z" : "inst-btn"}
-              onClick={() => setVisibility(!visibility)}
+            <button
+              className="inst-btn"
+              data-toggle="modal"
+              data-target="#instructionsmodal"
+              // className={visibility ? "inst-btn set-z" : "inst-btn"}
+              // onClick={() => setVisibility(!visibility)}
             >
-              Instructions <AiFillDownCircle className="right-icon" />
-            </button> */}
+              Instructions
+              {/* <AiFillDownCircle className="right-icon" /> */}
+            </button>
           </div>
         </div>
 
         <div className="row hashes">
           {hashCookie["hash"] && (
             <div className="">
-              <h5 className="hash-title">Your Hashtags are:</h5>
+              <h5 className="hash-title">Hashtags:</h5>
               {hashCookie["hash"] &&
                 hashCookie["hash"].map((hash) => (
                   <div className="div-hash">{hash}</div>
@@ -202,62 +206,88 @@ export default function Editor(props) {
           onChange={(e) => setTitle(e.target.value)}
         ></textarea>
         <div className="col-lg-12">
-          <div className="row">
-            <div className="col-lg-4">
-              <div className="editor-line">
-                You can use the editor to add a new article, using markdown
-                syntaxt, such as # for h1, ## for h2, etc. If you are not
-                familiar with markdown syntaxt you can checkout{" "}
-                <a
-                  target="_blank"
-                  href="https://www.markdownguide.org/basic-syntax/"
-                >
-                  Markdown Syntaxt
-                </a>{" "}
-                to better help write your article. If you have already written
-                your Article in .doc or .docx file you can use{" "}
-                <a target="_blank" href="https://word2md.com/">
-                  Word to Markdown Converter
-                </a>{" "}
-                to convert your article in markdown format and then paste the
-                contents below. Please upload a cover image for your article.
-                You can also include hashtags along with your article for users
-                to better understand the topics your article pertains too. You
-                can include upto a maximum of 5 hashtags to each article. For
-                any queries or issues regarding the same to reach out to us at{" "}
-                <a href="mailto: psychupcontact13@gmail.com" target="_blank">
-                  contact@psychup.com{" "}
-                </a>
-              </div>
+          <div className="main-editor">
+            <ReactMde
+              value={value}
+              onChange={setValue}
+              selectedTab={selectedTab}
+              onTabChange={setSelectedTab}
+              generateMarkdownPreview={(markdown) =>
+                Promise.resolve(converter.makeHtml(markdown))
+              }
+              id="editor"
+              loadSuggestions={loadSuggestions}
+              childProps={{
+                writeButton: {
+                  tabIndex: -1,
+                },
+              }}
+            />
+          </div>
+          <div className="button-container">
+            <button
+              className="article-submit"
+              type="button"
+              onClick={getDisplay}
+            >
+              Submit Article
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="instructionsmodal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">
+                Instructions
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-            <div className="col-lg-8">
-              <div className="main-editor">
-                <ReactMde
-                  value={value}
-                  onChange={setValue}
-                  selectedTab={selectedTab}
-                  onTabChange={setSelectedTab}
-                  generateMarkdownPreview={(markdown) =>
-                    Promise.resolve(converter.makeHtml(markdown))
-                  }
-                  loadSuggestions={loadSuggestions}
-                  childProps={{
-                    writeButton: {
-                      tabIndex: -1,
-                    },
-                  }}
-                />
-              </div>
-              <div className="button-container">
-                <button
-                  className="article-submit"
-                  type="button"
-                  onClick={getDisplay}
-                >
-                  Submit Article
-                </button>
-              </div>
+            <div class="modal-body">
+              You can use the editor to add a new article, using markdown
+              syntaxt, such as # for h1, ## for h2, etc. If you are not familiar
+              with markdown syntaxt you can checkout{" "}
+              <a
+                target="_blank"
+                href="https://www.markdownguide.org/basic-syntax/"
+              >
+                Markdown Syntaxt
+              </a>{" "}
+              to better help write your article. If you have already written
+              your Article in .doc or .docx file you can use{" "}
+              <a target="_blank" href="https://word2md.com/">
+                Word to Markdown Converter
+              </a>{" "}
+              to convert your article in markdown format and then paste the
+              contents below. Please upload a cover image for your article. You
+              can also include hashtags along with your article for users to
+              better understand the topics your article pertains too. You can
+              include upto a maximum of 5 hashtags to each article. For any
+              queries or issues regarding the same to reach out to us at{" "}
+              <a href="mailto: psychupcontact13@gmail.com" target="_blank">
+                contact@psychup.com{" "}
+              </a>
             </div>
+            {/* <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> */}
           </div>
         </div>
       </div>

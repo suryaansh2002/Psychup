@@ -3,7 +3,7 @@ import "./Aboutus.css";
 import services from "../../images/img10.png";
 import articles from "../../images/img14.png";
 import news from "../../images/img15.png";
-import pt from "../../images/img16.png";
+import pt from "../../images/img9.png";
 
 export default function AboutUs() {
   return (
@@ -23,7 +23,8 @@ export default function AboutUs() {
                   includes the study of conscious and unconscious phenomena,
                   including feelings and thoughts. It is an academic discipline
                   of immense scope, crossing the boundaries between the natural
-                  and social sciences Psychology is the science of mind and
+                  and social sciences.
+                  <br/><br/> Psychology is the science of mind and
                   behavior. Psychology includes the study of conscious and
                   unconscious phenomena, including feelings and thoughts. It is
                   an academic discipline of immense scope, crossing the
@@ -55,13 +56,14 @@ export default function AboutUs() {
                 bibendum.
               </div>
             </div> */}
+            <div className="services-h">OUR SERVICES</div>
             <div className="s-img-c">
               <img src={articles} className="services-img" />
               <img src={news} className="services-img" />
               <img src={pt} className="services-img" />
             </div>
 
-            <img src={services} className="serv-img" />
+            {/* <img src={services} className="serv-img" /> */}
           </div>
         </div>
       </div>

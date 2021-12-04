@@ -40,6 +40,7 @@
   padding: 0;
 }
 
+
 .editor-title textarea {
   height: 2rem;
   outline: none;
@@ -47,15 +48,12 @@
 
 .main-editor {
   margin-top: 2rem;
-  width: 100%;
+  width: 80%;
   align-items: center;
   text-align: center;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 15px;
   justify-content: center;
-}
-.editor-c {
-  width: 80%;
   margin-left: 10%;
 }
 
@@ -74,7 +72,7 @@
 }
 .hash-box {
   color: grey;
-  background-color: #eeeeee;
+  background-color: #5e0d0d;
   height: auto;
   border-radius: 8px;
   justify-content: center;
@@ -115,7 +113,7 @@
 }
 
 .hover-divs:hover {
-  color: rgb(85, 81, 81);
+
 }
 
 .editor-line {
@@ -149,17 +147,19 @@
 }
 .div-hash {
   display: inline-block;
-  background-color: rgb(0, 0, 0, 0.2);
+  background-color: rgb(7, 75, 66,0.5);
   padding: 0.4rem 1rem;
   border-radius: 8px;
   margin: 0rem 0.4rem;
+  color: white;
   font-size: 0.9rem;
   font-family: "Courier New", Courier, monospace;
 }
 .hash-title {
   display: inline-block;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
+  color: rgb(7, 75, 66);
   padding-top: 0.5rem;
 }
 .editor-label {
@@ -224,6 +224,12 @@
   padding: 1rem;
 }
 
+.modal-body a{
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 textarea::-webkit-input-placeholder {
   color: rgb(114, 108, 108);
 }
@@ -274,7 +280,7 @@ textarea::placeholder {
 .icon2 {
   display: inline;
 }
-.up-btn {
+.up-btn,.inst-btn,.submit-hash {
   border: none;
   width: auto;
   margin-top: 1rem;
@@ -282,17 +288,19 @@ textarea::placeholder {
   border-radius: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-family: Arial, Helvetica, sans-serif;
-  color: gray;
+  color: white;
   background: transparent;
   display: inline;
   font-size: 1rem;
+  background-color: rgba(13, 124, 109, 0.7);
+  transition: 0.3s;
 }
-.up-btn:hover {
-  background-color: rgba(211, 211, 211, 0.384);
-  color: black;
+.up-btn:hover,.inst-btn:hover,.submit-hash:hover {
+ cursor: pointer;
+ background-color: rgb(7, 75, 66);
 }
 
-.inst-btn {
+/* .inst-btn {
   border: none;
   width: auto;
   margin-top: 1.2rem;
@@ -308,7 +316,7 @@ textarea::placeholder {
 .inst-btn:hover {
   background-color: rgba(211, 211, 211, 0.384);
   color: black;
-}
+} */
 
 .category-select {
   display: inline;
@@ -320,35 +328,19 @@ textarea::placeholder {
   margin-top: 1rem;
 }
 
-.category-select:hover {
-  background-color: rgba(211, 211, 211, 0.384);
-  color: black;
-  padding-right: 0.5rem;
-  border-radius: 10px;
-}
-
 .hash-text {
   display: inline;
   width: auto;
   border: none;
   margin-top: 1.5rem;
-  border-bottom: 1.5px solid rgb(0, 0, 0, 0.2);
   margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  border: 1px solid rgb(7, 75, 66);
+  padding: 0.3rem 1rem;
 }
-.submit-hash {
-  background-color: rgb(0, 0, 0, 0.2);
-  font-size: 0.8rem;
-  display: inline;
-  border: none;
-  margin-left: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-.submit-hash:hover {
-  background-color: rgb(0, 0, 0, 0.7);
-  color: whitesmoke;
-}
+
 .myform {
   display: inline;
   width: auto;
@@ -371,6 +363,9 @@ textarea::placeholder {
   text-align: center;
   width: 100%;
   justify-content: left;
+}
+.hashes,.editor-title{
+  margin-left: 1.5rem;
 }
 @media only screen and (max-width: 620px) {
   .editor-h {
@@ -441,3 +436,32 @@ textarea::placeholder {
     top: 270px;
   }
 }
+
+.top-row{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.up-btn{
+
+}
+.category-select{
+  background: transparent;
+  border: 2px solid rgb(7, 75, 66);
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(13, 124, 109, 0.7);
+  font-weight: 600;
+  border: none;
+}
+.category-select:hover{
+cursor: pointer;
+}
+
+option:hover{
+  cursor: pointer;
+}
+

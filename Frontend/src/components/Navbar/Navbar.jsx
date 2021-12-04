@@ -223,7 +223,7 @@ export default function NavBar(props) {
               <Link to={"/editor"} target="_blank">
                 <button
                   type="button"
-                  className="btn btn-primary top-button"
+                  className="btn  top-button"
                   onClick={() => toggleInitials()}
                 >
                   Add an Article

@@ -101,7 +101,7 @@ function App() {
             component={() => <DomainPage />}
           />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </div>
   );

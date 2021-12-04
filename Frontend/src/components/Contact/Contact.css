@@ -16,6 +16,7 @@
   justify-content: center;
   position: relative;
   z-index: 10;
+  padding-top: 2rem;
 }
 .form-box {
   width: 25rem;
@@ -25,9 +26,10 @@
   background-color: rgb(134, 197, 201, 0.85);
   padding: 1rem;
   border-radius: 10px;
-  margin-top: 1rem;
+  margin-top: 2rem;
   box-shadow: 4px 4px 7px;
   padding-top: 1.8rem;
+  padding-bottom: 1.5rem;
 }
 
 .form-box textarea {

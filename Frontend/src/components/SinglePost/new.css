@@ -58,10 +58,10 @@
 .a-content {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1.1rem;
-  margin-top: 1.5rem;
   text-align: justify;
-  padding: 0rem 3rem;
+  padding: 1.5rem 10rem;
   margin-left: -0.5rem;
+  padding-top: 2.5rem;
 }
 
 .d-clock {
