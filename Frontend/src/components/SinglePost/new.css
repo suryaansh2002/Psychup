@@ -44,9 +44,9 @@
   margin-bottom: 2rem;
 }
 .a-row {
-  margin-top: 2rem;
+  margin-top: 5rem;
   padding: 0rem 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -62,4 +62,42 @@
   text-align: justify;
   padding: 0rem 3rem;
   margin-left: -0.5rem;
+}
+
+.d-clock {
+  margin-top: -0.2rem;
+}
+
+.all-b {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  background-color: rgba(3, 88, 84, 0.534);
+  color: white;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+.comment-c {
+  position: relative;
+  width: 100%;
+  /* min-height: 100vh; */
+}
+
+.l-i {
+  height: 260px;
+  width: auto;
+  position: absolute;
+  left: 2rem;
+  margin-top: 15rem;
+}
+
+.r-i {
+  height: 320px;
+  width: auto;
+  position: absolute;
+  right: 2rem;
+  margin-top: 13rem;
 }

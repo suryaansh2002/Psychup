@@ -109,7 +109,10 @@
 .top-button {
   width: 11rem;
   font-weight: bold;
+  color: white;
   margin: 0.5rem;
+  background: rgba(3, 88, 84, 0.534);
+  border: rgba(3, 88, 84, 0.534);
 }
 .logout-button {
   background: white;

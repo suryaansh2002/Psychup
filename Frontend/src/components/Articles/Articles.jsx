@@ -91,7 +91,7 @@ export default function Articles() {
             <div className="main-title title-a">
               <h2>Featured Articles</h2>
             </div>
-            <div className="article-card-container">
+            <div className="">
               <Slider className="slider" {...carSettings}>
                 {articles2.map((article) => (
                   <div>

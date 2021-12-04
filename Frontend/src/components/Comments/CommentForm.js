@@ -23,11 +23,7 @@ export default function CommentForm({
         onChange={(e) => setText(e.target.value)}
         placeholder={placeholder}
       ></textarea>
-      <button
-        className="btn btn-primary form-button"
-        type="submit"
-        disabled={isDisabled}
-      >
+      <button className="btn  form-button" type="submit" disabled={isDisabled}>
         {submitLabel}
       </button>
       {hasCancelButton ? (

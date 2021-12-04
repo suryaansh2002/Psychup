@@ -9,7 +9,10 @@ import { GoSmiley } from "react-icons/go";
 import { HiThumbUp } from "react-icons/hi";
 import { articles } from "../Articles/ArticleList";
 import ArticleCard from "../Articles/ArticleCard";
+import { Link } from "react-router-dom";
 import Comments from "../Comments/Comments";
+import leftImg from "../../images/img20.png";
+import rightImg from "../../images/img19.png";
 
 export default function SinglePost(props) {
   function removeTags(str) {
@@ -107,6 +110,7 @@ export default function SinglePost(props) {
                       Published on: {article.date}
                     </div>
                     <div className="col-lg-6 duration">
+                      <AiFillClockCircle className="d-clock" />
                       {article.duration} min read.
                     </div>
                   </div>
@@ -119,6 +123,23 @@ export default function SinglePost(props) {
                 ></div>
               </div>
             </div>
+
+            <div className="row comment-c">
+              {/* <img src={leftImg} className="l-i"/> */}
+
+              {props.cookie.user ? (
+                <Comments user={props.cookie.user} post={article} />
+              ) : (
+                <Comments post={article} />
+              )}
+              {/* <img src={rightImg} className="r-i"/> */}
+            </div>
+            <div className="row">
+              <Link to={"/articles"}>
+                <button className="all-b">Checkout All Our Articles</button>
+              </Link>
+            </div>
+
             {/* <div className="outer-article-container">
               <div className="single-article-container">
                 <div className="img-container">

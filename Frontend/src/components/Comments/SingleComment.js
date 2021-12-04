@@ -3,7 +3,7 @@ import "./comments.css";
 import axios from "axios";
 import { FaRegUserCircle } from "react-icons/fa";
 import CommentForm from "./CommentForm";
-import { FaRegComment } from "react-icons/fa";
+import { FaComments } from "react-icons/fa";
 
 export default function SingleComment(props) {
   const fiveMinutes = 300000;
@@ -29,6 +29,7 @@ export default function SingleComment(props) {
 
   const [comments, setComments] = useState([]);
   useEffect(() => {
+    setTog("");
     axios
       .get("http://localhost:5000/comments")
       .then((res) => setComments(res.data));
@@ -57,6 +58,14 @@ export default function SingleComment(props) {
   console.log(props.activeComment);
   console.log(isEditing);
   const replyId = props.comment._id;
+  const [tog, setTog] = useState("");
+  function showReplies(id) {
+    setTog("");
+    setTog(id);
+  }
+  function hideReplies(id) {
+    setTog("");
+  }
   return (
     <div className="single-comment-container">
       <div>
@@ -67,9 +76,12 @@ export default function SingleComment(props) {
         </div>
         <div className="comment-user">
           {props.comment.username}
-          <div>
+          <div className="comment-d">
             {new Date(props.comment.createdAt).toLocaleDateString()}{" "}
-            {new Date(props.comment.createdAt).toLocaleTimeString()}
+            {new Date().toLocaleDateString() ==
+            new Date(props.comment.createdAt).toLocaleDateString()
+              ? new Date(props.comment.createdAt).toLocaleTimeString()
+              : null}
           </div>
         </div>
       </div>
@@ -100,7 +112,7 @@ export default function SingleComment(props) {
               })
             }
           >
-            <FaRegComment className="comment-icon" />
+            <FaComments className="comment-icon" />
             Reply
           </button>
         ) : null}
@@ -133,7 +145,27 @@ export default function SingleComment(props) {
           handleSubmit={(text) => props.addComment(text, replyId)}
         />
       ) : null}
-      {props.replies.length ? (
+      {props.comment.parentId == null && props.replies.length ? (
+        <div>
+          {tog == "" ? (
+            <button
+              className="tog-r"
+              onClick={() => showReplies(props.comment._id)}
+            >
+              View Replies
+            </button>
+          ) : (
+            <button
+              className="tog-r"
+              onClick={() => hideReplies(props.comment._id)}
+            >
+              Hide Replies
+            </button>
+          )}
+        </div>
+      ) : null}
+      {props.replies.length &&
+      (tog == props.comment._id || props.comment.parentId !== null) ? (
         <div className="replies">
           {props.replies.map((reply) => (
             <div>

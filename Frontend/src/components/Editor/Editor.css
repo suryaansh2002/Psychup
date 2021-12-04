@@ -8,11 +8,14 @@
 }
 .editor-container {
   min-height: calc(100vh - 5rem);
-  width: 80%;
+  width: 100%;
+  padding: 0.5rem;
+  background-image: url("../../images/img1.png");
+  background-size: cover;
 }
 
 .article-submit {
-  background-color: rgba(0, 0, 255, 0.6);
+  background-color: rgba(8, 96, 107, 0.6);
   color: white;
   text-align: center;
   padding: 1rem;
@@ -47,6 +50,8 @@
   width: 100%;
   align-items: center;
   text-align: center;
+  background-color: white;
+  border-radius: 5px;
   justify-content: center;
 }
 .editor-c {
@@ -115,13 +120,12 @@
 
 .editor-line {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 1rem;
   text-align: justify;
   margin-bottom: 2rem;
-  position: absolute;
-  top: 125px;
-  left: 0px;
   z-index: 100;
+  width: 100%;
+  margin-top: 2rem;
+  font-size: 0.9rem;
 }
 .editor-line a {
   color: black;
@@ -377,6 +381,7 @@ textarea::placeholder {
     display: block;
     width: 100%;
     margin-top: 1rem;
+    margin-left: -5rem;
   }
   .hash-div {
     margin-top: 1.5rem;

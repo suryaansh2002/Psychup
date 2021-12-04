@@ -3,40 +3,66 @@
   display: inline-block;
   border-radius: 10px;
   margin: 1rem;
-  background-color: rgba(240, 240, 255);
-  background-color: #f2f3f6;
-  background-color: white;
   padding: 0.5rem;
   margin-left: 20px;
 }
 .comment-box {
-  background-color: #f2f3f6;
   width: 100%;
   align-items: center;
   justify-content: center;
 }
 
+.c-b-c {
+  background-color: rgba(255, 255, 255, 0.5);
+  background: transparent;
+  margin-top: 1rem;
+}
+.c-bg {
+  background-image: url("../../images/img18.png");
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("../../images/img18.png");
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  padding-top: 1.5rem;
+  /* min-height: 500px; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .user-button-c {
   display: inline-block;
   vertical-align: top;
 }
 .user-button {
-  background-color: #f2f3f6;
+  background-color: rgba(8, 121, 121, 0.5);
   width: 40px;
   height: 40px;
   border-radius: 50%;
   border: none;
   font-weight: 600;
   margin-right: 1rem;
+  color: white;
+}
+.comment-header {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(4, 61, 61);
 }
 .comment-user {
   display: inline-block;
   text-align: left;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin: 0.5rem;
   margin-top: 0rem;
   margin-left: -0.5rem;
   border: none;
+}
+.comment-d {
+  font-size: 0.7rem;
 }
 .comment-body {
   text-align: left;
@@ -51,11 +77,19 @@
   width: 50%;
 }
 .form-text {
-  width: 100%;
+  width: 80%;
   border-radius: 5px;
   margin: 1rem;
-  margin-left: 0;
+  margin-left: 10%;
   border: 1px solid rgb(0, 0, 0, 0.2);
+  height: 5rem;
+}
+.tog-r {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  background-color: transparent;
+  margin-top: 0.5rem;
 }
 
 .comment-actions {
@@ -85,5 +119,13 @@
 .form-button {
   font-size: 0.9rem;
   margin: 0.5rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
   margin-bottom: 0.5rem;
+  background-color: rgba(8, 121, 121, 0.9);
+  color: white;
+  font-weight: 600;
+}
+.comment-icon {
+  margin-right: 0.5rem;
 }

@@ -76,31 +76,36 @@ export default function Comments(props) {
         it functional, spent 2 days on this! Cheers!
       </div> */}
       <div className="comment-header">Comments ({postComments.length})</div>
-      {props.user ? (
-        <div>
-          <CommentForm
-            submitLabel="Submit"
-            handleSubmit={addComment}
-            placeholder="Add a comment..."
-          />
+      <div className="c-b-c">
+        <div className="c-bg">
+          {props.user ? (
+            <div>
+              <CommentForm
+                submitLabel="Submit"
+                handleSubmit={addComment}
+                placeholder="Add a comment..."
+              />
+            </div>
+          ) : null}
+
+          {rootComments.map((rootComment) => (
+            <div className="comment-box">
+              <SingleComment
+                key={rootComment.id}
+                comment={rootComment}
+                replies={getReplies(rootComment._id)}
+                currentUserId={currentUserId}
+                deleteComment={deleteComment}
+                activeComment={activeComment}
+                setActiveComment={setActiveComment}
+                addComment={addComment}
+                updateComment={updateComment}
+                user={props.user ? props.user : null}
+              />
+            </div>
+          ))}
         </div>
-      ) : null}
-      {rootComments.map((rootComment) => (
-        <div className="comment-box">
-          <SingleComment
-            key={rootComment.id}
-            comment={rootComment}
-            replies={getReplies(rootComment._id)}
-            currentUserId={currentUserId}
-            deleteComment={deleteComment}
-            activeComment={activeComment}
-            setActiveComment={setActiveComment}
-            addComment={addComment}
-            updateComment={updateComment}
-            user={props.user ? props.user : null}
-          />
-        </div>
-      ))}
+      </div>
     </div>
   );
 }
