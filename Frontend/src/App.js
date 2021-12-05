@@ -23,6 +23,7 @@ import { useCookies } from "react-cookie";
 import AllArticles from "./components/Articles/AllArticles";
 import AboutUs from "./components/AboutUs/AboutUs";
 import News from "./components/News/News";
+import Team from "./components/Team/Team";
 
 function App() {
   const [side, setSide] = useState(false);
@@ -99,6 +100,11 @@ function App() {
             path="/articles/:domain"
             exact
             component={() => <DomainPage />}
+          />
+          <Route
+            path="/team"
+            exact
+            component={() => <Team/>}
           />
         </Switch>
         {/* <Footer /> */}

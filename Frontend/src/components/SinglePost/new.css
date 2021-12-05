@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@900&display=swap');
 .s-a-main {
   min-height: 100vh;
   background-image: url("../../images/img1.png");
@@ -8,10 +9,13 @@
 }
 .s-a-title {
   font-size: 2.4rem;
-  font-weight: 700;
+  font-weight: 1000;
   margin: 1.5rem 0rem;
   text-align: center;
   margin-top: 4rem;
+  font-family: 'Philosopher', sans-serif;
+
+
 }
 
 .s-a-domain {
@@ -33,6 +37,9 @@
   background: rgba(3, 88, 84, 0.534);
   display: inline-block;
   color: white;
+  font-family: 'Philosopher', sans-serif;
+
+  
 }
 
 .s-a-author {
@@ -48,6 +55,8 @@
   padding: 0rem 2rem;
   font-size: 1rem;
   font-weight: 600;
+  font-family: 'Philosopher', sans-serif;
+
 }
 
 .duration {

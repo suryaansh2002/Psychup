@@ -67,6 +67,7 @@
   font-weight: 700;
   border-radius: 10px;
   transition: 0.3s;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.1rem;
 }
 
@@ -98,6 +99,8 @@
 .main-title {
   margin-top: -5rem;
   margin-bottom: 1.5rem;
+  font-family: 'Philosopher', sans-serif;
+font-weight: 800;
 }
 
 @media only screen and (max-width: 1200px) {

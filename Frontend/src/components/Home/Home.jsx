@@ -5,7 +5,7 @@ import img from "./home.png";
 import leftimg from "../../images/img3.png";
 import rightimg from "../../images/img4.png";
 // import lineImg from "../../images/img5.png";
-
+import logo from "../../images/logo.png";
 export default function Home(props) {
   const handleLog = () => {
     props.setSide(true);
@@ -30,7 +30,7 @@ export default function Home(props) {
           Enter Our Community
         </button>
       )}
-
+      <img className="home-logo" src={logo} />{" "}
       <div class="wrapper">
         <div class="circle"></div>
         <div class="circle"></div>
@@ -44,7 +44,6 @@ export default function Home(props) {
         <div class="circle"></div>
         <div class="circle"></div>
       </div>
-
       <div className="row">
         <div className="col-lg-12">
           <div className="intro">
@@ -58,9 +57,7 @@ export default function Home(props) {
           </div>
         </div>
       </div>
-
       {/* </div> */}
-
       {/* <div className="home-main">
         <div className="row">
           <div className="col-lg-12">

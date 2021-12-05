@@ -47,6 +47,10 @@
   /* -webkit-transform: translateX(-50%); */
   transform: translateX(-50%);
   z-index: 100;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 800;
+
+
 }
 .img-d {
   width: 100%;
@@ -61,6 +65,8 @@
   font-weight: 700;
   text-align: center;
   margin: 1rem 0rem;
+  font-family: 'Philosopher', sans-serif;
+
 }
 
 .article-card-container {
@@ -112,6 +118,8 @@
   text-align: left;
   margin: 0.5rem;
   font-size: 0.9rem;
+  font-family: 'Raleway', cursive;
+
 }
 
 .checkout-all {
@@ -160,6 +168,9 @@
   margin-top: -0.5rem;
   font-size: 0.9rem;
   font-weight: 600;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 900;
+
 }
 .main-title h2 {
   padding-top: 1.5rem;

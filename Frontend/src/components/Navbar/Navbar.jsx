@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import "./Sidebar.css";
 import "./Navbar.css";
-
+import logo from '../../images/logo.png'
 import axios from "axios";
 import { useHistory, Link } from "react-router-dom";
 
@@ -163,7 +163,7 @@ export default function NavBar(props) {
   return (
     <>
       <Navbar variant="light" expand="lg" className="nav-main">
-        <Navbar.Brand href="/" className="navbar-header"></Navbar.Brand>
+        <Navbar.Brand href="/" className="navbar-header"><img className="nav-logo" src={logo}></img></Navbar.Brand>
         <Navbar.Toggle
           className="nav-button"
           aria-controls="basic-navbar-nav"
@@ -197,6 +197,11 @@ export default function NavBar(props) {
               <Link2 className="n-l" to={"/#contact-h"}>
                 Contact
               </Link2>
+            </Nav.Link>
+            <Nav.Link href="#contact-h" className="nav-link">
+              <Link className="n-l" to={"/team"}>
+                Team
+              </Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

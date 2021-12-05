@@ -1,0 +1,32 @@
+import React from "react";
+import "./Team.css";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
+export default function TeamCard(props) {
+  return (
+    <div className="t-card">
+      <div>
+        <img src={props.imgSrc} className="t-card-img"></img>
+      </div>
+      <div className="t-card-name">{props.name}</div>
+      <div className="t-card-role">{props.role}</div>
+      <div className="t-card-quote">{props.quote}</div>
+
+      <div className="row">
+        <a className="t-icon-c">
+          <FaGithub className="t-icon-c" />
+        </a>
+        <a className="t-icon-c">
+          <FaLinkedin className="t-icon-c" />
+        </a>{" "}
+        <a className="t-icon-c">
+          <FaInstagram className="t-icon-c" />
+        </a>{" "}
+        <a className="t-icon-c">
+          <MdEmail className="t-icon-c" />
+        </a>
+      </div>
+    </div>
+  );
+}
