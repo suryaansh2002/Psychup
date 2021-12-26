@@ -3,7 +3,7 @@ import "./Aboutus.css";
 import services from "../../images/img10.png";
 import articles from "../../images/img14.png";
 import news from "../../images/img15.png";
-import pt from "../../images/img9.png";
+import brain from "../../images/23.png";
 
 export default function AboutUs() {
   return (
@@ -18,7 +18,6 @@ export default function AboutUs() {
           <div className="col-lg-6  temp">
             <div className="about-container">
               <div className="c-2">
-                <div className="aboutus-text">
                   Psychology is the science of mind and behavior. Psychology
                   includes the study of conscious and unconscious phenomena,
                   including feelings and thoughts. It is an academic discipline
@@ -29,12 +28,13 @@ export default function AboutUs() {
                   unconscious phenomena, including feelings and thoughts. It is
                   an academic discipline of immense scope, crossing the
                   boundaries between the natural and social sciences.{" "}
-                </div>
               </div>
             </div>
           </div>
 
           <div className="col-lg-6 bc">
+          <img src={brain} className="brain-img" />
+          <div className="services-h">OUR SERVICES</div>
             {/* <div className="serv-card">
               Articles
               <div className="serv-desc">
@@ -56,12 +56,6 @@ export default function AboutUs() {
                 bibendum.
               </div>
             </div> */}
-            <div className="services-h">OUR SERVICES</div>
-            <div className="s-img-c">
-              <img src={articles} className="services-img" />
-              <img src={news} className="services-img" />
-              <img src={pt} className="services-img" />
-            </div>
 
             {/* <img src={services} className="serv-img" /> */}
           </div>

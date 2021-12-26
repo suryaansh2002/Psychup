@@ -82,8 +82,8 @@
   font-size: 1.2rem;
 }
 .nav-logo{
-  width: 7rem;
-  height: 7rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 .initials-button {
@@ -188,7 +188,7 @@
     width: 100%;
   }
   .nav-main {
-    min-height: 5rem;
+    min-height: 4rem;
     padding-bottom: 1.4rem;
     height: auto;
   }
@@ -197,7 +197,14 @@
     right: 60px;
     top: 15px;
   }
+  .nav-logo{
+    width: 3rem;
+    height: 3rem;
+    margin: -1rem;
+    margin-top: -2rem;
+  }
 }
+
 
 .modal-link {
   color: rgba(3, 51, 49, 0.897);

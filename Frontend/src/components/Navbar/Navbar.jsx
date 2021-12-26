@@ -41,8 +41,7 @@ export default function NavBar(props) {
     } catch (error) {}
   };
   useEffect(() => {
-    props.setSide(true);
-    props.setSide(false);
+   props.setLogToggle(true)
   }, []);
 
   const [email, setEmail] = useState("");
@@ -85,9 +84,6 @@ export default function NavBar(props) {
     });
   }
 
-  function toggleform() {
-    props.setLogToggle(!props.logToggle);
-  }
   const url = "http://localhost:5000";
   // Can replace this url of wherever backend deployed so that dont have
   // to replace it everywhere
@@ -202,6 +198,11 @@ export default function NavBar(props) {
               <Link className="n-l" to={"/team"}>
                 Team
               </Link>
+            </Nav.Link>
+            <Nav.Link href="/news" className="nav-link">
+              <Link2 className="n-l" to={"/"}>
+                News
+              </Link2>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

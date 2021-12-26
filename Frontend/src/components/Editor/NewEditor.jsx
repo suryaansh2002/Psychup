@@ -122,7 +122,7 @@ export default function Editor(props) {
     <div className="container">
       <div className="editor-header">
         <div className="div">Add cover photo</div>
-        <div className="div">Add Hashtags</div>
+        <div className="div">Add shtags</div>
       </div>
       <ReactMde
         value={value}

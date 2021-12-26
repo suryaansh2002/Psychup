@@ -1,3 +1,6 @@
+.editor-responsive {
+  visibility: hidden;
+}
 *:focus {
   outline: 0;
 }
@@ -38,23 +41,28 @@
   border: none;
   margin-bottom: -2rem;
   padding: 0;
+  margin-left: 5%;
 }
-
 
 .editor-title textarea {
   height: 2rem;
   outline: none;
+  text-align: center;
+  margin-top: -5rem;
+  background-color: aqua;
 }
 
 .main-editor {
-  margin-top: 2rem;
-  width: 80%;
+  margin-top: 0rem;
+  width: 95%;
   align-items: center;
   text-align: center;
   background-color: white;
   border-radius: 15px;
   justify-content: center;
-  margin-left: 10%;
+  display: inline-block;
+  margin-left: 2.5%;
+  height: 100vh;
 }
 
 .hover-divs {
@@ -113,7 +121,6 @@
 }
 
 .hover-divs:hover {
-
 }
 
 .editor-line {
@@ -146,14 +153,16 @@
   background-color: rgb(0, 0, 0);
 }
 .div-hash {
-  display: inline-block;
-  background-color: rgb(7, 75, 66,0.5);
+  display: block;
+  background-color: rgb(7, 75, 66, 0.5);
   padding: 0.4rem 1rem;
   border-radius: 8px;
-  margin: 0rem 0.4rem;
   color: white;
   font-size: 0.9rem;
   font-family: "Courier New", Courier, monospace;
+  width: 80%;
+  margin: 1rem 0rem;
+  margin-left: 10%;
 }
 .hash-title {
   display: inline-block;
@@ -224,7 +233,7 @@
   padding: 1rem;
 }
 
-.modal-body a{
+.modal-body a {
   color: black;
   font-weight: 700;
   text-decoration: none;
@@ -265,22 +274,13 @@ textarea::placeholder {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@media only screen and (max-width: 520px) {
-  .editor-line {
-    font-size: 0.9rem;
-    top: 0px;
-    right: 0px;
-  }
-  .article-submit {
-    font-size: 0.9rem;
-    padding: 0.8rem;
-  }
-}
-
 .icon2 {
   display: inline;
 }
-.up-btn,.inst-btn,.submit-hash {
+.up-btn,
+.inst-btn,
+.submit-hash,
+.category-select {
   border: none;
   width: auto;
   margin-top: 1rem;
@@ -288,49 +288,59 @@ textarea::placeholder {
   border-radius: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  color: black;
   background: transparent;
   display: inline;
   font-size: 1rem;
   background-color: rgba(13, 124, 109, 0.7);
   transition: 0.3s;
+  width: 90%;
+  margin-left: 5%;
+  background-color: rgb(255, 255, 255, 0.7);
+  color: rgb(11, 75, 66);
 }
-.up-btn:hover,.inst-btn:hover,.submit-hash:hover {
- cursor: pointer;
- background-color: rgb(7, 75, 66);
+.submit-hash-2 {
+  float: right;
+  background-color: rgb(255, 255, 255, 0.7);
+  color: rgb(11, 75, 66);
+  border: none;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 900;
+  z-index: 500;
+
+  display: flex;
+  margin-top: -32.5px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.plus {
+  margin-top: -5px;
+  /* background-color: #bbbb; */
+  padding: 0;
+}
+.up-btn:hover,
+.inst-btn:hover,
+.submit-hash:hover {
+  cursor: pointer;
 }
 
-/* .inst-btn {
-  border: none;
-  width: auto;
-  margin-top: 1.2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-family: Arial, Helvetica, sans-serif;
-  color: gray;
-  background: transparent;
-  display: inline;
-  font-size: 1rem;
-}
-.inst-btn:hover {
-  background-color: rgba(211, 211, 211, 0.384);
-  color: black;
-} */
-
-.category-select {
-  display: inline;
-  width: auto;
-  font-size: 1rem;
-  color: gray;
-  border: none;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 1rem;
+.left-col {
+  padding-top: 10rem;
+  margin-top: 2rem;
+  border-radius: 20px;
+  background-color: rgb(7, 75, 66);
+  background-color: rgba(13, 124, 109, 0.7);
+  background-color: rgba(13, 124, 109, 0.7);
 }
 
 .hash-text {
   display: inline;
-  width: auto;
+  width: 75%;
   border: none;
   margin-top: 1.5rem;
   margin-left: 1rem;
@@ -339,6 +349,10 @@ textarea::placeholder {
   border-radius: 5px;
   border: 1px solid rgb(7, 75, 66);
   padding: 0.3rem 1rem;
+  color: white;
+  color: black;
+  background-color: rgb(255, 255, 255, 0.7);
+  border: none;
 }
 
 .myform {
@@ -364,10 +378,35 @@ textarea::placeholder {
   width: 100%;
   justify-content: left;
 }
-.hashes,.editor-title{
-  margin-left: 1.5rem;
+.editor-title {
 }
-@media only screen and (max-width: 620px) {
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  text-align: center;
+}
+
+.btn-yes,
+.btn-no {
+  background-color: rgb(11, 75, 66);
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1.5rem;
+  transition: 0.3s;
+}
+
+.btn-no {
+  background-color: #5e0d0d;
+}
+.btn-yes:hover,
+.btn-no:hover {
+  color: white;
+  transform: scale(1.05);
+}
+
+/* @media only screen and (max-width: 620px) {
   .editor-h {
     width: 100%;
     padding-left: 5rem;
@@ -417,8 +456,7 @@ textarea::placeholder {
     font-size: 1rem;
   }
 }
-@media only screen and (max-width: 420px) {
-}
+
 
 @media only screen and (max-width: 1050px) {
   .editor-line {
@@ -438,17 +476,19 @@ textarea::placeholder {
 }
 
 .top-row{
-  display: flex;
+  display: inline-block;
   justify-content: space-between;
-  width: 100%;
+  width: 20%;
   padding: 0rem 2rem;
   margin-bottom: 2rem;
+  height: 100vh;
+
 }
 
 .up-btn{
 
 }
-.category-select{
+/* .category-select{
   background: transparent;
   border: 2px solid rgb(7, 75, 66);
   border-radius: 5px;
@@ -456,7 +496,11 @@ textarea::placeholder {
   background-color: rgba(13, 124, 109, 0.7);
   font-weight: 600;
   border: none;
-}
+  z-index: 500;
+  padding: 0.5rem 1rem;
+  width: 90%;
+  margin-left: 5%;
+} 
 .category-select:hover{
 cursor: pointer;
 }
@@ -465,3 +509,33 @@ option:hover{
   cursor: pointer;
 }
 
+
+.submit-hash-2:hover{
+  cursor: pointer;
+  } */
+
+.editor-responsive {
+  display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+  .editor-outer-container {
+    visibility: hidden;
+    display: none;
+  }
+
+  .editor-responsive {
+    visibility: visible;
+    display: block;
+    background-image: url("../../images/img1.png");
+    height: calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0rem 1.5rem;
+  }
+}

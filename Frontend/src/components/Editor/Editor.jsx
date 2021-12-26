@@ -8,6 +8,7 @@ import marked from "marked";
 import { useCookies } from "react-cookie";
 import { BiImage, BiCategory } from "react-icons/bi";
 import { AiFillDownCircle } from "react-icons/ai";
+import { MdAdd } from "react-icons/md";
 
 import axios from "axios";
 import Input from "./Input";
@@ -134,111 +135,183 @@ export default function Editor(props) {
     inp.click();
   }
   return (
-    <div className="editor-outer-container">
-      <div className="editor-container">
-        <div className="editor-h">
-          <div className="row top-row">
-            <button className="up-btn" onClick={() => upload()}>
+    <>
+
+    <div className="editor-responsive">
+
+Sorry, the editor is not available on smaller screens, please use a desktop device.
+    </div>
+      <div className="editor-outer-container">
+        <div className="editor-container">
+          <div className="row">
+            <div className="col-lg-2 left-col">
+              <input
+                type="text"
+                placeholder="Enter Cover Image Link"
+                className="up-btn"
+                onChange={(e) => setImgSrc(e.target.value)}
+              ></input>
+              {/* <button className="up-btn" onClick={() => upload()}>
               <BiImage className="icon" /> Upload cover image
             </button>
-            <input type="file" id="file-inp" />
-            <select
-              className="category-select"
-              name="hash"
-              onChange={(e) => setCategory(e.target.value)}
-            >
-              <option value={""}> Choose A Category</option>
-              <option value={"Gender"}>Gender Psychology</option>
-              <option value={"Behaviour"}>Behaviour Psycholody</option>
-              <option value={"Mental"}>Mental Health</option>
-              <option value={4}>Domain 4</option>
-              <option value={5}>Domain 5</option>
-            </select>
-            <form className="myform">
-              <input
-                className="hash-text"
-                type="text"
-                placeholder="Add a hashtag"
-                onChange={(e) => setHash(e.target.value)}
-                required
-              ></input>
-              <button
-                type="submit"
-                className="  submit-hash"
-                onClick={(e) => {
-                  e.preventDefault();
-                  addHash();
-                }}
-                disabled={hashContainer.length > 4}
+            <input type="file" id="file-inp" /> */}
+              <select
+                className="category-select"
+                name="hash"
+                onChange={(e) => setCategory(e.target.value)}
               >
-                Add Hashtag
+                <option value={""}> Choose A Category</option>
+                <option value={"Gender"}>Gender Psychology</option>
+                <option value={"Behaviour"}>Behaviour Psycholody</option>
+                <option value={"Mental"}>Mental Health</option>
+                <option value={4}>Domain 4</option>
+                <option value={5}>Domain 5</option>
+              </select>
+              <form className="myform">
+                <input
+                  className="hash-text"
+                  type="text"
+                  placeholder="Add a hashtag"
+                  onChange={(e) => setHash(e.target.value)}
+                  required
+                ></input>
+                <button
+                  type="submit"
+                  className="submit-hash-2"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    addHash();
+                  }}
+                  disabled={hashContainer.length > 4}
+                >
+                  {/* <MdAdd className=""/> */}
+                  <span className="plus">+</span>
+                </button>
+              </form>
+              <div className="hashes">
+                {hashCookie["hash"] && (
+                  <div className="">
+                    {hashCookie["hash"] &&
+                      hashCookie["hash"].map((hash) => (
+                        <div className="div-hash">#{hash}</div>
+                      ))}
+                  </div>
+                )}
+              </div>
+              <button
+                className="inst-btn"
+                data-toggle="modal"
+                data-target="#instructionsmodal"
+                // className={visibility ? "inst-btn set-z" : "inst-btn"}
+                // onClick={() => setVisibility(!visibility)}
+              >
+                Instructions
               </button>
-            </form>
-            <button
-              className="inst-btn"
-              data-toggle="modal"
-              data-target="#instructionsmodal"
-              // className={visibility ? "inst-btn set-z" : "inst-btn"}
-              // onClick={() => setVisibility(!visibility)}
-            >
-              Instructions
-              {/* <AiFillDownCircle className="right-icon" /> */}
-            </button>
-          </div>
-        </div>
-
-        <div className="row hashes">
-          {hashCookie["hash"] && (
-            <div className="">
-              <h5 className="hash-title">Hashtags:</h5>
-              {hashCookie["hash"] &&
-                hashCookie["hash"].map((hash) => (
-                  <div className="div-hash">{hash}</div>
-                ))}
             </div>
-          )}
-        </div>
-        {visibility && <div className="editor-box"> </div>}
-
-        <textarea
-          className="editor-title"
-          placeholder="Title..."
-          onChange={(e) => setTitle(e.target.value)}
-        ></textarea>
-        <div className="col-lg-12">
-          <div className="main-editor">
-            <ReactMde
-              value={value}
-              onChange={setValue}
-              selectedTab={selectedTab}
-              onTabChange={setSelectedTab}
-              generateMarkdownPreview={(markdown) =>
-                Promise.resolve(converter.makeHtml(markdown))
-              }
-              id="editor"
-              loadSuggestions={loadSuggestions}
-              childProps={{
-                writeButton: {
-                  tabIndex: -1,
-                },
-              }}
-            />
+            <div className="col-lg-10">
+              <textarea
+                className="editor-title"
+                placeholder="Title..."
+                onChange={(e) => setTitle(e.target.value)}
+              ></textarea>
+              <div className="main-editor">
+                <ReactMde
+                  value={value}
+                  onChange={setValue}
+                  selectedTab={selectedTab}
+                  onTabChange={setSelectedTab}
+                  generateMarkdownPreview={(markdown) =>
+                    Promise.resolve(converter.makeHtml(markdown))
+                  }
+                  id="editor"
+                  minEditorHeight="500"
+                  loadSuggestions={loadSuggestions}
+                  childProps={{
+                    writeButton: {
+                      tabIndex: -1,
+                    },
+                  }}
+                />
+              </div>
+              <div className="button-container">
+                <button
+                  className="article-submit"
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#submitModal"
+                >
+                  Submit Article
+                </button>
+              </div>
+            </div>
           </div>
-          <div className="button-container">
-            <button
-              className="article-submit"
-              type="button"
-              onClick={getDisplay}
-            >
-              Submit Article
-            </button>
+        </div>
+
+        <div
+          class="modal fade"
+          id="instructionsmodal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">
+                  Instructions
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                You can use the editor to add a new article, using markdown
+                syntaxt, such as # for h1, ## for h2, etc. If you are not
+                familiar with markdown syntaxt you can checkout{" "}
+                <a
+                  target="_blank"
+                  href="https://www.markdownguide.org/basic-syntax/"
+                >
+                  Markdown Syntaxt
+                </a>{" "}
+                to better help write your article. If you have already written
+                your Article in .doc or .docx file you can use{" "}
+                <a target="_blank" href="https://word2md.com/">
+                  Word to Markdown Converter
+                </a>{" "}
+                to convert your article in markdown format and then paste the
+                contents below. To get a link for cover image or any other
+                images you wish to include, head over to{" "}
+                <a target="_blank" href="https://postimages.org/">
+                  Post Image
+                </a>
+                , upload the image, and copy the <i>Direct Link</i> you get from
+                there. You can also include hashtags along with your article for
+                users to better understand the topics your article pertains too.
+                You can include upto a maximum of 5 hashtags to each article.
+                For any queries or issues regarding the same to reach out to us
+                at{" "}
+                <a href="mailto: psychupcontact13@gmail.com" target="_blank">
+                  contact@psychup.com{" "}
+                </a>
+              </div>
+              {/* <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> */}
+            </div>
           </div>
         </div>
       </div>
-
       <div
         class="modal fade"
-        id="instructionsmodal"
+        id="submitModal"
         tabindex="-1"
         role="dialog"
         aria-labelledby="exampleModalCenterTitle"
@@ -247,8 +320,12 @@ export default function Editor(props) {
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">
-                Instructions
+              <h5
+                class="modal-title"
+                id="exampleModalLongTitle"
+                style={{ textAlign: "center" }}
+              >
+                Are You Sure You Want To Submit?
               </h5>
               <button
                 type="button"
@@ -259,38 +336,25 @@ export default function Editor(props) {
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
-              You can use the editor to add a new article, using markdown
-              syntaxt, such as # for h1, ## for h2, etc. If you are not familiar
-              with markdown syntaxt you can checkout{" "}
-              <a
-                target="_blank"
-                href="https://www.markdownguide.org/basic-syntax/"
-              >
-                Markdown Syntaxt
-              </a>{" "}
-              to better help write your article. If you have already written
-              your Article in .doc or .docx file you can use{" "}
-              <a target="_blank" href="https://word2md.com/">
-                Word to Markdown Converter
-              </a>{" "}
-              to convert your article in markdown format and then paste the
-              contents below. Please upload a cover image for your article. You
-              can also include hashtags along with your article for users to
-              better understand the topics your article pertains too. You can
-              include upto a maximum of 5 hashtags to each article. For any
-              queries or issues regarding the same to reach out to us at{" "}
-              <a href="mailto: psychupcontact13@gmail.com" target="_blank">
-                contact@psychup.com{" "}
-              </a>
+
+            <div
+              class="modal-footer"
+              style={{
+                textAlign: "center",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <button type="button" class="btn btn-no" data-dismiss="modal">
+                No
+              </button>
+              <button type="button" class="btn btn-yes" onClick={getDisplay}>
+                Yes
+              </button>
             </div>
-            {/* <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div> */}
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
