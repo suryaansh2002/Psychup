@@ -32,33 +32,10 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="col-lg-6 bc">
+          <div className="col-lg-6">
           <img src={brain} className="brain-img" />
           <div className="services-h">OUR SERVICES</div>
-            {/* <div className="serv-card">
-              Articles
-              <div className="serv-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                bibendum.
-              </div>
-            </div>
-            <div className="serv-card">
-              News
-              <div className="serv-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                bibendum.
-              </div>
-            </div>
-            <div className="serv-card">
-              Personality Test
-              <div className="serv-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                bibendum.
-              </div>
-            </div> */}
-
-            {/* <img src={services} className="serv-img" /> */}
-          </div>
+           </div>
         </div>
       </div>
     </div>
