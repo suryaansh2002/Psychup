@@ -8,6 +8,7 @@
   background-color: #bfe6ff;
   background-image: url("../../images/img1.png");
   background-size: cover;
+  z-index: 1000;
 }
 .navbar-header {
   position: absolute;

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:wght@900&display=swap");
 .s-a-main {
   min-height: 100vh;
   background-image: url("../../images/img1.png");
@@ -14,9 +14,7 @@
   margin: 1.5rem 0rem;
   text-align: center;
   margin-top: 4rem;
-  font-family: 'Philosopher', sans-serif;
-
-
+  font-family: "Philosopher", sans-serif;
 }
 
 .s-a-domain {
@@ -38,9 +36,7 @@
   background: rgba(3, 88, 84, 0.534);
   display: inline-block;
   color: white;
-  font-family: 'Philosopher', sans-serif;
-
-  
+  font-family: "Philosopher", sans-serif;
 }
 
 .s-a-author {
@@ -56,8 +52,7 @@
   padding: 0rem 2rem;
   font-size: 1rem;
   font-weight: 600;
-  font-family: 'Philosopher', sans-serif;
-
+  font-family: "Philosopher", sans-serif;
 }
 
 .duration {
@@ -91,7 +86,6 @@
   font-size: 1.3rem;
 }
 .comment-c {
-  position: relative;
   width: 100%;
   /* min-height: 100vh; */
 }
@@ -111,3 +105,80 @@
   right: 2rem;
   margin-top: 13rem;
 }
+
+@media only screen and (max-width: 520px) {
+  .s-a-img {
+    width: 90%;
+    margin-left: 5%;
+    height: 250px;
+    border-radius: 20px;
+  }
+  .s-a-title {
+    font-size: 1.8rem;
+    font-weight: 1000;
+    margin: 1.5rem 0rem;
+    text-align: center;
+    margin-top: 1rem;
+    font-family: "Philosopher", sans-serif;
+  }
+
+  .s-a-author {
+    text-align: right;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: -1.6rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .s-a-domain {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+  }
+  .hash-box {
+ font-size: 0.8rem; 
+  } 
+  .a-row{
+    width: 100%;
+    margin-top: 2.5rem;
+    padding: 0;
+
+  }
+  .date{
+    width: 60%;
+    font-size: 0.9rem;
+    padding: 0;
+    padding-left: 0.5rem;
+  }
+.duration {
+width: 40%;
+font-size: 0.9rem;
+padding-right: 0.5rem;
+
+}
+.a-content {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  text-align: justify;
+  padding: 1.5rem 5%;
+  margin-left: -0.5rem;
+  padding-top: 2.5rem;
+}
+
+.all-b {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  background-color: rgba(3, 88, 84, 0.534);
+  color: white;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+
+}
+

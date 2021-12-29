@@ -62,19 +62,7 @@ export default function Comments(props) {
   };
   return (
     <div className="container">
-      {/* <div className="info">
-        Okay so UI sucks, focus on functionality, both frontend backend done,
-        integrated anfd fully functional user can add comments from here, once a
-        user adds a comments, the same user or other users can reply to it,
-        forming a chain of replies as you can see,once a user adds a comment,
-        they have the ability to edit or delete that comment, within 5 minutes
-        of posting that comment only, incase they make a mistake, after 5
-        minutes of posting that comment the option to edit or delete goes. Any
-        user who logs into the site can see all the comments but can add a new
-        comment or reply to existing ones only if they are logged in, this is
-        without authentication rn, but will integrate it with our site and make
-        it functional, spent 2 days on this! Cheers!
-      </div> */}
+
       <div className="comment-header">Comments ({postComments.length})</div>
       <div className="c-b-c">
         <div className="c-bg">

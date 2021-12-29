@@ -125,14 +125,12 @@ export default function SinglePost(props) {
             </div>
 
             <div className="row comment-c">
-              {/* <img src={leftImg} className="l-i"/> */}
 
               {props.cookie.user ? (
                 <Comments user={props.cookie.user} post={article} />
               ) : (
                 <Comments post={article} />
               )}
-              {/* <img src={rightImg} className="r-i"/> */}
             </div>
             <div className="row">
               <Link to={"/articles"}>

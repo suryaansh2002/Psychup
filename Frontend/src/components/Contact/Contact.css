@@ -112,7 +112,16 @@ font-weight: 800;
 
 
 }
+@media only screen and (max-width: 920px) {
 
+.bg-img{
+  height: 60vw;
+}
+.form-box{
+  background-color: rgb(134, 197, 201, 0.9);
+
+}
+}
 @media only screen and (max-width: 520px) {
   .form-box {
     width: 22rem;
