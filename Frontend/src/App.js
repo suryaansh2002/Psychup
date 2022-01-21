@@ -24,6 +24,7 @@ import AllArticles from "./components/Articles/AllArticles";
 import AboutUs from "./components/AboutUs/AboutUs";
 import News from "./components/News/News";
 import Team from "./components/Team/Team";
+import PersonalityTest from "./components/PersonalityTest/PersonalityTest";
 
 function App() {
   const [side, setSide] = useState(false);
@@ -94,18 +95,18 @@ function App() {
             )}
           />
           <Route path="/articles" exact component={() => <AllArticles />} />
-          <Route path="/news" exact component={() => <News />} />
+          <Route
+            path="/personality"
+            exact
+            component={() => <PersonalityTest />}
+          />
 
           <Route
             path="/articles/:domain"
             exact
             component={() => <DomainPage />}
           />
-          <Route
-            path="/team"
-            exact
-            component={() => <Team/>}
-          />
+          <Route path="/team" exact component={() => <Team />} />
         </Switch>
         {/* <Footer /> */}
       </Router>

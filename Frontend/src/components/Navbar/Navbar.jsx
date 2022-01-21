@@ -199,8 +199,8 @@ export default function NavBar(props) {
                 Team
               </Link>
             </Nav.Link>
-            <Nav.Link href="/news" className="nav-link">
-              <Link2 className="n-l" to={"/"}>
+            <Nav.Link href="/personality" className="nav-link">
+              <Link2 className="n-l" to={"/personality"}>
                 News
               </Link2>
             </Nav.Link>

@@ -161,11 +161,11 @@ Sorry, the editor is not available on smaller screens, please use a desktop devi
                 onChange={(e) => setCategory(e.target.value)}
               >
                 <option value={""}> Choose A Category</option>
-                <option value={"Gender"}>Gender Psychology</option>
-                <option value={"Behaviour"}>Behaviour Psycholody</option>
-                <option value={"Mental"}>Mental Health</option>
-                <option value={4}>Domain 4</option>
-                <option value={5}>Domain 5</option>
+                <option value={"mhr"}>Mental Health and Rehabiliation</option>
+                <option value={"gdp"}>Gender Diversity Psychology</option>
+                <option value={"iobp"}>Industrial/Organizational Behavioural Psychology</option>
+                <option value={"cmp"}>Consumer/Marketing Psychology</option>
+                <option value={"pdpd"}>Psychology of Disorders and Preliminary Diagnosis</option>
               </select>
               <form className="myform">
                 <input

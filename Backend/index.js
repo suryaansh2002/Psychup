@@ -6,6 +6,8 @@ const authRoute = require("./routes/auth");
 const postRoute = require("./routes/posts");
 const commentsRoute = require("./routes/comments");
 const cookieParser = require("cookie-parser");
+const testRoute = require("./routes/test.js");
+
 
 const cors = require("cors");
 
@@ -41,6 +43,8 @@ const PORT = process.env.PORT || 5000;
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
 app.use("/comments", commentsRoute);
+app.use("/api/sentino", testRoute);
+
 
 app.listen(PORT, (req, res) => {
   console.log(`Server Started at PORT ${PORT}`);

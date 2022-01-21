@@ -62,41 +62,50 @@ export default function About() {
 
         <Slider {...carSettings}>
           <div>
-            <Link to={"/articles/Gender"} className="domain-link">
+            <Link to={"/articles/mhr"} className="domain-link">
               <CarouselCard
-                domain="Gender Psychology"
+                domain="Mental Health and Rehabiliation"
                 about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
               />
             </Link>
           </div>
           <div>
-            <Link to={"/articles/Behaviour"} className="domain-link">
+            <Link to={"/articles/gdp"} className="domain-link">
               <CarouselCard
-                domain="Behaviour Psychology"
+                domain="Gender Diversity Psychology"
                 about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
               />
             </Link>
           </div>
           <div>
-            <Link to={"/articles/Mental"} className="domain-link">
+            <Link to={"/articles/iobp"} className="domain-link">
               <CarouselCard
-                domain="Mental Health"
+                domain="Industrial/Organizational Behavioural Psychology"
                 about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
               />
             </Link>
           </div>
           <div>
-            <Link to={"/articles/domain4"} className="domain-link">
+            <Link to={"/articles/cmp"} className="domain-link">
               <CarouselCard
-                domain="Domain 4"
+                domain="Consumer/Marketing Psychology"
                 about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
               />
             </Link>
           </div>
           <div>
-            <Link to={"/articles/domain5"} className="domain-link">
+            <Link to={"/articles/pdpd"} className="domain-link">
               <CarouselCard
-                domain="Domain 5"
+                domain="Psychology of Disorders and Preliminary Diagnosis"
+                about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
+              />
+            </Link>
+          </div>
+
+          <div>
+            <Link to={"/articles/ppid"} className="domain-link">
+              <CarouselCard
+                domain="Psychology of Personality and Individual Difference"
                 about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
               />
             </Link>

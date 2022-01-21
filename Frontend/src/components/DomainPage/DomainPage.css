@@ -67,6 +67,24 @@
   padding-top: 5rem;
 }
 #all {
-  min-height: 100vh;
   padding-top: 10rem;
+}
+
+.main-c{
+  width: 80%;
+  margin-left: 10%;
+  padding-top: 10rem;
+}
+
+.explore-video{
+  width: 40%;
+  height: auto;
+  margin-top: 2rem;
+}
+
+.article-h2 h3{
+  text-align: center;
+  margin-top: 2rem;
+  font-family: 'Philosopher', sans-serif;
+
 }
