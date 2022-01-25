@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import "./Sidebar.css";
 import "./Navbar.css";
-import logo from '../../images/logo.png'
+import logo from "../../images/logo.png";
 import axios from "axios";
 import { useHistory, Link } from "react-router-dom";
 
@@ -41,7 +41,7 @@ export default function NavBar(props) {
     } catch (error) {}
   };
   useEffect(() => {
-   props.setLogToggle(true)
+    props.setLogToggle(true);
   }, []);
 
   const [email, setEmail] = useState("");
@@ -159,7 +159,9 @@ export default function NavBar(props) {
   return (
     <>
       <Navbar variant="light" expand="lg" className="nav-main">
-        <Navbar.Brand href="/" className="navbar-header"><img className="nav-logo" src={logo}></img></Navbar.Brand>
+        <Navbar.Brand href="/" className="navbar-header">
+          <img className="nav-logo" src={logo}></img>
+        </Navbar.Brand>
         <Navbar.Toggle
           className="nav-button"
           aria-controls="basic-navbar-nav"

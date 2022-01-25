@@ -125,7 +125,6 @@ export default function SinglePost(props) {
             </div>
 
             <div className="row comment-c">
-
               {props.cookie.user ? (
                 <Comments user={props.cookie.user} post={article} />
               ) : (

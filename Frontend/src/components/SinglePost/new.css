@@ -137,48 +137,44 @@
     font-style: italic;
   }
   .hash-box {
- font-size: 0.8rem; 
-  } 
-  .a-row{
+    font-size: 0.8rem;
+  }
+  .a-row {
     width: 100%;
     margin-top: 2.5rem;
     padding: 0;
-
   }
-  .date{
+  .date {
     width: 60%;
     font-size: 0.9rem;
     padding: 0;
     padding-left: 0.5rem;
   }
-.duration {
-width: 40%;
-font-size: 0.9rem;
-padding-right: 0.5rem;
+  .duration {
+    width: 40%;
+    font-size: 0.9rem;
+    padding-right: 0.5rem;
+  }
+  .a-content {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-size: 1rem;
+    text-align: justify;
+    padding: 1.5rem 5%;
+    margin-left: -0.5rem;
+    padding-top: 2.5rem;
+  }
 
+  .all-b {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    background-color: rgba(3, 88, 84, 0.534);
+    color: white;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
 }
-.a-content {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1rem;
-  text-align: justify;
-  padding: 1.5rem 5%;
-  margin-left: -0.5rem;
-  padding-top: 2.5rem;
-}
-
-.all-b {
-  margin-left: 50%;
-  transform: translateX(-50%);
-  border: none;
-  padding: 1rem 1rem;
-  border-radius: 10px;
-  background-color: rgba(3, 88, 84, 0.534);
-  color: white;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-}
-
-
-}
-

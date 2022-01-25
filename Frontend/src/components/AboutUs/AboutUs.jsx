@@ -18,24 +18,25 @@ export default function AboutUs() {
           <div className="col-lg-6  temp">
             <div className="about-container">
               <div className="c-2">
-                  Psychology is the science of mind and behavior. Psychology
-                  includes the study of conscious and unconscious phenomena,
-                  including feelings and thoughts. It is an academic discipline
-                  of immense scope, crossing the boundaries between the natural
-                  and social sciences.
-                  <br/><br/> Psychology is the science of mind and
-                  behavior. Psychology includes the study of conscious and
-                  unconscious phenomena, including feelings and thoughts. It is
-                  an academic discipline of immense scope, crossing the
-                  boundaries between the natural and social sciences.{" "}
+                Psychology is the science of mind and behavior. Psychology
+                includes the study of conscious and unconscious phenomena,
+                including feelings and thoughts. It is an academic discipline of
+                immense scope, crossing the boundaries between the natural and
+                social sciences.
+                <br />
+                <br /> Psychology is the science of mind and behavior.
+                Psychology includes the study of conscious and unconscious
+                phenomena, including feelings and thoughts. It is an academic
+                discipline of immense scope, crossing the boundaries between the
+                natural and social sciences.{" "}
               </div>
             </div>
           </div>
 
           <div className="col-lg-6">
-          <img src={brain} className="brain-img" />
-          <div className="services-h">OUR SERVICES</div>
-           </div>
+            <img src={brain} className="brain-img" />
+            <div className="services-h">OUR SERVICES</div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,19 +1,18 @@
-.personality-main{
-    height: 100vh;
+.personality-main {
+  min-height: 100vh;
 
-    justify-content: center;
-    word-spacing: 1px;
-    padding: 5rem;
-    width: 100%;
-    background-color: #8cd3ffc7;
-    background-image: url("../../images/img1.png");
-    background-size: cover;
-  
+  justify-content: center;
+  word-spacing: 1px;
+  padding: 5rem;
+  width: 100%;
+  background-color: #8cd3ffc7;
+  background-image: url("../../images/img1.png");
+  background-size: cover;
 }
 
-.ans-btn{
-    margin: 0.5rem 1rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    background-color: rgba(0, 255, 255, 0.452);
+.ans-btn {
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: rgba(0, 255, 255, 0.452);
 }

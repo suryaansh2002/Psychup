@@ -62,7 +62,6 @@ export default function Comments(props) {
   };
   return (
     <div className="container">
-
       <div className="comment-header">Comments ({postComments.length})</div>
       <div className="c-b-c">
         <div className="c-bg">

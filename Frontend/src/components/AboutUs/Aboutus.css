@@ -142,28 +142,25 @@
     width: 90%;
     margin-left: 5%;
   }
-  
 }
 @media only screen and (max-width: 800px) {
   .about-container {
-width: 90%;
-margin-left: 5%;
-
-}
+    width: 90%;
+    margin-left: 5%;
+  }
 }
 
 @media only screen and (max-width: 700px) {
-.c-2{
-  width: 80%;
-  margin-left: 10%;
-  font-size: 0.9rem;
-}
-
+  .c-2 {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 0.9rem;
+  }
 }
 @media only screen and (max-width: 600px) {
   .about-container {
-  width: 100%;
-  margin-left: 0;
+    width: 100%;
+    margin-left: 0;
   }
   .c-2 {
     text-align: center;
@@ -173,8 +170,6 @@ margin-left: 5%;
     width: 90%;
     margin-left: 5%;
   }
-  
-
 }
 @media only screen and (max-width: 520px) {
   .about-container {
@@ -192,9 +187,8 @@ margin-left: 5%;
     background-position: center;
     height: 60vh;
     border-radius: 20px;
+  }
 
-    }
-  
   .aboutus-text {
     font-size: 1.1rem;
   }
@@ -207,7 +201,7 @@ margin-left: 5%;
     font-size: 1.6rem;
     margin-bottom: 1.2rem;
   }
-  .services-h{
+  .services-h {
     font-size: 1.3rem;
   }
 
@@ -219,27 +213,21 @@ margin-left: 5%;
     width: 90%;
     height: 400px;
   }
-
-
 }
 
-
 @media only screen and (max-width: 480px) {
-
-  .c-2{
+  .c-2 {
     width: 120%;
     margin: -10%;
     margin-top: -8rem;
   }
-
 }
 
 @media only screen and (max-width: 433px) {
-  .about-container{
+  .about-container {
     height: 60vh;
-
   }
-  .c-2{
+  .c-2 {
     font-size: 0.8rem;
     margin-top: -8rem;
   }
@@ -255,16 +243,14 @@ margin-left: 5%;
 }
 
 @media only screen and (max-width: 390px) {
-.c-2{
-  width: 160%;
-  margin-left: -30%;
-}
-
+  .c-2 {
+    width: 160%;
+    margin-left: -30%;
+  }
 }
 
 @media only screen and (max-width: 370px) {
-.about-container{
-  height: 50vh;
-}
-
+  .about-container {
+    height: 50vh;
+  }
 }

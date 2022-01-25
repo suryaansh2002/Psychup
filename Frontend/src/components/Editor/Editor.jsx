@@ -136,11 +136,10 @@ export default function Editor(props) {
   }
   return (
     <>
-
-    <div className="editor-responsive">
-
-Sorry, the editor is not available on smaller screens, please use a desktop device.
-    </div>
+      <div className="editor-responsive">
+        Sorry, the editor is not available on smaller screens, please use a
+        desktop device.
+      </div>
       <div className="editor-outer-container">
         <div className="editor-container">
           <div className="row">
@@ -163,9 +162,13 @@ Sorry, the editor is not available on smaller screens, please use a desktop devi
                 <option value={""}> Choose A Category</option>
                 <option value={"mhr"}>Mental Health and Rehabiliation</option>
                 <option value={"gdp"}>Gender Diversity Psychology</option>
-                <option value={"iobp"}>Industrial/Organizational Behavioural Psychology</option>
+                <option value={"iobp"}>
+                  Industrial/Organizational Behavioural Psychology
+                </option>
                 <option value={"cmp"}>Consumer/Marketing Psychology</option>
-                <option value={"pdpd"}>Psychology of Disorders and Preliminary Diagnosis</option>
+                <option value={"pdpd"}>
+                  Psychology of Disorders and Preliminary Diagnosis
+                </option>
               </select>
               <form className="myform">
                 <input

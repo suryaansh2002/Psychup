@@ -37,7 +37,7 @@ export default function News() {
     axios
       .get(
         "https://newsapi.org/v2/everything?q=depression&apiKey=a6b2736115464642a67216804d7aeb1b"
-        )
+      )
       .then(
         (response) => (
           console.log(response.data.articles),

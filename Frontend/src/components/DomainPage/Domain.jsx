@@ -53,7 +53,7 @@ export default function DomainPage() {
         <div className="articles-main">
           <div className="main-content-container">
             <div className="main-title">
-              <h2>{d}lflflffl:</h2>
+              <h2>{d}:</h2>
             </div>
             <div className="article-card-container">
               {articles2.map((article) => (

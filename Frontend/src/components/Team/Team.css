@@ -1,64 +1,60 @@
-.teams-main{
-    min-height: calc(100vh - 5rem);
-    background-image: url('../../images/img1.png');
-    background-size: cover;
+.teams-main {
+  min-height: calc(100vh - 5rem);
+  background-image: url("../../images/img1.png");
+  background-size: cover;
 }
-.team-title{
-    text-align: center;
-    padding: 2rem 0rem;
-    font-size: 2rem;
-  font-family: 'Philosopher', sans-serif;
+.team-title {
+  text-align: center;
+  padding: 2rem 0rem;
+  font-size: 2rem;
+  font-family: "Philosopher", sans-serif;
 
-    font-weight: 900;
+  font-weight: 900;
 }
-.t-card-container{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+.t-card-container {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
-.t-card{
-    width: 22rem;
-    background-color: bisque;
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 1rem 2rem;
-    display: inline-block;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    background-image: url('../../images/img8.png');
-    box-shadow: 2px 2px 5px;
-}
-
-.t-card-img{
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
-
+.t-card {
+  width: 22rem;
+  background-color: bisque;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 2rem;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../images/img8.png");
+  box-shadow: 2px 2px 5px;
 }
 
-.t-card-name{
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin: 0.2rem 0rem;
-
-
+.t-card-img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
 }
 
-.t-card-role{
-    font-size: 1rem;
-    font-style: italic;
-    margin: 0.2rem 0rem;
+.t-card-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0.2rem 0rem;
 }
-.t-card-quote{
-    font-size: 0.9rem;
-    text-align: left;
-    margin: 0.2rem 0rem;
 
+.t-card-role {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0.2rem 0rem;
 }
-.t-icon-c{
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    font-size: 1.5rem;
+.t-card-quote {
+  font-size: 0.9rem;
+  text-align: left;
+  margin: 0.2rem 0rem;
+}
+.t-icon-c {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  font-size: 1.5rem;
 }

@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap");
 
 #home-h {
   margin: 0;
@@ -37,21 +36,16 @@
   z-index: 1;
   width: 100%;
   margin-top: 20rem;
-  font-family: 'Philosopher', sans-serif;
-
-
+  font-family: "Philosopher", sans-serif;
 }
 
 .intro-line {
   font-size: 22px;
   margin-top: 2rem;
   text-align: center;
-  font-family: 'Norican', cursive;
-  font-family: 'Roboto', sans-serif;
-  font-family: 'Raleway', cursive;
-
-
-
+  font-family: "Norican", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", cursive;
 }
 .log-button {
   background: transparent;
@@ -61,7 +55,7 @@
   color: blue;
   font-weight: 500;
   font-size: 1.2rem;
-  font-family: 'Philosopher', sans-serif;
+  font-family: "Philosopher", sans-serif;
 }
 .home-main {
 }
@@ -85,12 +79,11 @@
   left: 80px;
   animation: y-axis 2s infinite ease-in-out;
 }
-.home-logo{
+.home-logo {
   position: absolute;
   width: 14rem;
   left: 50%;
-  transform: translate(-50%,20%);
-
+  transform: translate(-50%, 20%);
 }
 @keyframes x-axis {
   50% {
@@ -140,8 +133,6 @@
   }
 }
 
-
-
 @media only screen and (max-width: 1100px) {
   @keyframes x-axis {
     50% {
@@ -168,13 +159,12 @@
     }
   } */
 
-  .wrapper{
+  .wrapper {
     visibility: hidden;
   }
 
   .leftimage {
     visibility: hidden;
-
   }
   .rightimage {
     visibility: hidden;
@@ -182,30 +172,24 @@
 
   .home-main {
     height: auto;
-  height: calc(100vh - 5rem);
-
+    height: calc(100vh - 5rem);
   }
-  
-  .intro-title h1{
+
+  .intro-title h1 {
     font-size: 2rem;
   }
   .intro-line {
     font-size: 1.2rem;
     margin-top: 2rem;
   }
-  
 }
 
-
 @media only screen and (max-width: 620px) {
-
-
-  .intro-title h1{
+  .intro-title h1 {
     width: 90%;
     margin-left: 5%;
     font-size: 1.6rem;
-  margin-top: 20rem;
-
+    margin-top: 20rem;
   }
   .intro-line {
     width: 90%;
@@ -214,33 +198,29 @@
     font-size: 1rem;
     margin-top: 2rem;
   }
-  .home-logo{
-  position: absolute;
-  width: 12rem;
-  left: 50%;
-  top: 15%;
-  transform: translate(-50%,20%);
-  z-index: 0;
-}
-
+  .home-logo {
+    position: absolute;
+    width: 12rem;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, 20%);
+    z-index: 0;
+  }
 }
 
 @media only screen and (max-width: 420px) {
-
-
-  .intro-title h1{
+  .intro-title h1 {
     font-size: 1.3rem;
   }
   .intro-line {
     font-size: 0.9rem;
     margin-top: 2rem;
   }
-  .home-logo{
+  .home-logo {
     position: absolute;
     width: 10rem;
     left: 50%;
     top: 20%;
-    transform: translate(-50%,20%);
-  
+    transform: translate(-50%, 20%);
   }
 }

@@ -2,8 +2,6 @@ const express = require("express");
 const router = express.Router();
 const request = require("request-promise");
 
-
-
 const token = process.env.SENTINO_API_KEY;
 
 const data = {
@@ -22,10 +20,10 @@ const data = {
     },
   ],
   profile: { inventories: ["big5"], indices: ["withdrawal"] },
-}
+};
 
 router.post("/", (req, res) => {
-  console.log(req.body)
+  console.log(req.body);
   const data = req.body;
   const options = {
     method: "POST",
@@ -42,10 +40,10 @@ router.post("/", (req, res) => {
         "append,delete,entries,foreach,get,has,keys,set,values,Authorization",
     },
   };
-  
+
   request(options)
     .then(function (response) {
-      console.log(response)
+      console.log(response);
       res.status(200).json(response);
     })
     .catch(function (err) {

@@ -20,36 +20,37 @@ export default function Team() {
       imgSrc: tj,
       quote:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet pharetra nunc, vel gravida eros blandit non. Phasellus ut risus vel odio malesuada pretium. Maecenas semper sagittis nibh, ac consectetur.",
-    }, {
-        name: "Suryaansh Rathinam",
-        role: "Web Developer",
-        imgSrc: sr,
-        quote:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet pharetra nunc, vel gravida eros blandit non. Phasellus ut risus vel odio malesuada pretium. Maecenas semper sagittis nibh, ac consectetur.",
-      },
-  
-      {
-        name: "Trisha Jaipuriar",
-        role: "Designer",
-        imgSrc: tj,
-        quote:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet pharetra nunc, vel gravida eros blandit non. Phasellus ut risus vel odio malesuada pretium. Maecenas semper sagittis nibh, ac consectetur.",
-      },
-      {
-        name: "Suryaansh Rathinam",
-        role: "Web Developer",
-        imgSrc: sr,
-        quote:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet pharetra nunc, vel gravida eros blandit non. Phasellus ut risus vel odio malesuada pretium. Maecenas semper sagittis nibh, ac consectetur.",
-      },
-  
-      {
-        name: "Trisha Jaipuriar",
-        role: "Designer",
-        imgSrc: tj,
-        quote:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet pharetra nunc, vel gravida eros blandit non. Phasellus ut risus vel odio malesuada pretium. Maecenas semper sagittis nibh, ac consectetur.",
-      },
+    },
+    {
+      name: "Suryaansh Rathinam",
+      role: "Web Developer",
+      imgSrc: sr,
+      quote:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet pharetra nunc, vel gravida eros blandit non. Phasellus ut risus vel odio malesuada pretium. Maecenas semper sagittis nibh, ac consectetur.",
+    },
+
+    {
+      name: "Trisha Jaipuriar",
+      role: "Designer",
+      imgSrc: tj,
+      quote:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet pharetra nunc, vel gravida eros blandit non. Phasellus ut risus vel odio malesuada pretium. Maecenas semper sagittis nibh, ac consectetur.",
+    },
+    {
+      name: "Suryaansh Rathinam",
+      role: "Web Developer",
+      imgSrc: sr,
+      quote:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet pharetra nunc, vel gravida eros blandit non. Phasellus ut risus vel odio malesuada pretium. Maecenas semper sagittis nibh, ac consectetur.",
+    },
+
+    {
+      name: "Trisha Jaipuriar",
+      role: "Designer",
+      imgSrc: tj,
+      quote:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet pharetra nunc, vel gravida eros blandit non. Phasellus ut risus vel odio malesuada pretium. Maecenas semper sagittis nibh, ac consectetur.",
+    },
   ];
 
   return (
@@ -63,7 +64,6 @@ export default function Team() {
             role={member.role}
             quote={member.quote}
           />
-          
         ))}
       </div>
     </div>

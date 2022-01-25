@@ -1,6 +1,5 @@
 import { React, useState, useEffect } from "react";
 import axios from "axios";
-import video1 from "../../videos/video1.mp4";
 
 import {
   BrowserRouter as Router,
@@ -32,11 +31,11 @@ export default function DomainPage() {
   }, [domain]);
   const map = {
     mhr: "Mental Health and Rehabilitation",
-    gdp:"Gender Diversity Psychology",
-    iobp:"Industrial/Organizational Behavioural Psychology",
-    cmp:"Consumer/Marketing Psychology",
-    pdpd:"Psychology of Disorders and Preliminary Diagnosis",
-    ppid:"Psychology of Personality and Individual Difference"
+    gdp: "Gender Diversity Psychology",
+    iobp: "Industrial/Organizational Behavioural Psychology",
+    cmp: "Consumer/Marketing Psychology",
+    pdpd: "Psychology of Disorders and Preliminary Diagnosis",
+    ppid: "Psychology of Personality and Individual Difference",
   };
   const length = articleList.length;
   const articles2 = [];
@@ -92,14 +91,12 @@ export default function DomainPage() {
               iaculis vitae interdum in, sagittis a enim.
             </div>
             <div className="video">
-              <video className="explore-video" controls>
+              {/* <video className="explore-video" controls>
                 <source src={video1} type="video/mp4"></source>
-              </video>
+              </video> */}
             </div>
             <div className="article-h2">
-            <h3>
-            Articles on {map[domain]}
-            </h3>
+              <h3>Articles on {map[domain]}</h3>
             </div>
             <div className="article-card-container" id="all">
               {articles2.map((article) => (

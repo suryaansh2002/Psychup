@@ -67,15 +67,13 @@
   font-weight: 700;
   border-radius: 10px;
   transition: 0.3s;
-  font-family: 'Philosopher', sans-serif;
+  font-family: "Philosopher", sans-serif;
   font-size: 1.1rem;
 }
 
 .contact-submit:hover {
   transform: scale(1.05);
 }
-
-
 
 .bg-img {
   height: 100vh;
@@ -97,8 +95,8 @@
 .main-title {
   margin-top: -5rem;
   margin-bottom: 1.5rem;
-  font-family: 'Philosopher', sans-serif;
-font-weight: 800;
+  font-family: "Philosopher", sans-serif;
+  font-weight: 800;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -109,29 +107,23 @@ font-weight: 800;
   .main-title h2 {
     text-align: center;
   }
-
-
 }
 @media only screen and (max-width: 920px) {
-
-.bg-img{
-  height: 60vw;
-}
-.form-box{
-  background-color: rgb(134, 197, 201, 0.9);
-
-}
+  .bg-img {
+    height: 60vw;
+  }
+  .form-box {
+    background-color: rgb(134, 197, 201, 0.9);
+  }
 }
 @media only screen and (max-width: 520px) {
   .form-box {
     width: 22rem;
   }
-
 }
 
 @media only screen and (max-width: 380px) {
   .form-box {
     width: 20rem;
   }
-
 }
