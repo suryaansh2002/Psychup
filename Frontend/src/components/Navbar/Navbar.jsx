@@ -203,7 +203,7 @@ export default function NavBar(props) {
             </Nav.Link>
             <Nav.Link href="/personality" className="nav-link">
               <Link2 className="n-l" to={"/personality"}>
-                News
+                Personality Test
               </Link2>
             </Nav.Link>
           </Nav>

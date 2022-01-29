@@ -71,9 +71,10 @@
 }
 
 .main-c {
-  width: 80%;
-  margin-left: 10%;
+  width: 60%;
+  margin-left: 20%;
   padding-top: 10rem;
+  text-align: left;
 }
 
 .explore-video {
@@ -86,4 +87,8 @@
   text-align: center;
   margin-top: 2rem;
   font-family: "Philosopher", sans-serif;
+}
+
+.main-c p{
+  margin-top: -1rem;
 }

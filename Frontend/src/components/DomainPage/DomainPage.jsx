@@ -11,7 +11,7 @@ import {
 import ArticleCard from "../Articles/ArticleCard";
 import "../Articles/Articles.css";
 import "./DomainPage.css";
-
+import { details } from "./details";
 export default function DomainPage() {
   const [articleList, setArticleList] = useState([]);
   const [domainName, setDomainName] = useState("");
@@ -56,6 +56,17 @@ export default function DomainPage() {
     articles2[i].desc_short = removeTags(articles2[i].desc);
     articles2[i].desc_short = articles2[i].desc_short.slice(0, 100) + "...";
   }
+
+  const [url,setUrl]=useState("");
+  useEffect(() => {
+    var content = document.querySelector(".main-c");
+    // content.innerHTML=details[domain].content;
+    console.log("d", details[domain].content);
+    console.log("s", domain);
+    console.log("r", content);
+    content.innerHTML = details[domain].content;
+    setUrl(details[domain].video)
+  }, []);
   return (
     <div id="articles-h">
       {articles2 ? (
@@ -64,36 +75,17 @@ export default function DomainPage() {
             <div className="main-title title-a">
               <h2>{map[domain]}</h2>
             </div>
-            <div className="main-c">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              quis ipsum nisl. In imperdiet nunc pulvinar pulvinar ultricies.
-              Etiam mattis ex mi, vel egestas risus pellentesque nec. Aliquam eu
-              nulla pharetra, facilisis nisi vestibulum, semper elit. Sed
-              fringilla maximus turpis, quis scelerisque nunc auctor in. Donec
-              laoreet faucibus odio, eget luctus urna mattis at. Ut euismod mi a
-              velit mollis, eget pharetra diam mattis. Donec ac euismod sapien.
-              Duis condimentum risus sapien, a sagittis mauris condimentum
-              pretium. Nunc in augue non lorem tempor vulputate in quis elit.
-              Fusce blandit purus erat, ut commodo nisi facilisis sed.
-              Vestibulum non urna mauris. Praesent luctus, quam eu euismod
-              dapibus, sapien turpis pellentesque justo, vitae dapibus lorem
-              massa id ligula. Vivamus tincidunt lacus nisi, eget accumsan odio
-              tempus et. Sed pretium ante nec nisi sollicitudin, eu consectetur
-              nisi varius. Suspendisse ac elementum purus, in pulvinar elit.
-              Aenean rhoncus convallis ligula at tristique. Orci varius natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              Donec eget consequat risus. Vestibulum id tincidunt nisl, id
-              bibendum enim. Maecenas ut arcu dictum, tincidunt turpis eget,
-              eleifend lorem. Orci varius natoque penatibus et magnis dis
-              parturient montes, nascetur ridiculus mus. Proin quis urna risus.
-              Suspendisse lobortis ex vel commodo aliquet. Duis aliquet nisl non
-              purus finibus, at lobortis enim tempor. Praesent augue urna,
-              iaculis vitae interdum in, sagittis a enim.
-            </div>
+            <div className="main-c"></div>
             <div className="video">
-              {/* <video className="explore-video" controls>
-                <source src={video1} type="video/mp4"></source>
-              </video> */}
+              <iframe
+                width="560"
+                height="315"
+                src={url}
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </div>
             <div className="article-h2">
               <h3>Articles on {map[domain]}</h3>

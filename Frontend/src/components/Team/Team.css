@@ -28,7 +28,9 @@
   justify-content: center;
   background-image: url("../../images/img8.png");
   box-shadow: 2px 2px 5px;
+  min-height: 350px;
 }
+
 
 .t-card-img {
   width: 8rem;
@@ -57,4 +59,5 @@
   margin-right: auto;
   width: auto;
   font-size: 1.5rem;
+  color: rgb(0, 0, 0,0.6);
 }

@@ -14,16 +14,14 @@ export default function TeamCard(props) {
       <div className="t-card-quote">{props.quote}</div>
 
       <div className="row">
-        <a className="t-icon-c">
+        <a className="t-icon-c" href={props.github} target={"_blank"}>
           <FaGithub className="t-icon-c" />
         </a>
-        <a className="t-icon-c">
+        <a className="t-icon-c" href={props.linkedin} target={"_blank"}>
           <FaLinkedin className="t-icon-c" />
         </a>{" "}
-        <a className="t-icon-c">
-          <FaInstagram className="t-icon-c" />
-        </a>{" "}
-        <a className="t-icon-c">
+      
+        <a className="t-icon-c" href={props.mail} target={"_blank"}>
           <MdEmail className="t-icon-c" />
         </a>
       </div>
