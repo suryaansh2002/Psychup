@@ -178,3 +178,11 @@
     font-size: 0.9rem;
   }
 }
+
+.a-content img{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: auto;
+
+}

@@ -61,9 +61,6 @@ export default function DomainPage() {
   useEffect(() => {
     var content = document.querySelector(".main-c");
     // content.innerHTML=details[domain].content;
-    console.log("d", details[domain].content);
-    console.log("s", domain);
-    console.log("r", content);
     content.innerHTML = details[domain].content;
     setUrl(details[domain].video)
   }, []);
