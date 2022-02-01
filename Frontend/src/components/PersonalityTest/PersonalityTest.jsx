@@ -2,6 +2,14 @@ import "./PersonalityTest.css";
 import axios from "axios";
 import { useState } from "react";
 import Question from "./Question";
+import { AiOutlineArrowRight } from "react-icons/ai";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+import Logician from "./logician";
+import Logistician from "./logistician";
+import Entertainer from "./entertainer";
+import Campaigner from "./campaigner";
+import Protaginist from "./protaginist";
 
 function PersonalityTest() {
   //make 30 variables
@@ -36,8 +44,28 @@ function PersonalityTest() {
   const [a29, setA29] = useState("");
   const [a30, setA30] = useState("");
 
-  const [arr, setArr] = useState([]);
+  // const arrayobs={
+  //   1:'disagree',
+  // }
 
+  const [arr, setArr] = useState([]);
+  function max(temp) {
+    return Math.max.apply(null, temp);
+  }
+
+  function giveLabel(arr) {
+    if (max(arr) == arr[0]) {
+      return "Logician";
+    } else if (max(arr) == arr[1]) {
+      return "Logistician";
+    } else if (max(arr) == arr[2]) {
+      return "Entertertainer";
+    } else if (max(arr) == arr[3]) {
+      return "Protagonist";
+    } else if (max(arr) == arr[4]) {
+      return "Campaigner";
+    }
+  }
   const data = {
     facts: [
       {
@@ -163,7 +191,12 @@ function PersonalityTest() {
     profile: { inventories: ["big5"], indices: ["withdrawal"] },
   };
   //data.facts[i].item not getting referenced
-
+  const [c, setC] = useState(0.871);
+  const [n, setN] = useState(0.521);
+  const [e, setE] = useState(0.111);
+  const [o, setO] = useState(0.505);
+  const [a, setA] = useState(0.909);
+  const [label, setLabel] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(data.facts);
@@ -174,13 +207,21 @@ function PersonalityTest() {
 
         var temp = res.data.profile.inventories.big5;
 
-        var c = temp.conscientiousness.quantile;
-        var n = temp.neuroticism.quantile;
-        var e = temp.extraversion.quantile;
-        var o = temp.openness.quantile;
-        var a = temp.agreeableness.quantile;
+        setC(res.data.profile.inventories.big5.conscientiousness.quantile);
+        setN(res.data.profile.inventories.big5.neuroticism.quantile);
+        setE(res.data.profile.inventories.big5.extraversion.quantile);
+        setO(res.data.profile.inventories.big5.openness.quantile);
+        setA(res.data.profile.inventories.big5.agreeableness.quantile);
 
-        const arr = [c, n, e, o, a];
+        setCount(count + 1);
+        const arr2 = [
+          res.data.profile.inventories.big5.conscientiousness.quantile,
+          res.data.profile.inventories.big5.neuroticism.quantile,
+          res.data.profile.inventories.big5.extraversion.quantile,
+          res.data.profile.inventories.big5.openness.quantile,
+          res.data.profile.inventories.big5.agreeableness.quantile,
+        ];
+        setLabel(giveLabel(arr2));
       })
 
       .catch((err) => {
@@ -188,43 +229,324 @@ function PersonalityTest() {
       });
   };
 
+  const [count, setCount] = useState(0);
+
   return (
     <div className="personality-main">
-      <h1>Personality Test</h1>
-      <form method="post" name="myForm" autocomplete="on">
-        <Question i={1} question={data.facts[0].item} function={setA1} />
-        <Question i={2} question={data.facts[1].item} function={setA2} />
-        <Question i={3} question={data.facts[2].item} function={setA3} />
-        <Question i={4} question={data.facts[3].item} function={setA4} />
-        <Question i={5} question={data.facts[4].item} function={setA5} />
-        <Question i={6} question={data.facts[5].item} function={setA6} />
-        <Question i={7} question={data.facts[6].item} function={setA7} />
-        <Question i={8} question={data.facts[7].item} function={setA8} />
-        <Question i={9} question={data.facts[8].item} function={setA9} />
-        <Question i={10} question={data.facts[9].item} function={setA10} />
-        <Question i={11} question={data.facts[10].item} function={setA11} />
-        <Question i={12} question={data.facts[11].item} function={setA12} />
-        <Question i={13} question={data.facts[12].item} function={setA13} />
-        <Question i={14} question={data.facts[13].item} function={setA14} />
-        <Question i={15} question={data.facts[14].item} function={setA15} />
-        <Question i={16} question={data.facts[15].item} function={setA16} />
-        <Question i={17} question={data.facts[16].item} function={setA17} />
-        <Question i={18} question={data.facts[17].item} function={setA18} />
-        <Question i={19} question={data.facts[18].item} function={setA19} />
-        <Question i={20} question={data.facts[19].item} function={setA20} />
-        <Question i={21} question={data.facts[20].item} function={setA21} />
-        <Question i={22} question={data.facts[21].item} function={setA22} />
-        <Question i={23} question={data.facts[22].item} function={setA23} />
-        <Question i={24} question={data.facts[23].item} function={setA24} />
-        <Question i={25} question={data.facts[24].item} function={setA25} />
-        <Question i={26} question={data.facts[25].item} function={setA26} />
-        <Question i={27} question={data.facts[26].item} function={setA27} />
-        <Question i={28} question={data.facts[27].item} function={setA28} />
-        <Question i={29} question={data.facts[28].item} function={setA29} />
-      </form>
-      <button onClick={handleSubmit}>Submit</button>
+      {count < 5 && <h1>Personality Test</h1>}
+      {count < 5 && <h2>Section: {count + 1} / 5</h2>}
 
-      <div className="profile">{arr}</div>
+      {count < 5 && (
+        <form method="post" name="myForm" autocomplete="on">
+          {count == 0 && (
+            <>
+              <Question i={1} question={data.facts[0].item} function={setA1} />
+              <Question i={2} question={data.facts[1].item} function={setA2} />
+              <Question i={3} question={data.facts[2].item} function={setA3} />
+              <Question i={4} question={data.facts[3].item} function={setA4} />
+              <Question i={5} question={data.facts[4].item} function={setA5} />
+              <Question i={6} question={data.facts[5].item} function={setA6} />
+            </>
+          )}
+          {count == 1 && (
+            <>
+              <Question i={7} question={data.facts[6].item} function={setA7} />
+              <Question i={8} question={data.facts[7].item} function={setA8} />
+              <Question i={9} question={data.facts[8].item} function={setA9} />
+              <Question
+                i={10}
+                question={data.facts[9].item}
+                function={setA10}
+              />
+              <Question
+                i={11}
+                question={data.facts[10].item}
+                function={setA11}
+              />
+              <Question
+                i={12}
+                question={data.facts[11].item}
+                function={setA12}
+              />
+            </>
+          )}
+          {count == 2 && (
+            <>
+              {" "}
+              <Question
+                i={13}
+                question={data.facts[12].item}
+                function={setA13}
+              />
+              <Question
+                i={14}
+                question={data.facts[13].item}
+                function={setA14}
+              />
+              <Question
+                i={15}
+                question={data.facts[14].item}
+                function={setA15}
+              />
+              <Question
+                i={16}
+                question={data.facts[15].item}
+                function={setA16}
+              />
+              <Question
+                i={17}
+                question={data.facts[16].item}
+                function={setA17}
+              />
+              <Question
+                i={18}
+                question={data.facts[17].item}
+                function={setA18}
+              />
+            </>
+          )}
+          {count == 3 && (
+            <>
+              {" "}
+              <Question
+                i={19}
+                question={data.facts[18].item}
+                function={setA19}
+              />
+              <Question
+                i={20}
+                question={data.facts[19].item}
+                function={setA20}
+              />
+              <Question
+                i={21}
+                question={data.facts[20].item}
+                function={setA21}
+              />
+              <Question
+                i={22}
+                question={data.facts[21].item}
+                function={setA22}
+              />
+              <Question
+                i={23}
+                question={data.facts[22].item}
+                function={setA23}
+              />
+              <Question
+                i={24}
+                question={data.facts[23].item}
+                function={setA24}
+              />
+            </>
+          )}
+          {count == 4 && (
+            <>
+              <Question
+                i={25}
+                question={data.facts[24].item}
+                function={setA25}
+              />
+              <Question
+                i={26}
+                question={data.facts[25].item}
+                function={setA26}
+              />
+              <Question
+                i={27}
+                question={data.facts[26].item}
+                function={setA27}
+              />
+              <Question
+                i={28}
+                question={data.facts[27].item}
+                function={setA28}
+              />
+              <Question
+                i={29}
+                question={data.facts[28].item}
+                function={setA29}
+              />
+            </>
+          )}
+        </form>
+      )}
+      {/* {count>0 && <button  onClick={()=>setCount(count-1)}>Previous</button>} */}
+      {count < 4 && (
+        <button
+          className="pt-btn"
+          onClick={() => {
+            setCount(count + 1);
+            window.scrollTo(0, 0);
+          }}
+        >
+          Next <AiOutlineArrowRight className="right" />
+        </button>
+      )}
+
+      {count == 4 && (
+        <button className="pt-btn" onClick={handleSubmit}>
+          Submit
+        </button>
+      )}
+
+      {count == 5 && <h1>Your Assesment Results</h1>}
+      {count == 5 && (
+        <div>
+          <h2 className="res-h2">Characteristics:</h2>
+          <div className="res-cont">
+            <div className="res-card">
+              <div className="res-h">Conscientiousness</div>
+              <div className="res-con">
+                Lorel iplsum one two three four five six seven eight nine ten
+                eleven tweleve thirteen fourteen fifteen sixteen seventeen.
+              </div>
+              <div className="bar-c">
+                <CircularProgressbar
+                  value={c * 100}
+                  text={`${c * 100}%`}
+                  circleRatio={1}
+                  strokeWidth={15}
+                  styles={buildStyles({
+                    strokeLinecap: "round",
+                    textSize: "12px",
+                    strokeWidth: 100,
+                    pathColor: `rgb(64, 255, 255)`,
+                    textColor: "red",
+                    trailColor: "#d6d6d6",
+                    backgroundColor: "#3e98c7",
+                  })}
+                />
+                ;
+              </div>
+            </div>
+
+            <div className="res-card">
+              <div className="res-h">Neuroticism</div>
+              <div className="res-con">
+                Lorel iplsum one two three four five six seven eight nine ten
+                eleven tweleve thirteen fourteen fifteen sixteen seventeen.
+              </div>
+              <div className="bar-c">
+                <CircularProgressbar
+                  value={n * 100}
+                  text={`${n * 100}%`}
+                  circleRatio={1}
+                  strokeWidth={15}
+                  styles={buildStyles({
+                    // Rotation of path and trail, in number of turns (0-1)
+
+                    // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+                    strokeLinecap: "round",
+
+                    // Text size
+                    textSize: "12px",
+
+                    // How long animation takes to go from one percentage to another, in seconds
+
+                    // Can specify path transition in more detail, or remove it entirely
+                    // pathTransition: 'none',
+                    strokeWidth: 100,
+                    // Colors
+                    pathColor: `rgb(64, 255, 255)`,
+                    textColor: "red",
+                    trailColor: "#d6d6d6",
+                    backgroundColor: "#3e98c7",
+                  })}
+                />
+                ;
+              </div>
+            </div>
+
+            <div className="res-card">
+              <div className="res-h">Extraversion</div>
+              <div className="res-con">
+                Lorel iplsum one two three four five six seven eight nine ten
+                eleven tweleve thirteen fourteen fifteen sixteen seventeen.
+              </div>
+              <div className="bar-c">
+                <CircularProgressbar
+                  value={e * 100}
+                  text={`${e * 100}%`}
+                  circleRatio={1}
+                  strokeWidth={15}
+                  styles={buildStyles({
+                    strokeLinecap: "round",
+                    textSize: "12px",
+                    strokeWidth: 100,
+                    pathColor: `rgb(64, 255, 255)`,
+                    textColor: "red",
+                    trailColor: "#d6d6d6",
+                    backgroundColor: "#3e98c7",
+                  })}
+                />
+                ;
+              </div>
+            </div>
+
+            <div className="res-card">
+              <div className="res-h">Openness</div>
+              <div className="res-con">
+                Lorel iplsum one two three four five six seven eight nine ten
+                eleven tweleve thirteen fourteen fifteen sixteen seventeen.
+              </div>
+              <div className="bar-c">
+                <CircularProgressbar
+                  value={o * 100}
+                  text={`${o * 100}%`}
+                  circleRatio={1}
+                  strokeWidth={15}
+                  styles={buildStyles({
+                    strokeLinecap: "round",
+                    textSize: "12px",
+                    strokeWidth: 100,
+                    pathColor: `rgb(64, 255, 255)`,
+                    textColor: "red",
+                    trailColor: "#d6d6d6",
+                    backgroundColor: "#3e98c7",
+                  })}
+                />
+                ;
+              </div>
+            </div>
+
+            <div className="res-card">
+              <div className="res-h">Agreeableness</div>
+              <div className="res-con">
+                Lorel iplsum one two three four five six seven eight nine ten
+                eleven tweleve thirteen fourteen fifteen sixteen seventeen.
+              </div>
+              <div className="bar-c">
+                <CircularProgressbar
+                  value={a * 100}
+                  text={`${a * 100}%`}
+                  circleRatio={1}
+                  strokeWidth={15}
+                  styles={buildStyles({
+                    strokeLinecap: "round",
+                    textSize: "12px",
+                    strokeWidth: 100,
+                    pathColor: `rgb(64, 255, 255)`,
+                    textColor: "red",
+                    trailColor: "#d6d6d6",
+                    backgroundColor: "#3e98c7",
+                  })}
+                />
+                ;
+              </div>
+            </div>
+          </div>
+          <h4 className="res-h2">Your Personality Label:</h4>
+          <div className="label-c">
+            {label=="Logician" && <Logician/>}
+            {label=="Logistician" && <Logistician/>}
+            {label=="Entertertainer" && <Entertainer/>}
+            {label=="Protagonist" && <Protaginist/>}
+            {label=="Campaigner" && <Campaigner/>}
+
+          </div>
+        </div>
+      )}
     </div>
   );
 }

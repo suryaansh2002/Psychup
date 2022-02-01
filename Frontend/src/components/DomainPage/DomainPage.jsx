@@ -35,7 +35,6 @@ export default function DomainPage() {
     iobp: "Industrial/Organizational Behavioural Psychology",
     cmp: "Consumer/Marketing Psychology",
     pdpd: "Psychology of Disorders and Preliminary Diagnosis",
-    ppid: "Psychology of Personality and Individual Difference",
   };
   const length = articleList.length;
   const articles2 = [];
@@ -87,7 +86,7 @@ export default function DomainPage() {
             <div className="article-h2">
               <h3>Articles on {map[domain]}</h3>
             </div>
-            <div className="article-card-container" id="all">
+            <div className="article-card-container" id="">
               {articles2.map((article) => (
                 <ArticleCard
                   imgSrc={article.imgSrc}

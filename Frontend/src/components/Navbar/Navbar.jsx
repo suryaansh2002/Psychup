@@ -180,32 +180,33 @@ export default function NavBar(props) {
                 Domains
               </Link2>
             </Nav.Link>
-            <Nav.Link href="#about-h" className="nav-link">
+            {/* <Nav.Link href="#about-h" className="nav-link">
               <Link2 className="n-l" to={"/#about-h"}>
                 {" "}
                 About
               </Link2>
-            </Nav.Link>
-            <Nav.Link href="#articles-h" className="nav-link">
+            </Nav.Link> */}
+            {/* <Nav.Link href="#articles-h" className="nav-link">
               <Link2 className="n-l" to={"/#articles-h"}>
                 Articles
               </Link2>
-            </Nav.Link>
-            <Nav.Link href="#contact-h" className="nav-link">
-              <Link2 className="n-l" to={"/#contact-h"}>
-                Contact
-              </Link2>
-            </Nav.Link>
-            <Nav.Link href="#contact-h" className="nav-link">
-              <Link className="n-l" to={"/team"}>
-                Team
-              </Link>
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link href="/personality" className="nav-link">
               <Link2 className="n-l" to={"/personality"}>
                 Personality Test
               </Link2>
             </Nav.Link>
+            <Nav.Link href="#contact-h" className="nav-link">
+              <Link2 className="n-l" to={"/#contact-h"}>
+                Contact Us
+              </Link2>
+            </Nav.Link>
+            <Nav.Link href="/team" className="nav-link">
+              <Link className="n-l" to={"/team"}>
+                Our Team
+              </Link>
+            </Nav.Link>
+         
           </Nav>
         </Navbar.Collapse>
         <Nav className="nav-logreg">

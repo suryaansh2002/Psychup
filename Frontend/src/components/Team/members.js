@@ -23,5 +23,25 @@ export const members = [
           linkedin:"",
           mail:""
         },
+
+        {
+          name: "Shourya Gupta",
+          role: "Co-founder |  Developer",
+          imgSrc: sr,
+          quote:
+            "Lorem ipsum dolor sit nunc, vel gravida eros blandit non. Phasellus ut risus vel odio malesuada pretium. Maecenas semper sagittis nibh, ac consectetur.",
+            github:"" ,
+            linkedin:"",
+            mail:""
+          },{
+            name: "Shourya Gupta",
+            role: "Co-founder |  Developer",
+            imgSrc: sr,
+            quote:
+              "Lorem ipsum dolor sit nunc, vel gravida eros blandit non. Phasellus ut risus vel odio malesuada pretium. Maecenas semper sagittis nibh, ac consectetur.",
+              github:"" ,
+              linkedin:"",
+              mail:""
+            },
     
   ];

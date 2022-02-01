@@ -1,0 +1,25 @@
+.ptest-main{
+    min-height: 100vh;
+    background-image: url("../../images/img1.png");
+    background-size: cover;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ptest-heading{
+    font-size: 2.5rem;
+  font-family: "Philosopher", sans-serif;
+    
+}
+
+.ptest-sub{
+  margin: 2rem;
+  font-family: "Philosopher", sans-serif;
+font-size: 1.3rem;
+margin-bottom: 6rem;
+}
+

@@ -65,7 +65,7 @@ export default function About() {
             <Link to={"/articles/mhr"} className="domain-link">
               <CarouselCard
                 domain="Mental Health and Rehabiliation"
-                about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
+                about="Mental health refers to cognitive, behavioral, and emotional well-being. It is all about how people think, feel, and behave. Tune in, as we voyage on a journey to unravel some scientific facts that attempt to give mental health the importance it requires in the modern world. This is what Psychology stands for, your mental well being!"
               />
             </Link>
           </div>
@@ -73,7 +73,7 @@ export default function About() {
             <Link to={"/articles/gdp"} className="domain-link">
               <CarouselCard
                 domain="Gender Diversity Psychology"
-                about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
+                about="Gender is increasingly understood as defining a system of power relations embedded in other power relations. Psychological research on gender—which has most often focused on analysis of sex differences, within-sex variability, and gender roles—has begun to incorporate this new understanding. Tune in, as we attempt to shatter all the societal taboos centered around gender and diversity."
               />
             </Link>
           </div>
@@ -81,7 +81,7 @@ export default function About() {
             <Link to={"/articles/iobp"} className="domain-link">
               <CarouselCard
                 domain="Industrial/Organizational Behavioural Psychology"
-                about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
+                about="Psychology at workplaces!? Unexpected right? Well, not so! Industrial-organizational psychology is the branch of psychology that applies psychological theories and principles to organizations. Often referred to as I-O psychology, this field focuses on increasing workplace productivity and related issues such as the physical and mental well-being of employees."
               />
             </Link>
           </div>
@@ -89,7 +89,7 @@ export default function About() {
             <Link to={"/articles/cmp"} className="domain-link">
               <CarouselCard
                 domain="Consumer/Marketing Psychology"
-                about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
+                about="What is meant by consumer behaviour ? Does there exist any uniformity in the behavior pattern of consumers? Consumer psychology refers to the processes used by clients and customers to select, purchase, use and discard products and services.In the business world, Consumer Psychology helps firms improve products, services and marketing strategies in order to bolster sales. Tune in to know more!"
               />
             </Link>
           </div>
@@ -97,19 +97,12 @@ export default function About() {
             <Link to={"/articles/pdpd"} className="domain-link">
               <CarouselCard
                 domain="Psychology of Disorders and Preliminary Diagnosis"
-                about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
+                about="Psychological and mental health disorders are patterns of behavioral or psychological symptoms that impact multiple areas of life. These disorders create distress for the person experiencing these symptoms. We analyse these through a scientific perspective, hence, renouncing the vices of taboo and prejudice centered around them."
               />
             </Link>
           </div>
 
-          <div>
-            <Link to={"/articles/ppid"} className="domain-link">
-              <CarouselCard
-                domain="Psychology of Personality and Individual Difference"
-                about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus et turpis ac pulvinar. Integer ornare justo tincidunt mauris accumsan."
-              />
-            </Link>
-          </div>
+        
         </Slider>
       </div>
 

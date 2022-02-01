@@ -9,10 +9,203 @@
   background-image: url("../../images/img1.png");
   background-size: cover;
 }
-
+.personality-main  h1{
+text-align: center;
+font-family: "Philosopher", sans-serif;
+font-size: 2.25rem;
+margin-bottom: 4rem;
+margin-top: -2rem;
+}
+.personality-main  h2{
+  text-align: center;
+  font-family: "Philosopher", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 4rem;  }
+  
 .ans-btn {
-  margin: 0.5rem 1rem;
+  margin: 0.5rem 1.75rem;
   padding: 0.5rem 1rem;
   border: none;
-  background-color: rgba(0, 255, 255, 0.452);
+  /* background-color: rgba(0, 255, 255, 0.452); */
+background: transparent;
+font-size: 2rem;
+transition: 0.5s;
+}
+
+.question-c{
+  text-align: center;
+  margin: 2rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(255, 255, 255,0.5);
+  border-radius: 10px;
+  padding: 0.5rem;
+  padding-top: 1rem;
+  width: max-content;
+  box-shadow: 5px 5px 5px rgb(100, 100, 100,0.9);
+}
+
+
+.question-title{
+  font-size: 1.25rem;
+  font-family: "Raleway", cursive;
+margin-bottom: .8rem;
+}
+
+.pt-btn{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 14rem;
+  border-radius: 40px;
+  font-size: 1.25rem;
+  background-color: rgba(3, 88, 84, 0.8);
+  font-family: "Philosopher", sans-serif;
+
+  color: white;
+  font-weight: 700;
+border: none;
+padding: 0.75rem 1rem ;
+margin-top: 1.5rem;
+}
+.pt-btn:hover{
+  cursor: pointer;
+}
+
+.right{
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.res-cont{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.res-card{
+  width: 400px;
+  background-color: rgba(18, 155, 132, 0.4);
+  border-radius: 10px;
+  padding: 1rem;
+align-items: center;
+justify-content: center;
+display: inline-block;
+margin: 1rem;
+}
+
+.res-h {
+  font-family: "Philosopher", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+
+
+
+.a{
+  color: rgb(64, 255, 255);
+}
+
+.bar-c{
+  width: 150px;
+  height: 150px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.res-h2{
+  font-size: 1.5rem;
+  text-align: center;
+font-family: "Philosopher", sans-serif;
+
+}
+.ans-btn:hover{
+  transform: scale(1.3);
+}
+
+@media only screen and (max-width: 740px) {
+  .question-c{
+    width: 95vw;
+  }
+  .ans-btn{
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .ans-btn{
+    font-size: 1.6rem;
+  }
+  .question-title{
+    font-size: 1rem;
+  }
+  .pt-btn{
+    width: 10rem;
+    font-size: 1rem;
+  }
+  .right{
+    font-size: 1rem;
+    margin-left: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+.personality-main h1{
+  font-size: 1.75rem;
+}
+.personality-main h2{
+  font-size: 1rem;
+}
+}
+
+@media only screen and (max-width: 400px) {
+  .ans-btn{
+    font-size: 1.3rem;
+  }
+  .question-c{
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+
+  }
+}
+
+ a{
+text-decoration: none;
+color: black;
+font-weight: bold;
+}
+
+a:hover{
+  color: black;
+}
+
+.label-c h1{
+  font-size: 1.5rem;
+}
+
+.label-c{
+  width: 70%;
+  background-color: rgb(7, 73, 53,0.4);
+  margin-left: 15%;
+  padding: 4.5rem;
+  border-radius: 10px;
+}
+
+.label-c .ul1{
+  margin-top: -3rem;
+}
+
+.label-c .p1{
+  margin-top: -2rem;
+}
+
+.label-c h2{
+  margin-top:2.5rem;
+}
+
+.res-h2 {
+  font-family: "Philosopher", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }

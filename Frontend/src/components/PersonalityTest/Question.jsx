@@ -5,15 +5,16 @@ export default function Question(props) {
     var elms = document.querySelectorAll(`[id='${id}']`);
 
     for (var i = 0; i < elms.length; i++)
-      elms[i].style.backgroundColor = "rgba(0, 255, 255, 0.452)"; // <-- whatever you need to do here.
-    e.target.style.backgroundColor = "green";
+      elms[i].style.transform = "scale(1.0)"; // <-- whatever you need to do here.
+    e.target.style.transform = "scale(1.5)";
+
   }
 
   return (
     <div>
-      <div>
+      <div className="question-c">
         <div className="question-title">
-          {props.i}. {props.question}
+         {props.question}
         </div>
         <div>
           <button
@@ -22,10 +23,10 @@ export default function Question(props) {
             id={`q${props.i}`}
             onClick={(e) => {
               setColor(`q${props.i}`, e);
-              props.function(`dis-${props.i}`);
+              props.function(`Disagree`);
             }}
           >
-            Disagree
+            😡
           </button>
           <button
             type="button"
@@ -33,10 +34,10 @@ export default function Question(props) {
             id={`q${props.i}`}
             onClick={(e) => {
               setColor(`q${props.i}`, e);
-              props.function(`sl-dis-${props.i}`);
+              props.function(`Slightly Disagree`);
             }}
           >
-            Slightly Disagree
+            😠
           </button>{" "}
           <button
             type="button"
@@ -44,10 +45,10 @@ export default function Question(props) {
             id={`q${props.i}`}
             onClick={(e) => {
               setColor(`q${props.i}`, e);
-              props.function(`neu-${props.i}`);
+              props.function(`Neutral`);
             }}
           >
-            Neutral
+            😐
           </button>{" "}
           <button
             type="button"
@@ -55,10 +56,10 @@ export default function Question(props) {
             id={`q${props.i}`}
             onClick={(e) => {
               setColor(`q${props.i}`, e);
-              props.function(`sl-ag-${props.i}`);
+              props.function(`Slightly Agree`);
             }}
           >
-            Slightly Agree
+            😊
           </button>
           <button
             type="button"
@@ -66,14 +67,15 @@ export default function Question(props) {
             id={`q${props.i}`}
             onClick={(e) => {
               setColor(`q${props.i}`, e);
-              props.function(`ag-${props.i}`);
+              props.function(`Agree`);
             }}
           >
             {" "}
-            Agree
+            😁
           </button>
         </div>
       </div>
+
     </div>
   );
 }

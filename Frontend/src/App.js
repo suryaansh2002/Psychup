@@ -25,6 +25,7 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import News from "./components/News/News";
 import Team from "./components/Team/Team";
 import PersonalityTest from "./components/PersonalityTest/PersonalityTest";
+import PTest from "./components/PTest/PTest";
 
 function App() {
   const [side, setSide] = useState(false);
@@ -64,6 +65,7 @@ function App() {
               removeCookie={removeCookie}
               setCookie={setCookie}
             />
+            <PTest/>
             <Domains />
             <AboutUs />
             <Articles />
