@@ -5,8 +5,9 @@
   background-size: cover;
 }
 .s-a-img {
-  width: 100%;
+  width: 80%;
   height: 350px;
+  margin-left: 20%;
 }
 .s-a-title {
   font-size: 2.4rem;

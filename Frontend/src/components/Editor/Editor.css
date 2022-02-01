@@ -333,9 +333,7 @@ textarea::placeholder {
   padding-top: 10rem;
   margin-top: 2rem;
   border-radius: 20px;
-  background-color: rgb(7, 75, 66);
-  background-color: rgba(13, 124, 109, 0.7);
-  background-color: rgba(13, 124, 109, 0.7);
+  background-color: rgba(9, 83, 52, 0.2);
 }
 
 .hash-text {
@@ -352,6 +350,7 @@ textarea::placeholder {
   color: white;
   color: black;
   background-color: rgb(255, 255, 255, 0.7);
+
   border: none;
 }
 

@@ -209,3 +209,30 @@ a:hover{
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
+
+.key-box{
+  position: fixed;
+  background-color: rgb(255, 255, 255,0.5);
+  width: 15rem;
+left: 10px;
+border-radius: 10px;  
+top: 50%;
+transform: translateY(-50%);
+}
+.key-h{
+  font-family: "Philosopher", sans-serif;
+font-size: 1.5rem;
+text-align: center;
+padding-top: 1rem;
+width: 80%;
+margin-left: 10%;
+padding-bottom: .5rem;
+border-bottom: 2px solid rgb(200, 200, 200,0.4);
+}
+
+.key-div{
+  font-size: 1.1rem;
+  text-align: center;
+  font-family: "Raleway", cursive;
+  padding: 1rem 0rem;
+}

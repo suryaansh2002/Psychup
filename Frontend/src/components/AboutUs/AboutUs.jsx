@@ -3,7 +3,7 @@ import "./Aboutus.css";
 import services from "../../images/img10.png";
 import articles from "../../images/img14.png";
 import news from "../../images/img15.png";
-import brain from "../../images/23.png";
+import brain from "../../images/img30.png";
 
 export default function AboutUs() {
   return (
