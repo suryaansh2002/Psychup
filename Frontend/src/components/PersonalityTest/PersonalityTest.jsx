@@ -235,29 +235,18 @@ function PersonalityTest() {
     <div className="personality-main">
       {count < 5 && <h1>Personality Test</h1>}
       {count < 5 && <h2>Section: {count + 1} / 5</h2>}
-      {count < 5 && 
-      <div className="key-box">
-      <div className="key-h">Key</div> 
-      <div className="key-div">
-        😡-> Disagree
-      </div> 
-      <div className="key-div">
-        😠 -> Slightly Disagree
-      </div>
-      <div className="key-div">
-        😐 -> Neutral
-      </div>  
-      <div className="key-div">
-        😊 -> Slightly Agree
-      </div> 
-      <div className="key-div">
-        😁 -> Agree
-      </div> 
-      </div>
-      }
+      {count < 5 && (
+        <div className="key-box">
+          <div className="key-h">Key</div>
+          <div className="key-div">😡-> Disagree</div>
+          <div className="key-div">😠 -> Slightly Disagree</div>
+          <div className="key-div">😐 -> Neutral</div>
+          <div className="key-div">😊 -> Slightly Agree</div>
+          <div className="key-div">😁 -> Agree</div>
+        </div>
+      )}
 
       {count < 5 && (
-        
         <form method="post" name="myForm" autocomplete="on">
           {count == 0 && (
             <>
@@ -559,12 +548,11 @@ function PersonalityTest() {
           </div>
           <h4 className="res-h2">Your Personality Label:</h4>
           <div className="label-c">
-            {label=="Logician" && <Logician/>}
-            {label=="Logistician" && <Logistician/>}
-            {label=="Entertertainer" && <Entertainer/>}
-            {label=="Protagonist" && <Protaginist/>}
-            {label=="Campaigner" && <Campaigner/>}
-
+            {label == "Logician" && <Logician />}
+            {label == "Logistician" && <Logistician />}
+            {label == "Entertertainer" && <Entertainer />}
+            {label == "Protagonist" && <Protaginist />}
+            {label == "Campaigner" && <Campaigner />}
           </div>
         </div>
       )}

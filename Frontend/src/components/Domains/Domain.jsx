@@ -101,8 +101,6 @@ export default function About() {
               />
             </Link>
           </div>
-
-        
         </Slider>
       </div>
 

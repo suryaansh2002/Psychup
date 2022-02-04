@@ -4,7 +4,6 @@ import { members } from "./members";
 
 import TeamCard from "./TeamCard";
 export default function Team() {
- 
   return (
     <div className="teams-main">
       <div className="team-title">Our Team</div>

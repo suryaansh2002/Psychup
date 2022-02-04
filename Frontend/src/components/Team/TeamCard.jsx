@@ -20,7 +20,6 @@ export default function TeamCard(props) {
         <a className="t-icon-c" href={props.linkedin} target={"_blank"}>
           <FaLinkedin className="t-icon-c" />
         </a>{" "}
-      
         <a className="t-icon-c" href={props.mail} target={"_blank"}>
           <MdEmail className="t-icon-c" />
         </a>

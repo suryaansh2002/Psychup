@@ -56,12 +56,12 @@ export default function DomainPage() {
     articles2[i].desc_short = articles2[i].desc_short.slice(0, 100) + "...";
   }
 
-  const [url,setUrl]=useState("");
+  const [url, setUrl] = useState("");
   useEffect(() => {
     var content = document.querySelector(".main-c");
     // content.innerHTML=details[domain].content;
     content.innerHTML = details[domain].content;
-    setUrl(details[domain].video)
+    setUrl(details[domain].video);
   }, []);
   return (
     <div id="articles-h">

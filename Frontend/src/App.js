@@ -65,7 +65,7 @@ function App() {
               removeCookie={removeCookie}
               setCookie={setCookie}
             />
-            <PTest/>
+            <PTest />
             <Domains />
             <AboutUs />
             <Articles />

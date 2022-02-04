@@ -180,10 +180,9 @@
   }
 }
 
-.a-content img{
+.a-content img {
   margin-left: 50%;
   transform: translateX(-50%);
   width: 40%;
   height: auto;
-
 }

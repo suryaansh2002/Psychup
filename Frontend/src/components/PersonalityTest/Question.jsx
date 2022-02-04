@@ -7,15 +7,12 @@ export default function Question(props) {
     for (var i = 0; i < elms.length; i++)
       elms[i].style.transform = "scale(1.0)"; // <-- whatever you need to do here.
     e.target.style.transform = "scale(1.5)";
-
   }
 
   return (
     <div>
       <div className="question-c">
-        <div className="question-title">
-         {props.question}
-        </div>
+        <div className="question-title">{props.question}</div>
         <div>
           <button
             type="button"
@@ -75,7 +72,6 @@ export default function Question(props) {
           </button>
         </div>
       </div>
-
     </div>
   );
 }

@@ -206,7 +206,6 @@ export default function NavBar(props) {
                 Our Team
               </Link>
             </Nav.Link>
-         
           </Nav>
         </Navbar.Collapse>
         <Nav className="nav-logreg">

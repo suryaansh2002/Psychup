@@ -89,21 +89,18 @@
   font-family: "Philosopher", sans-serif;
 }
 
-
-.main-c h2{
+.main-c h2 {
   font-family: "Philosopher", sans-serif;
   font-size: 1.75rem;
-
-
 }
 
-.main-c p a{
+.main-c p a {
   color: black;
   text-decoration: none;
   font-weight: bold;
 }
 
-.main-c p{
+.main-c p {
   font-family: "Raleway", cursive;
-font-size: 0.9rem;
+  font-size: 0.9rem;
 }
