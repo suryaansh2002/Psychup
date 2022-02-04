@@ -71,16 +71,22 @@
 }
 
 .main-c {
-  width: 60%;
-  margin-left: 20%;
-  padding-top: 10rem;
+  width: 100%;
+
   text-align: left;
+  padding: 7rem;
+  padding-top: 11rem;
 }
 
-.explore-video {
-  width: 40%;
-  height: auto;
-  margin-top: 2rem;
+.video {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+iframe {
+  width: 560px;
+  height: 315px;
 }
 
 .article-h2 h3 {
@@ -103,4 +109,29 @@
 .main-c p {
   font-family: "Raleway", cursive;
   font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 900px) {
+
+  .video {
+
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .main-c {
+    padding: 3rem;
+    padding-top: 10rem;
+  }
+  .main-title h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  iframe {
+    width: 350px;
+    height: 250px;
+  }
 }
