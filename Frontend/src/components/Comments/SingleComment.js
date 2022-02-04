@@ -31,7 +31,7 @@ export default function SingleComment(props) {
   useEffect(() => {
     setTog("");
     axios
-      .get("http://localhost:5000/comments")
+      .get("https://psychup-back.herokuapp.com/comments")
       .then((res) => setComments(res.data));
   }, []);
   console.log(comments);

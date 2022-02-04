@@ -201,7 +201,7 @@ function PersonalityTest() {
     e.preventDefault();
     console.log(data.facts);
     axios
-      .post("http://localhost:5000/api/sentino", data)
+      .post("https://psychup-back.herokuapp.com/api/sentino", data)
       .then((res) => {
         setArr(JSON.stringify(res.data.profile.inventories.big5));
 

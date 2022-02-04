@@ -14,7 +14,7 @@ export default function Articles() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/posts/")
+      .get("https://psychup-back.herokuapp.com/api/posts/")
       .then((response) => {
         setArticleList(response.data);
       })

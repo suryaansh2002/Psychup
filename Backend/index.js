@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 });
 
 app.get("/", function (req, res) {
-  res.send("hello");
+  res.send("Welcome to Psychup backend");
 });
 
 app.use(cookieParser());

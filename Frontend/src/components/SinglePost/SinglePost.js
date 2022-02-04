@@ -45,7 +45,7 @@ export default function SinglePost(props) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/posts/" + id)
+      .get("https://psychup-back.herokuapp.com/api/posts/" + id)
       .then((response) => {
         setArticleList([response.data]);
       })

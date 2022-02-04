@@ -84,7 +84,7 @@ export default function NavBar(props) {
     });
   }
 
-  const url = "http://localhost:5000";
+  const url = "https://psychup-back.herokuapp.com";
   // Can replace this url of wherever backend deployed so that dont have
   // to replace it everywhere
   let history = useHistory();

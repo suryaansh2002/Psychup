@@ -9,7 +9,7 @@ export default function Comments(props) {
   const currentUserId = 1;
   useEffect(() => {
     axios
-      .get("http://localhost:5000/comments")
+      .get("https://psychup-back.herokuapp.com/comments")
       .then((res) => setComments(res.data.reverse()));
   }, []);
   console.log(comments);
@@ -39,7 +39,7 @@ export default function Comments(props) {
       postId: props.post._id,
     };
     axios
-      .post("http://localhost:5000/comments", data)
+      .post("https://psychup-back.herokuapp.com/comments", data)
       .then((comment) => window.location.reload());
   };
 
@@ -48,7 +48,7 @@ export default function Comments(props) {
     console.log(commentId);
     if (window.confirm("Are you sure you want to delete this comment?")) {
       axios
-        .delete("http://localhost:5000/comments/" + commentId)
+        .delete("https://psychup-back.herokuapp.com/comments/" + commentId)
         .then((res) => window.location.reload());
     }
   };
@@ -57,7 +57,7 @@ export default function Comments(props) {
       body: text,
     };
     axios
-      .put("http://localhost:5000/comments/" + commentId, data)
+      .put("https://psychup-back.herokuapp.com/comments/" + commentId, data)
       .then((response) => window.location.reload());
   };
   return (
