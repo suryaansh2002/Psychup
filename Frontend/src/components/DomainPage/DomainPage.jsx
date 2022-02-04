@@ -21,7 +21,7 @@ export default function DomainPage() {
   console.log(domain);
   useEffect(() => {
     axios
-      .get("https://psychup-back.herokuapp.com/api/posts/")
+      .get("http://localhost:5000/api/posts/")
       .then((response) => {
         setArticleList(response.data);
       })
@@ -68,20 +68,21 @@ export default function DomainPage() {
       {articles2 ? (
         <div className="articles-main">
           <div className="main-content-container">
-            <div className="main-title title-a">
-              <h2>{map[domain]}</h2>
-            </div>
-            <div className="main-c"></div>
-            <div className="video">
-              <iframe
-                width="560"
-                height="315"
-                src={url}
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
+            <div>
+              <div className="main-title title-a">
+                <h2>{map[domain]}</h2>
+              </div>
+              <div className="main-c"></div>
+              <div className="video">
+                <iframe
+                  
+                  src={url}
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
             <div className="article-h2">
               <h3>Articles on {map[domain]}</h3>
@@ -106,3 +107,4 @@ export default function DomainPage() {
     </div>
   );
 }
+
