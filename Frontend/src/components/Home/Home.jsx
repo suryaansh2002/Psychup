@@ -47,7 +47,7 @@ export default function Home(props) {
         <div className="col-lg-12">
           <div className="intro">
             <div className="intro-title">
-              <h1>P, Redressal, Mental Health and Growth!</h1>
+              <h1>Psychology, Redressal, Mental Health and Growth!</h1>
             </div>
             <div className="intro-line">
               Be it mental health, or be core Psychology, we have got it all
