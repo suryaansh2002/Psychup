@@ -21,7 +21,7 @@ export default function DomainPage() {
   console.log(domain);
   useEffect(() => {
     axios
-      .get("https://psychup-back.herokuapp.com/api/posts/")
+      .get("http://localhost:5000/api/posts/")
       .then((response) => {
         setArticleList(response.data);
       })
@@ -105,3 +105,4 @@ export default function DomainPage() {
     </div>
   );
 }
+
