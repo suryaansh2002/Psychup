@@ -40,6 +40,7 @@
   border-radius: 5px;
   width: 90%;
   margin-top: 1rem;
+  
 }
 .title-a h2 {
   position: absolute;
@@ -146,7 +147,7 @@
   background-color: rgba(8, 121, 121, 0.171);
   margin: 1.5rem 2rem;
   display: inline-block;
-  max-width: 350px;
+  width: 350px;
   border-radius: 25px;
   padding: 0.2rem;
   display: inline-block;
@@ -154,6 +155,7 @@
   vertical-align: top;
   box-shadow: 4px 4px 7.5px rgba(9, 94, 87, 0.5);
   z-index: 5;
+  
 }
 
 .card-category {
@@ -172,4 +174,17 @@
   .checkout-all {
     font-size: 1rem;
   }
+.article-card{
+  width: 80%;
+}
+  
+}
+
+
+
+@media only screen and (max-width: 400px) {
+.article-card{
+  width: 90%;
+}
+
 }

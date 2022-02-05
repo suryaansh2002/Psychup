@@ -82,10 +82,19 @@ export default function Editor(props) {
   };
 
   const getDisplay = async () => {
+    // value={"mhr"}>Mental Health and Rehabiliation</option>
+    //             <option value={"gdp"}>Gender Diversity Psychology</option>
+    //             <option value={"iobp"}>
+    //               Industrial/Organizational Behavioural Psychology
+    //             </option>
+    //             <option value={"cmp"}>Consumer/Marketing Psychology</option>
+    //             <option value={"pdpd"}
     const map = {
-      Gender: "Gender Psychology",
-      Behaviour: "Behaviour Psycholoy",
-      Mental: "Mental Health",
+      mhr: "Mental Health and Rehabilitation",
+      gdp:"Gender Diversity Psychology",
+      iobp:"Industrial/Organizational Behavioural Psychology",
+      cmp:"Consumer/Marketing Psychology",
+      pdpd:""
     };
     const hashvalue = [];
     console.log(hashvalue);
@@ -351,7 +360,7 @@ export default function Editor(props) {
               <button type="button" class="btn btn-no" data-dismiss="modal">
                 No
               </button>
-              <button type="button" class="btn btn-yes" onClick={getDisplay}>
+              <button type="button" class="btn btn-yes" onClick={()=>getDisplay()}>
                 Yes
               </button>
             </div>

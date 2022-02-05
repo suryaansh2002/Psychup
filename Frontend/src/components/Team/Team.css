@@ -60,3 +60,22 @@
   font-size: 1.5rem;
   color: rgb(0, 0, 0, 0.6);
 }
+
+@media only screen and (max-width: 520px) {
+.t-card{
+  display: block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.t-card-container{
+padding-bottom: 2rem;
+}
+
+}
+
+@media only screen and (max-width: 520px) {
+.t-card{
+  width: 80vw;
+}
+}

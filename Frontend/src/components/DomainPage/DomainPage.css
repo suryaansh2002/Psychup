@@ -78,8 +78,8 @@
 }
 
 .explore-video {
-  width: 40%;
-  height: auto;
+  width: 50%;
+  height: 350px;
   margin-top: 2rem;
 }
 
@@ -103,4 +103,31 @@
 .main-c p {
   font-family: "Raleway", cursive;
   font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .explore-video {
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .main-c {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .explore-video {
+    width: 80vw;
+    height: 45vw;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .main-c h2 {
+    font-size: 1.25rem;
+  }
+  .main-c p {
+    font-size: 0.8rem;
+  }
 }

@@ -100,6 +100,17 @@
 }
 @media only screen and (max-width: 520px) {
   .item {
-    width: 16rem;
+    width: 70vw;
+    margin: 0rem 3rem;
   }
+}
+
+
+@media only screen and (max-width: 420px) {
+.item{
+  width: 70vw;
+}
+.item-about{
+  font-size: 0.8rem;
+}
 }

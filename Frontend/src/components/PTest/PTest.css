@@ -21,3 +21,14 @@
   font-size: 1.3rem;
   margin-bottom: 6rem;
 }
+@media only screen and (max-width: 520px) {
+.ptest-heading{
+  font-size: 6.5vw;
+}
+.ptest-sub{
+  font-size: 4.5vw;
+  margin-bottom: 1vw;
+}
+
+
+}

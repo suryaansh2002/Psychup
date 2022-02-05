@@ -62,7 +62,7 @@
   justify-content: center;
   display: inline-block;
   margin-left: 2.5%;
-  height: 100vh;
+  height: auto;
 }
 
 .hover-divs {

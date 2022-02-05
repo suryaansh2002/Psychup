@@ -55,10 +55,10 @@
 .brain-img {
   z-index: 500;
   position: absolute;
-  top: 20%;
+  top: 5%;
   right: 10%;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
 }
 
 .psych {
@@ -111,7 +111,7 @@
   .brain-img {
     z-index: 700;
     position: absolute;
-    top: 10vh;
+    top: 5vh;
     right: 10%;
     width: 80%;
     height: 500px;
@@ -208,10 +208,10 @@
   .brain-img {
     z-index: 700;
     position: absolute;
-    top: 20vh;
+    top: 10vh;
     right: 5%;
     width: 90%;
-    height: 400px;
+    height: 500px;
   }
 }
 
