@@ -91,10 +91,10 @@ export default function Editor(props) {
     //             <option value={"pdpd"}
     const map = {
       mhr: "Mental Health and Rehabilitation",
-      gdp:"Gender Diversity Psychology",
-      iobp:"Industrial/Organizational Behavioural Psychology",
-      cmp:"Consumer/Marketing Psychology",
-      pdpd:""
+      gdp: "Gender Diversity Psychology",
+      iobp: "Industrial/Organizational Behavioural Psychology",
+      cmp: "Consumer/Marketing Psychology",
+      pdpd: "",
     };
     const hashvalue = [];
     console.log(hashvalue);
@@ -142,6 +142,14 @@ export default function Editor(props) {
   function upload() {
     const inp = document.getElementById("file-inp");
     inp.click();
+  }
+  async function delHash(value) {
+    const newArr=hashContainer.filter((hash) => 
+      hash != value
+    );
+   await setHashContainer(newArr)
+    await setHashCookie("hash", newArr);
+    // console.log(hashCookie["hash"]);
   }
   return (
     <>
@@ -205,7 +213,15 @@ export default function Editor(props) {
                   <div className="">
                     {hashCookie["hash"] &&
                       hashCookie["hash"].map((hash) => (
-                        <div className="div-hash">#{hash}</div>
+                        <div className="div-hash">
+                          #{hash}{" "}
+                          <button
+                            className="cross2"
+                            onClick={() => delHash(hash)}
+                          >
+                            x
+                          </button>
+                        </div>
                       ))}
                   </div>
                 )}
@@ -360,7 +376,11 @@ export default function Editor(props) {
               <button type="button" class="btn btn-no" data-dismiss="modal">
                 No
               </button>
-              <button type="button" class="btn btn-yes" onClick={()=>getDisplay()}>
+              <button
+                type="button"
+                class="btn btn-yes"
+                onClick={() => getDisplay()}
+              >
                 Yes
               </button>
             </div>

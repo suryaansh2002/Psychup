@@ -25,7 +25,7 @@ export default function CarouselCard(props) {
     <div className="item">
       <div className="item-title">{props.domain}</div>
       <div className="item-about">{props.about}</div>
-      <div>{/*Homane will come here*/}</div>
+      <div>Read more...</div>
     </div>
   );
 }

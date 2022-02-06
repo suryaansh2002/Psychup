@@ -86,7 +86,7 @@ function App() {
             }
           />
           <Route
-            path="/article/:id"
+            path="/article/:id/:name"
             exact
             component={() => (
               <SinglePost

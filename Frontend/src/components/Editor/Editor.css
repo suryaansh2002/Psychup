@@ -405,114 +405,6 @@ textarea::placeholder {
   transform: scale(1.05);
 }
 
-/* @media only screen and (max-width: 620px) {
-  .editor-h {
-    width: 100%;
-    padding-left: 5rem;
-  }
-  .hashes {
-    display: block;
-    width: 100%;
-    margin-top: 1rem;
-    margin-left: -5rem;
-  }
-  .hash-div {
-    margin-top: 1.5rem;
-  }
-  .hash-text {
-    margin-left: -1rem;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .editor-h {
-    width: 100%;
-    padding-left: 3.5rem;
-  }
-
-  .editor-c {
-    width: 100%;
-    margin-left: 0%;
-  }
-  .hash-text {
-    margin-left: -2rem;
-    font-size: 0.8rem;
-  }
-  .hash-submit {
-    font-size: 0.8rem;
-  }
-  .category-select {
-    font-size: 0.9rem;
-    padding: 0.5rem 0rem;
-  }
-  .up-btn {
-    font-size: 0.9rem;
-  }
-  .inst-btn {
-    font-size: 0.9rem;
-  }
-  .right-icon {
-    font-size: 1rem;
-  }
-}
-
-
-@media only screen and (max-width: 1050px) {
-  .editor-line {
-    top: 180px;
-  }
-}
-@media only screen and (max-width: 610px) {
-  .editor-line {
-    top: 240px;
-  }
-}
-
-@media only screen and (max-width: 560px) {
-  .editor-line {
-    top: 270px;
-  }
-}
-
-.top-row{
-  display: inline-block;
-  justify-content: space-between;
-  width: 20%;
-  padding: 0rem 2rem;
-  margin-bottom: 2rem;
-  height: 100vh;
-
-}
-
-.up-btn{
-
-}
-/* .category-select{
-  background: transparent;
-  border: 2px solid rgb(7, 75, 66);
-  border-radius: 5px;
-  color: white;
-  background-color: rgba(13, 124, 109, 0.7);
-  font-weight: 600;
-  border: none;
-  z-index: 500;
-  padding: 0.5rem 1rem;
-  width: 90%;
-  margin-left: 5%;
-} 
-.category-select:hover{
-cursor: pointer;
-}
-
-option:hover{
-  cursor: pointer;
-}
-
-
-.submit-hash-2:hover{
-  cursor: pointer;
-  } */
-
 .editor-responsive {
   display: none;
 }
@@ -537,4 +429,10 @@ option:hover{
     font-weight: bold;
     padding: 0rem 1.5rem;
   }
+}
+.cross2{
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border: none;
 }

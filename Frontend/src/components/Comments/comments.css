@@ -170,3 +170,11 @@
     font-size: 0.9rem;
   }
 }
+.log-2{
+  background-color: transparent;
+  color: rgba(2, 49, 2, 0.91);
+  font-weight: 700;
+  border: none;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}

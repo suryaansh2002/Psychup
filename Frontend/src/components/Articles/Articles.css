@@ -15,6 +15,8 @@
   /* background-image: url("../../images/img1.png"); */
   background-size: cover;
   z-index: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 .all-heading {
@@ -183,8 +185,6 @@
 
 
 @media only screen and (max-width: 400px) {
-.article-card{
-  width: 90%;
-}
+.article-card{}
 
 }

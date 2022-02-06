@@ -201,7 +201,7 @@ function PersonalityTest() {
     e.preventDefault();
     console.log(data.facts);
     axios
-      .post("https://psychup-back.herokuapp.com/api/sentino", data)
+      .post("http://localhost:5000/api/sentino", data)
       .then((res) => {
         setArr(JSON.stringify(res.data.profile.inventories.big5));
 
@@ -230,7 +230,37 @@ function PersonalityTest() {
   };
 
   const [count, setCount] = useState(0);
-
+  // var acc = document.getElementsByClassName("accordion");
+  // var i;
+  
+  // for (i = 0; i < acc.length; i++) {
+  //   acc[i].addEventListener("click", function() {
+  //     /* Toggle between adding and removing the "active" class,
+  //     to highlight the button that controls the panel */
+  //     this.classList.toggle("active");
+  
+  //     /* Toggle between hiding and showing the active panel */
+  //     var panel = this.nextElementSibling;
+  //     if (panel.style.display === "block") {
+  //       panel.style.display = "none";
+  //     } else {
+  //       panel.style.display = "block";
+  //     }
+  //   });
+  // }
+  
+  function toggleKey(e){
+    e.target.classList.toggle("active");
+  
+    /* Toggle between hiding and showing the active panel */
+    var panel = document.querySelector(".panel");
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  };
+  
   return (
     <div className="personality-main">
       {count < 5 && <h1>Personality Test</h1>}
@@ -245,9 +275,25 @@ function PersonalityTest() {
           <div className="key-div">😁 -> Agree</div>
         </div>
       )}
+    
 
       {count < 5 && (
-        <form method="post" name="myForm" autocomplete="on">
+        <>
+
+        <div className="key-res-2">
+        <button class="accordion" onClick={(e)=>toggleKey(e)}>
+        <div className="key-h">Key</div>
+
+        </button>
+        <div class="panel" id="pan">
+
+        <div className="key-div">😡-> Disagree</div>
+          <div className="key-div">😠 -> Slightly Disagree</div>
+          <div className="key-div">😐 -> Neutral</div>
+          <div className="key-div">😊 -> Slightly Agree</div>
+          <div className="key-div">😁 -> Agree</div>
+        </div>
+      </div>
           {count == 0 && (
             <>
               <Question i={1} question={data.facts[0].item} function={setA1} />
@@ -379,7 +425,8 @@ function PersonalityTest() {
               />
             </>
           )}
-        </form>
+        </>
+
       )}
       {/* {count>0 && <button  onClick={()=>setCount(count-1)}>Previous</button>} */}
       {count < 4 && (
@@ -408,8 +455,11 @@ function PersonalityTest() {
             <div className="res-card">
               <div className="res-h">Conscientiousness</div>
               <div className="res-con">
-                Lorel iplsum one two three four five six seven eight nine ten
-                eleven tweleve thirteen fourteen fifteen sixteen seventeen.
+                Conscientiousness is the personality trait of being careful, or
+                diligent. Conscientiousness implies a desire to do a task well,
+                and to take obligations to others seriously. Conscientious
+                people tend to be efficient and organized as opposed to
+                easy-going and disorderly{" "}
               </div>
               <div className="bar-c">
                 <CircularProgressbar
@@ -434,8 +484,13 @@ function PersonalityTest() {
             <div className="res-card">
               <div className="res-h">Neuroticism</div>
               <div className="res-con">
-                Lorel iplsum one two three four five six seven eight nine ten
-                eleven tweleve thirteen fourteen fifteen sixteen seventeen.
+                Neuroticism is the trait disposition to experience negative
+                affects, including anger, anxiety, self‐consciousness,
+                irritability, emotional instability, and depression1. Persons
+                with elevated levels of neuroticism respond poorly to
+                environmental stress, interpret ordinary situations as
+                threatening, and can experience minor frustrations as hopelessly
+                overwhelming.{" "}
               </div>
               <div className="bar-c">
                 <CircularProgressbar
@@ -471,8 +526,11 @@ function PersonalityTest() {
             <div className="res-card">
               <div className="res-h">Extraversion</div>
               <div className="res-con">
-                Lorel iplsum one two three four five six seven eight nine ten
-                eleven tweleve thirteen fourteen fifteen sixteen seventeen.
+                Extraversion is a measure of how energetic, sociable and
+                friendly a person is. Extraverts are commonly understood as
+                being a 'people's person' drawing energy from being around
+                others directing their energies towards people and the outside
+                world.{" "}
               </div>
               <div className="bar-c">
                 <CircularProgressbar
@@ -497,8 +555,12 @@ function PersonalityTest() {
             <div className="res-card">
               <div className="res-h">Openness</div>
               <div className="res-con">
-                Lorel iplsum one two three four five six seven eight nine ten
-                eleven tweleve thirteen fourteen fifteen sixteen seventeen.
+                Openness to experience is one of the domains which are used to
+                describe human personality in the Five Factor Model. Openness
+                involves six facets, or dimensions: active imagination,
+                aesthetic sensitivity, attentiveness to inner feelings,
+                preference for variety, intellectual curiosity, and challenging
+                authority{" "}
               </div>
               <div className="bar-c">
                 <CircularProgressbar
@@ -523,8 +585,11 @@ function PersonalityTest() {
             <div className="res-card">
               <div className="res-h">Agreeableness</div>
               <div className="res-con">
-                Lorel iplsum one two three four five six seven eight nine ten
-                eleven tweleve thirteen fourteen fifteen sixteen seventeen.
+                Agreeableness is one of the five personality traits of the Big
+                Five personality theory. A person with a high level of
+                agreeableness in a personality test is usually warm, friendly,
+                and tactful. They generally have an optimistic view of human
+                nature and get along well with others.{" "}
               </div>
               <div className="bar-c">
                 <CircularProgressbar

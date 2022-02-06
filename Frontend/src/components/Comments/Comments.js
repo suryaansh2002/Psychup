@@ -73,7 +73,10 @@ export default function Comments(props) {
                 placeholder="Add a comment..."
               />
             </div>
-          ) : null}
+          ) : <button           data-toggle="modal"
+          data-target="#logModal"
+          className="log-2"
+>Login to add comments</button>}
 
           {rootComments.map((rootComment) => (
             <div className="comment-box">

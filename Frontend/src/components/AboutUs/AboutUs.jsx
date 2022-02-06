@@ -18,17 +18,17 @@ export default function AboutUs() {
           <div className="col-lg-6  temp">
             <div className="about-container">
               <div className="c-2">
-                Psychology is the science of mind and behavior. Psychology
-                includes the study of conscious and unconscious phenomena,
-                including feelings and thoughts. It is an academic discipline of
-                immense scope, crossing the boundaries between the natural and
-                social sciences.
-                <br />
-                <br /> Psychology is the science of mind and behavior.
-                Psychology includes the study of conscious and unconscious
-                phenomena, including feelings and thoughts. It is an academic
-                discipline of immense scope, crossing the boundaries between the
-                natural and social sciences.{" "}
+                PsychUp! is a platform, which aims to promulgate the multivaried
+                ideas and aspects of Psychology , from a scientific point of
+                view. Psychology is not just about "mental health", it is far
+                more than that. Bringing these principles to light would
+                substantiate the power of mind, and its subsequent effects on
+                our day to day lives. Whether it be a social setting such as an
+                office workplace, or be the Great Gender Divide, Psychology
+                extends its scientific fundamentals omnipotently. Come join us,
+                as we embark on a journey to unravel the deepest and the most
+                interesting issues, which might seem small at first sight, but
+                in reality, serve a bigger societal purpose!
               </div>
             </div>
           </div>
