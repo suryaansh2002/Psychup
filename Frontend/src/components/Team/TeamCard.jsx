@@ -1,6 +1,7 @@
 import React from "react";
 import "./Team.css";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { GiArchiveResearch } from "react-icons/gi";
 import { MdEmail } from "react-icons/md";
 
 export default function TeamCard(props) {
@@ -14,9 +15,17 @@ export default function TeamCard(props) {
       <div className="t-card-quote">{props.quote}</div>
 
       <div className="row">
-        <a className="t-icon-c" href={props.github} target={"_blank"}>
-          <FaGithub className="t-icon-c" />
-        </a>
+        {props.github && (
+          <a className="t-icon-c" href={props.github} target={"_blank"}>
+            <FaGithub className="t-icon-c" />
+          </a>
+        )}
+        {props.other && (
+          <a className="t-icon-c" href={props.other} target={"_blank"}>
+            {/* <FaGithub className="t-icon-c" /> */}
+            <GiArchiveResearch className="t-icon-c" />
+          </a>
+        )}
         <a className="t-icon-c" href={props.linkedin} target={"_blank"}>
           <FaLinkedin className="t-icon-c" />
         </a>{" "}

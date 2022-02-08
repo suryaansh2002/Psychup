@@ -1,4 +1,3 @@
-
 .main-title h2 {
   padding-top: 5rem;
 }
@@ -23,6 +22,7 @@
   text-align: center;
   margin-top: 2rem;
   font-family: "Philosopher", sans-serif;
+  margin-bottom: 1rem;
 }
 
 .main-c h2 {
@@ -38,7 +38,7 @@
 
 .main-c p {
   font-family: "Raleway", cursive;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 @media only screen and (max-width: 900px) {
@@ -49,14 +49,22 @@
 
 @media only screen and (max-width: 620px) {
   .main-c {
-    width: 90%;
-    margin-left: 5%;
+    width: 90vw;
+    margin-left: 5vw;
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 
   .explore-video {
     width: 80vw;
     height: 45vw;
   }
+  /* .main-c h2{
+    width: 100%;
+  }
+  .main-c p{
+    width: 90vw;
+  } */
 }
 
 @media only screen and (max-width: 520px) {
@@ -65,4 +73,11 @@
   }
   .main-c p {
     font-size: 0.8rem;
-  }}
+  }
+  .main-title h2 {
+    font-size: 1.5rem;
+    width: 100vw;
+    padding: 1rem;
+    padding-top: 6rem;
+  }
+}

@@ -26,6 +26,7 @@ import News from "./components/News/News";
 import Team from "./components/Team/Team";
 import PersonalityTest from "./components/PersonalityTest/PersonalityTest";
 import PTest from "./components/PTest/PTest";
+import Personalities from "./components/Personalities/Personalities";
 
 function App() {
   const [side, setSide] = useState(false);
@@ -107,6 +108,11 @@ function App() {
             path="/articles/:domain"
             exact
             component={() => <DomainPage />}
+          />
+          <Route
+            path="/personalities/:type"
+            exact
+            component={() => <Personalities />}
           />
           <Route path="/team" exact component={() => <Team />} />
         </Switch>

@@ -1,0 +1,123 @@
+.personalities-main {
+  min-height: 100vh;
+  background-image: url("../../images/img1.png");
+  background-size: cover;
+}
+
+.pers-c {
+  width: 80vw;
+  margin-left: 10vw;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pers-c h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Philosopher", sans-serif;
+}
+
+.pers-c p {
+  font-size: 1.1rem;
+  font-family: "Raleway", cursive;
+}
+
+.pers-c h2 {
+  margin-top: 3rem;
+  font-family: "Philosopher", sans-serif;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+}
+
+.pers-c b {
+  font-family: "Philosopher", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.pers-img {
+  height: 20vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.pers-c .p-bubble {
+  display: inline-block;
+  /* background-color:  #abdee6; */
+  box-shadow: 5px 5px 5px rgb(100, 100, 100, 0.9);
+  font-size: 1.3rem;
+  font-family: "Philosopher", sans-serif;
+  font-family: 800;
+  padding: 1rem 2rem;
+  border-radius: 50%;
+}
+.bubble-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.pers-box {
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgb(100, 100, 100, 0.9);
+  padding: 1rem;
+  /* background-color: rgba(250, 235, 215, 0.733); */
+}
+
+.s-w {
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgb(100, 100, 100, 0.9);
+  padding: 1rem;
+  display: inline-block;
+  width: 40%;
+  margin: 1rem;
+  margin-top: 2rem;
+}
+@media only screen and (max-width: 740px) {
+  .pers-c .p-bubble {
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+    display: block;
+    text-align: center;
+    width: 60vw;
+    margin: 1.5rem 0rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  .bubble-container {
+    display: block;
+    background-color: antiquewhite;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+  }
+
+  .pers-c h1 {
+    font-size: 6vw;
+  }
+  .pers-c h2 {
+    font-size: 5vw;
+  }
+  .pers-img {
+    width: 60vw;
+    height: auto;
+  }
+  .pers-c p {
+    font-size: 0.9rem;
+  }
+  .pers-c {
+    width: 90vw;
+    margin-left: 5vw;
+  }
+  .s-w {
+    display: block;
+    width: 80vw;
+  }
+  .pers-c b {
+    font-size: 1.1rem;
+  }
+}

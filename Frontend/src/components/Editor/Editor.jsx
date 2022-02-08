@@ -9,6 +9,7 @@ import { useCookies } from "react-cookie";
 import { BiImage, BiCategory } from "react-icons/bi";
 import { AiFillDownCircle } from "react-icons/ai";
 import { MdAdd } from "react-icons/md";
+import { AiFillDelete } from "react-icons/ai";
 
 import axios from "axios";
 import Input from "./Input";
@@ -144,10 +145,8 @@ export default function Editor(props) {
     inp.click();
   }
   async function delHash(value) {
-    const newArr=hashContainer.filter((hash) => 
-      hash != value
-    );
-   await setHashContainer(newArr)
+    const newArr = hashContainer.filter((hash) => hash != value);
+    await setHashContainer(newArr);
     await setHashCookie("hash", newArr);
     // console.log(hashCookie["hash"]);
   }
@@ -219,7 +218,7 @@ export default function Editor(props) {
                             className="cross2"
                             onClick={() => delHash(hash)}
                           >
-                            x
+                            <AiFillDelete className="dustbin" />
                           </button>
                         </div>
                       ))}

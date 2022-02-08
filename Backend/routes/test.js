@@ -21,6 +21,9 @@ const data = {
   ],
   profile: { inventories: ["big5"], indices: ["withdrawal"] },
 };
+router.get("/", (req, res) => {
+  res.send("P Test Backend");
+});
 
 router.post("/", (req, res) => {
   console.log(req.body);

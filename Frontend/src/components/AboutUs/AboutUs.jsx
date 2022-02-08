@@ -14,7 +14,7 @@ export default function AboutUs() {
             About <span className="psych">PsychUp!</span>
           </h2>
         </div>
-        <div className="row">
+        <div className="row content">
           <div className="col-lg-6  temp">
             <div className="about-container">
               <div className="c-2">

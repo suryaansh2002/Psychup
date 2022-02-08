@@ -42,7 +42,6 @@
   border-radius: 5px;
   width: 90%;
   margin-top: 1rem;
-  
 }
 .title-a h2 {
   position: absolute;
@@ -117,7 +116,7 @@
 .card-content {
   text-align: left;
   margin: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-family: "Raleway", cursive;
 }
 
@@ -157,7 +156,6 @@
   vertical-align: top;
   box-shadow: 4px 4px 7.5px rgba(9, 94, 87, 0.5);
   z-index: 5;
-  
 }
 
 .card-category {
@@ -176,15 +174,12 @@
   .checkout-all {
     font-size: 1rem;
   }
-.article-card{
-  width: 80%;
+  .article-card {
+    width: 80%;
+  }
 }
-  
-}
-
-
 
 @media only screen and (max-width: 400px) {
-.article-card{}
-
+  .article-card {
+  }
 }

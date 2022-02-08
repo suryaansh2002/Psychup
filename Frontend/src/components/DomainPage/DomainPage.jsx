@@ -74,7 +74,7 @@ export default function DomainPage() {
             <div className="main-c"></div>
             <div className="video">
               <iframe
-              className="explore-video"
+                className="explore-video"
                 src={url}
                 title="YouTube video player"
                 frameborder="0"
@@ -105,4 +105,3 @@ export default function DomainPage() {
     </div>
   );
 }
-

@@ -428,11 +428,17 @@ textarea::placeholder {
     font-size: 20px;
     font-weight: bold;
     padding: 0rem 1.5rem;
+    font-family: "Philosopher", sans-serif;
   }
 }
-.cross2{
+.cross2 {
   position: absolute;
   right: 10px;
   background: transparent;
   border: none;
+}
+.dustbin {
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  color: rgb(11, 75, 66);
 }

@@ -8,6 +8,7 @@
   text-align: center;
   align-items: center;
   flex-direction: column;
+  padding: 2rem 0rem;
 }
 
 .ptest-heading {
@@ -18,17 +19,67 @@
 .ptest-sub {
   margin: 2rem;
   font-family: "Philosopher", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-family: "Raleway", cursive;
+}
+
+.ptest-c {
+  width: 100vw;
+}
+.ptest-card {
+  display: inline-block;
+  width: 20rem;
+  /* height: 10rem; */
+  border-radius: 10px;
+  margin: 1rem 2rem;
+  padding: 1.5rem;
+  background-color: rgba(129, 194, 191, 0.548);
+  border-radius: 15px;
+  box-shadow: 4px 10px 10px rgba(35, 58, 57, 0.959);
+  padding: 1rem;
+  transform: 1.5s;
+}
+.ptest-card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.ptest-h {
   font-size: 1.3rem;
-  margin-bottom: 6rem;
+  font-weight: 800;
+  font-family: "Philosopher", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.ptest-content {
+  font-size: 1rem;
+  font-family: "Raleway", cursive;
+}
+.ptest-img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}
+/* #ptest1{
+  background-image: url('../../images/img31.png');
+  background-size: cover;
+} */
+.pt-btn {
+  background: rgba(3, 88, 84, 0.534);
+  box-shadow: 2px 4px 4px rgba(60, 63, 63, 0.884);
+  color: white;
+  padding: 1rem;
 }
 @media only screen and (max-width: 520px) {
-.ptest-heading{
-  font-size: 6.5vw;
-}
-.ptest-sub{
-  font-size: 4.5vw;
-  margin-bottom: 1vw;
-}
+  .ptest-heading {
+    font-size: 6.5vw;
+  }
+  .ptest-sub {
+    font-size: 4.5vw;
+    margin-bottom: 1vw;
+  }
 
-
+  .ptest-card {
+    width: 80vw;
+  }
 }

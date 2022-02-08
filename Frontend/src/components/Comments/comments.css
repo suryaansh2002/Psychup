@@ -51,6 +51,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: rgb(4, 61, 61);
+  font-family: "Philosopher", sans-serif;
 }
 .comment-user {
   display: inline-block;
@@ -60,13 +61,17 @@
   margin-top: 0rem;
   margin-left: -0.5rem;
   border: none;
+  font-family: "Philosopher", sans-serif;
+  font-weight: 400;
 }
 .comment-d {
   font-size: 0.7rem;
+  font-family: "Philosopher", sans-serif;
 }
 .comment-body {
   text-align: left;
   margin: 1rem;
+  font-family: "Raleway", cursive;
 }
 .comment-image-container {
   text-align: left;
@@ -170,11 +175,14 @@
     font-size: 0.9rem;
   }
 }
-.log-2{
+.log-2 {
   background-color: transparent;
-  color: rgba(2, 49, 2, 0.91);
-  font-weight: 700;
   border: none;
   margin-left: 50%;
   transform: translateX(-50%);
+  font-family: "Philosopher", sans-serif;
+  font-weight: bold;
+  text-decoration: underline;
+  color: black;
+  color: rgb(4, 61, 61);
 }

@@ -2,14 +2,19 @@ import "./PersonalityTest.css";
 import axios from "axios";
 import { useState } from "react";
 import Question from "./Question";
-import { AiOutlineArrowRight } from "react-icons/ai";
+import { AiOutlineArrowRight, AiOutlineDown } from "react-icons/ai";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import Logician from "./logician";
-import Logistician from "./logistician";
-import Entertainer from "./entertainer";
-import Campaigner from "./campaigner";
-import Protaginist from "./protaginist";
+// import Logician from "./logician";
+// import Logistician from "./logistician";
+// import Entertainer from "./entertainer";
+// import Campaigner from "../Personalities/campaigner";
+// import Protaginist from "../Personalities/protaginist";
+import t1 from "../../images/logician.png";
+import t2 from "../../images/logistician.png";
+import t3 from "../../images/entertainer.png";
+import t4 from "../../images/protagonist.png";
+import t5 from "../../images/campaigner.png";
 
 function PersonalityTest() {
   //make 30 variables
@@ -59,7 +64,7 @@ function PersonalityTest() {
     } else if (max(arr) == arr[1]) {
       return "Logistician";
     } else if (max(arr) == arr[2]) {
-      return "Entertertainer";
+      return "Entertainer";
     } else if (max(arr) == arr[3]) {
       return "Protagonist";
     } else if (max(arr) == arr[4]) {
@@ -196,12 +201,12 @@ function PersonalityTest() {
   const [e, setE] = useState(0.111);
   const [o, setO] = useState(0.505);
   const [a, setA] = useState(0.909);
-  const [label, setLabel] = useState("");
+  const [label, setLabel] = useState("Campaigner");
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(data.facts);
     axios
-      .post("http://localhost:5000/api/sentino", data)
+      .post("https://psychup-back.herokuapp.com/api/sentino", data)
       .then((res) => {
         setArr(JSON.stringify(res.data.profile.inventories.big5));
 
@@ -232,13 +237,13 @@ function PersonalityTest() {
   const [count, setCount] = useState(0);
   // var acc = document.getElementsByClassName("accordion");
   // var i;
-  
+
   // for (i = 0; i < acc.length; i++) {
   //   acc[i].addEventListener("click", function() {
   //     /* Toggle between adding and removing the "active" class,
   //     to highlight the button that controls the panel */
   //     this.classList.toggle("active");
-  
+
   //     /* Toggle between hiding and showing the active panel */
   //     var panel = this.nextElementSibling;
   //     if (panel.style.display === "block") {
@@ -248,10 +253,10 @@ function PersonalityTest() {
   //     }
   //   });
   // }
-  
-  function toggleKey(e){
+
+  function toggleKey(e) {
     e.target.classList.toggle("active");
-  
+
     /* Toggle between hiding and showing the active panel */
     var panel = document.querySelector(".panel");
     if (panel.style.display === "block") {
@@ -259,8 +264,8 @@ function PersonalityTest() {
     } else {
       panel.style.display = "block";
     }
-  };
-  
+  }
+
   return (
     <div className="personality-main">
       {count < 5 && <h1>Personality Test</h1>}
@@ -275,25 +280,23 @@ function PersonalityTest() {
           <div className="key-div">😁 -> Agree</div>
         </div>
       )}
-    
 
       {count < 5 && (
         <>
-
-        <div className="key-res-2">
-        <button class="accordion" onClick={(e)=>toggleKey(e)}>
-        <div className="key-h">Key</div>
-
-        </button>
-        <div class="panel" id="pan">
-
-        <div className="key-div">😡-> Disagree</div>
-          <div className="key-div">😠 -> Slightly Disagree</div>
-          <div className="key-div">😐 -> Neutral</div>
-          <div className="key-div">😊 -> Slightly Agree</div>
-          <div className="key-div">😁 -> Agree</div>
-        </div>
-      </div>
+          <div className="key-res-2">
+            <button class="accordion" onClick={(e) => toggleKey(e)}>
+              <div className="key-h">
+                Key <AiOutlineDown className="down" />
+              </div>
+            </button>
+            <div class="panel" id="pan">
+              <div className="key-div">😡-> Disagree</div>
+              <div className="key-div">😠 -> Slightly Disagree</div>
+              <div className="key-div">😐 -> Neutral</div>
+              <div className="key-div">😊 -> Slightly Agree</div>
+              <div className="key-div">😁 -> Agree</div>
+            </div>
+          </div>
           {count == 0 && (
             <>
               <Question i={1} question={data.facts[0].item} function={setA1} />
@@ -426,7 +429,6 @@ function PersonalityTest() {
             </>
           )}
         </>
-
       )}
       {/* {count>0 && <button  onClick={()=>setCount(count-1)}>Previous</button>} */}
       {count < 4 && (
@@ -447,11 +449,176 @@ function PersonalityTest() {
         </button>
       )}
 
-      {count == 5 && <h1>Your Assesment Results</h1>}
+      {count == 5 && <h1 id="results">Your Assesment Results</h1>}
       {count == 5 && (
         <div>
-          <h2 className="res-h2">Characteristics:</h2>
-          <div className="res-cont">
+          <h2 className="res-h1" id="res2">
+            Characteristics:
+          </h2>
+          <div className="cardss">
+            <div className="card-1 c1">
+              <div className="c-1-h">Conscientiousness</div>
+              <div className="bar-c">
+                <CircularProgressbar
+                  value={c * 100}
+                  text={`${c * 100}%`}
+                  circleRatio={1}
+                  strokeWidth={10}
+                  strokeLinecap="round"
+                  styles={buildStyles({
+                    strokeLinecap: "round",
+                    textSize: "14px",
+                    strokeWidth: 100,
+                    pathColor: `#745074`,
+                    textColor: "black",
+                    trailColor: "#d6d6d6",
+                    backgroundColor: "#3e98c7",
+                  })}
+                />
+              </div>
+            </div>
+
+            <div className="card-1 c2">
+              <div className="c-1-h">Neuroticism</div>
+              <div className="bar-c">
+                <CircularProgressbar
+                  value={n * 100}
+                  text={`${n * 100}%`}
+                  circleRatio={1}
+                  strokeWidth={10}
+                  styles={buildStyles({
+                    strokeLinecap: "round",
+                    textSize: "14px",
+                    strokeWidth: 100,
+                    pathColor: `#ad826c`,
+                    textColor: "black",
+                    trailColor: "#d6d6d6",
+                    backgroundColor: "#3e98c7",
+                  })}
+                />
+              </div>
+            </div>
+
+            <div className="card-1 c3">
+              <div className="c-1-h">Extraversion</div>
+              <div className="bar-c">
+                <CircularProgressbar
+                  value={e * 100}
+                  text={`${e * 100}%`}
+                  circleRatio={1}
+                  strokeWidth={10}
+                  styles={buildStyles({
+                    strokeLinecap: "round",
+                    textSize: "14px",
+                    strokeWidth: 100,
+                    pathColor: `#627962`,
+                    textColor: "black",
+                    trailColor: "#d6d6d6",
+                    backgroundColor: "#3e98c7",
+                  })}
+                />
+              </div>
+            </div>
+
+            <div className="card-1 c4">
+              <div className="c-1-h">Openness</div>
+              <div className="bar-c">
+                <CircularProgressbar
+                  value={o * 100}
+                  text={`${o * 100}%`}
+                  circleRatio={1}
+                  strokeWidth={10}
+                  styles={buildStyles({
+                    strokeLinecap: "round",
+                    textSize: "14px",
+                    strokeWidth: 100,
+                    pathColor: `#96965a`,
+                    textColor: "black",
+                    trailColor: "#d6d6d6",
+                    backgroundColor: "#3e98c7",
+                  })}
+                />
+              </div>
+            </div>
+
+            <div className="card-1 c5">
+              <div className="c-1-h">Agreeableness</div>
+              <div className="bar-c">
+                <CircularProgressbar
+                  value={a * 100}
+                  text={`${a * 100}%`}
+                  circleRatio={1}
+                  strokeWidth={10}
+                  styles={buildStyles({
+                    strokeLinecap: "round",
+                    textSize: "14px",
+                    strokeWidth: 100,
+                    pathColor: `#58868d`,
+                    textColor: "black",
+                    trailColor: "#d6d6d6",
+                    backgroundColor: "#3e98c7",
+                  })}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="long-card lc1 c1">
+            <div className="lc-h">Conscientiousness</div>
+            <div className="lc-c">
+              Conscientiousness is the personality trait of being careful, or
+              diligent. Conscientiousness implies a desire to do a task well,
+              and to take obligations to others seriously. Conscientious people
+              tend to be efficient and organized as opposed to easy-going and
+              disorderly
+            </div>
+          </div>
+
+          <div className="long-card lc2 c2">
+            <div className="lc-h">Neuroticism</div>
+            <div className="lc-c">
+              Neuroticism is the trait disposition to experience negative
+              affects, including anger, anxiety, self‐consciousness,
+              irritability, emotional instability, and depression1. Persons with
+              elevated levels of neuroticism respond poorly to environmental
+              stress, interpret ordinary situations as threatening, and can
+              experience minor frustrations as hopelessly overwhelming.
+            </div>
+          </div>
+
+          <div className="long-card lc1 c3">
+            <div className="lc-h">Extraversion</div>
+            <div className="lc-c">
+              Extraversion is a measure of how energetic, sociable and friendly
+              a person is. Extraverts are commonly understood as being a
+              'people's person' drawing energy from being around others
+              directing their energies towards people and the outside world.
+            </div>
+          </div>
+
+          <div className="long-card lc2 c4">
+            <div className="lc-h">Openness</div>
+            <div className="lc-c">
+              Openness to experience is one of the domains which are used to
+              describe human personality in the Five Factor Model. Openness
+              involves six facets, or dimensions: active imagination, aesthetic
+              sensitivity, attentiveness to inner feelings, preference for
+              variety, intellectual curiosity, and challenging authority
+            </div>
+          </div>
+
+          <div className="long-card lc1 c5">
+            <div className="lc-h">Agreeableness</div>
+            <div className="lc-c">
+              Agreeableness is one of the five personality traits of the Big
+              Five personality theory. A person with a high level of
+              agreeableness in a personality test is usually warm, friendly, and
+              tactful. They generally have an optimistic view of human nature
+              and get along well with others.
+            </div>
+          </div>
+
+          {/* <div className="res-cont">
             <div className="res-card">
               <div className="res-h">Conscientiousness</div>
               <div className="res-con">
@@ -477,7 +644,6 @@ function PersonalityTest() {
                     backgroundColor: "#3e98c7",
                   })}
                 />
-                ;
               </div>
             </div>
 
@@ -519,7 +685,6 @@ function PersonalityTest() {
                     backgroundColor: "#3e98c7",
                   })}
                 />
-                ;
               </div>
             </div>
 
@@ -548,7 +713,6 @@ function PersonalityTest() {
                     backgroundColor: "#3e98c7",
                   })}
                 />
-                ;
               </div>
             </div>
 
@@ -578,7 +742,6 @@ function PersonalityTest() {
                     backgroundColor: "#3e98c7",
                   })}
                 />
-                ;
               </div>
             </div>
 
@@ -607,17 +770,87 @@ function PersonalityTest() {
                     backgroundColor: "#3e98c7",
                   })}
                 />
-                ;
               </div>
             </div>
-          </div>
-          <h4 className="res-h2">Your Personality Label:</h4>
+          </div> */}
           <div className="label-c">
+            <h4 className="res-h2">Your Personality Label Is:</h4>
+            {/* <div className="label-c"> */}
+            {label == "Logician" && (
+              <>
+                <div>
+                  <img className="label-img" src={t1} />
+                </div>
+                <div className="res-h3"> Logician- INTP</div>
+
+                <a href="/personalities/logician">
+                  <button className="label-btn">
+                    Read about your personality
+                  </button>
+                </a>
+              </>
+            )}
+            {label == "Logistician" && (
+              <>
+                <div>
+                  <img className="label-img" src={t2} />
+                </div>
+                <div className="res-h3"> Logistician- ISTJ</div>
+
+                <a href="/personalities/logistician">
+                  <button className="label-btn">
+                    Read about your personality
+                  </button>
+                </a>
+              </>
+            )}
+            {label == "Entertainer" && (
+              <>
+                <div>
+                  <img className="label-img" src={t3} />
+                </div>
+                <div className="res-h3"> Entertainer-ESFP</div>
+                <a href="/personalities/entertainer">
+                  <button className="label-btn">
+                    Read about your personality
+                  </button>
+                </a>
+              </>
+            )}
+            {label == "Protagonist" && (
+              <>
+                <div className="img-div">
+                  <img className="label-img" src={t4} />
+                </div>
+                <div className="res-h3"> Protaginist-ENFJ</div>
+                <a href="/personalities/protagonist">
+                  <button className="label-btn">
+                    Read about your personality
+                  </button>
+                </a>
+              </>
+            )}
+            {label == "Campaigner" && (
+              <>
+                <div>
+                  <img className="label-img" src={t5} />
+                </div>
+                <div className="res-h3"> Campaigner-ENFP</div>
+                <a href="/personalities/campaigner">
+                  <button className="label-btn">
+                    Read about your personality
+                  </button>
+                </a>
+              </>
+            )}
+            {/* </div> */}
+            {/* <div className="label-c">
             {label == "Logician" && <Logician />}
             {label == "Logistician" && <Logistician />}
-            {label == "Entertertainer" && <Entertainer />}
+            {label == "Entertainer" && <Entertainer />}
             {label == "Protagonist" && <Protaginist />}
             {label == "Campaigner" && <Campaigner />}
+          </div> */}
           </div>
         </div>
       )}
