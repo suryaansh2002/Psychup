@@ -15,6 +15,7 @@ import t2 from "../../images/logistician.png";
 import t3 from "../../images/entertainer.png";
 import t4 from "../../images/protagonist.png";
 import t5 from "../../images/campaigner.png";
+import request from "request-promise";
 
 function PersonalityTest() {
   //make 30 variables
@@ -202,36 +203,77 @@ function PersonalityTest() {
   const [o, setO] = useState(0.505);
   const [a, setA] = useState(0.909);
   const [label, setLabel] = useState("Campaigner");
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(data.facts);
+    const token = "9020f914769a5b5b92870034c6b2caad65f03074";
+    const options = {
+      method: "POST",
+      uri: "https://sentino.org/api/v2/person/profile",
+      body: data,
+      json: true,
+      headers: {
+        "cache-control": "no-cache",
+        "Content-Type": "application/json",
+        Authorization: `Token ${token}`,
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+        "Access-Control-Allow-Headers":
+          "append,delete,entries,foreach,get,has,keys,set,values,Authorization",
+      },
+    };
+
     axios
-      .post("https://psychup-back.herokuapp.com/api/sentino", data)
-      .then((res) => {
-        setArr(JSON.stringify(res.data.profile.inventories.big5));
-
-        var temp = res.data.profile.inventories.big5;
-
-        setC(res.data.profile.inventories.big5.conscientiousness.quantile);
-        setN(res.data.profile.inventories.big5.neuroticism.quantile);
-        setE(res.data.profile.inventories.big5.extraversion.quantile);
-        setO(res.data.profile.inventories.big5.openness.quantile);
-        setA(res.data.profile.inventories.big5.agreeableness.quantile);
-
-        setCount(count + 1);
-        const arr2 = [
-          res.data.profile.inventories.big5.conscientiousness.quantile,
-          res.data.profile.inventories.big5.neuroticism.quantile,
-          res.data.profile.inventories.big5.extraversion.quantile,
-          res.data.profile.inventories.big5.openness.quantile,
-          res.data.profile.inventories.big5.agreeableness.quantile,
-        ];
-        setLabel(giveLabel(arr2));
+      .post("https://sentino.org/api/v2/person/profile", data, {
+        headers: {
+          "cache-control": "no-cache",
+          "Content-Type": "application/json",
+          Authorization: `Token ${token}`,
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+          "Access-Control-Allow-Headers":
+            "append,delete,entries,foreach,get,has,keys,set,values,Authorization",
+        },
       })
-
-      .catch((err) => {
+      .then(function (response) {
+        console.log(response);
+        // res.status(200).json(response);
+      })
+      .catch(function (err) {
         console.log(err);
       });
+
+    var url = "https://psychup-back.herokuapp.com";
+    url = "http://localhost:5000";
+
+    // axios
+    //   .post(url + "/api/sentino", data)
+    //   .then((res) => {
+    //     setArr(JSON.stringify(res.data.profile.inventories.big5));
+
+    //     var temp = res.data.profile.inventories.big5;
+
+    //     setC(res.data.profile.inventories.big5.conscientiousness.quantile);
+    //     setN(res.data.profile.inventories.big5.neuroticism.quantile);
+    //     setE(res.data.profile.inventories.big5.extraversion.quantile);
+    //     setO(res.data.profile.inventories.big5.openness.quantile);
+    //     setA(res.data.profile.inventories.big5.agreeableness.quantile);
+
+    //     setCount(count + 1);
+    //     const arr2 = [
+    //       res.data.profile.inventories.big5.conscientiousness.quantile,
+    //       res.data.profile.inventories.big5.neuroticism.quantile,
+    //       res.data.profile.inventories.big5.extraversion.quantile,
+    //       res.data.profile.inventories.big5.openness.quantile,
+    //       res.data.profile.inventories.big5.agreeableness.quantile,
+    //     ];
+    //     setLabel(giveLabel(arr2));
+    //   })
+
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
   };
 
   const [count, setCount] = useState(0);
