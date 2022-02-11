@@ -19,9 +19,9 @@ export default function DomainPage() {
   const splitArr = window.location.pathname.split("/");
   const domain = splitArr[2];
   console.log(domain);
-  useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/posts/")
+  useEffect( async() => {
+    await axios
+      .get("https://psychup-back.herokuapp.com/api/posts/")
       .then((response) => {
         setArticleList(response.data);
       })
@@ -45,6 +45,7 @@ export default function DomainPage() {
       articles2.push(articleList[i]);
     }
   }
+  console.log(articleList)
 
   function removeTags(str) {
     str = str.toString();

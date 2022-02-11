@@ -224,56 +224,56 @@ function PersonalityTest() {
       },
     };
 
-    axios
-      .post("https://sentino.org/api/v2/person/profile", data, {
-        headers: {
-          "cache-control": "no-cache",
-          "Content-Type": "application/json",
-          Authorization: `Token ${token}`,
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-          "Access-Control-Allow-Headers":
-            "append,delete,entries,foreach,get,has,keys,set,values,Authorization",
-        },
-      })
-      .then(function (response) {
-        console.log(response);
-        // res.status(200).json(response);
-      })
-      .catch(function (err) {
-        console.log(err);
-      });
-
-    var url = "https://psychup-back.herokuapp.com";
-    url = "http://localhost:5000";
-
     // axios
-    //   .post(url + "/api/sentino", data)
-    //   .then((res) => {
-    //     setArr(JSON.stringify(res.data.profile.inventories.big5));
-
-    //     var temp = res.data.profile.inventories.big5;
-
-    //     setC(res.data.profile.inventories.big5.conscientiousness.quantile);
-    //     setN(res.data.profile.inventories.big5.neuroticism.quantile);
-    //     setE(res.data.profile.inventories.big5.extraversion.quantile);
-    //     setO(res.data.profile.inventories.big5.openness.quantile);
-    //     setA(res.data.profile.inventories.big5.agreeableness.quantile);
-
-    //     setCount(count + 1);
-    //     const arr2 = [
-    //       res.data.profile.inventories.big5.conscientiousness.quantile,
-    //       res.data.profile.inventories.big5.neuroticism.quantile,
-    //       res.data.profile.inventories.big5.extraversion.quantile,
-    //       res.data.profile.inventories.big5.openness.quantile,
-    //       res.data.profile.inventories.big5.agreeableness.quantile,
-    //     ];
-    //     setLabel(giveLabel(arr2));
+    //   .post("https://sentino.org/api/v2/person/profile", data, {
+    //     headers: {
+    //       "cache-control": "no-cache",
+    //       "Content-Type": "application/json",
+    //       Authorization: `Token ${token}`,
+    //       "Access-Control-Allow-Origin": "*",
+    //       "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+    //       "Access-Control-Allow-Headers":
+    //         "append,delete,entries,foreach,get,has,keys,set,values,Authorization",
+    //     },
     //   })
-
-    //   .catch((err) => {
+    //   .then(function (response) {
+    //     console.log(response);
+    //     // res.status(200).json(response);
+    //   })
+    //   .catch(function (err) {
     //     console.log(err);
     //   });
+
+    var url = "https://psychup-back.herokuapp.com";
+    // url = "http://localhost:5000";
+
+    axios
+      .post(url + "/api/sentino", data)
+      .then((res) => {
+        setArr(JSON.stringify(res.data.profile.inventories.big5));
+
+        var temp = res.data.profile.inventories.big5;
+
+        setC(res.data.profile.inventories.big5.conscientiousness.quantile);
+        setN(res.data.profile.inventories.big5.neuroticism.quantile);
+        setE(res.data.profile.inventories.big5.extraversion.quantile);
+        setO(res.data.profile.inventories.big5.openness.quantile);
+        setA(res.data.profile.inventories.big5.agreeableness.quantile);
+
+        setCount(count + 1);
+        const arr2 = [
+          res.data.profile.inventories.big5.conscientiousness.quantile,
+          res.data.profile.inventories.big5.neuroticism.quantile,
+          res.data.profile.inventories.big5.extraversion.quantile,
+          res.data.profile.inventories.big5.openness.quantile,
+          res.data.profile.inventories.big5.agreeableness.quantile,
+        ];
+        setLabel(giveLabel(arr2));
+      })
+
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const [count, setCount] = useState(0);

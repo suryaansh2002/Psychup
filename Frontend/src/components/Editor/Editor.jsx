@@ -95,7 +95,7 @@ export default function Editor(props) {
       gdp: "Gender Diversity Psychology",
       iobp: "Industrial/Organizational Behavioural Psychology",
       cmp: "Consumer/Marketing Psychology",
-      pdpd: "",
+      pdpd: "Psychology of Disorders and Preliminary Diagnosis",
     };
     const hashvalue = [];
     console.log(hashvalue);
