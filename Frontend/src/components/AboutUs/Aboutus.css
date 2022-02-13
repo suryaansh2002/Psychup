@@ -109,12 +109,12 @@
 
 @media only screen and (max-width: 990px) {
   .aboutus-main {
-    height: 200vh;
+    height: max-content;
   }
 
   .brain-img {
     z-index: 700;
-    position: absolute;
+    position: static;
     top: 5vh;
     right: 10%;
     width: 80%;
@@ -178,7 +178,7 @@
 @media only screen and (max-width: 520px) {
   .about-container {
     width: 120%;
-    margin-left: -10%;
+    margin-left: calc(-10% - 10px);
     margin-top: 18vh;
     padding: 2rem 5rem;
     background-image: url("../../images/22.png");
@@ -212,15 +212,12 @@
 
   .brain-img {
     z-index: 700;
-    position: absolute;
-    top: 50vw;
-    right: 5%;
-    width: 90%;
-    height: 500px;
+    position: static;
+    width: 90vw;
+    height: auto;
+    margin: 4rem 0rem;    
   }
-  .aboutus-main {
-    height: 200vh;
-  }
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -228,15 +225,6 @@
     width: 160%;
     margin: -30%;
     margin-top: -8rem;
-  }
-  .brain-img {
-    z-index: 700;
-    position: absolute;
-    top: 40vw;
-    right: 0%;
-    width: 120%;
-    height: 400px;
-    left: -10%;
   }
 }
 

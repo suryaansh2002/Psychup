@@ -60,7 +60,7 @@ font-weight: normal;
   box-shadow: 4px 10px 10px rgba(35, 58, 57, 0.959);
   padding: 1rem;
   width: 20rem;
-  height: 24rem;
+  height: 21rem;
   margin: 2rem;
   display: block;
 }
@@ -116,22 +116,30 @@ font-weight: normal;
 }
 @media only screen and (max-width: 520px) {
   .item {
-    width: 70vw;
+    width: 65vw;
     margin: 0rem 3rem;
     margin-bottom: 1rem;
+  }
+  .item-title{
+    font-size: 1rem;
+
+  }
+  .item-about{
+    font-size: 0.75rem;
+  }
+  .more{
+    font-size: 0.8rem;
   }
 }
 
 @media only screen and (max-width: 420px) {
   .item {
-    width: 75vw;
+    width: 70vw;
     margin-bottom: 2.5rem;
     margin-left: -2.5vw;
 
   }
-  .item-about {
-    font-size: 0.8rem;
-  }
+
   .domain-main {
     height: max-content;
   }

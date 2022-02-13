@@ -1,22 +1,19 @@
 .footer-main {
-  height: 100vh;
-  vertical-align: middle;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  color: black;
-  font-size: 1.5rem;
-  font-weight: 700;
-  background-color: #f2f3f6;
 
+  width: 100vw;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.8rem;
   background-image: url("../../images/img1.png");
-  background-size: cover;
+  background-size: 100% 100%;
+  /* font-weight: 600; */
+  font-family: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-  height: 90px;
+  /* background-color: rgb(16, 137, 218); */
+}
+
+@media only screen and (max-width: 480px) {
+  .footer-main{
+    font-size: 0.7rem;
+  }
 }

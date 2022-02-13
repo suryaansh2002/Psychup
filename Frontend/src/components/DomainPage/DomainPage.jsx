@@ -50,7 +50,9 @@ export default function DomainPage() {
 
   function removeTags(str) {
     str = str.toString();
-    return str.replace(/(<([^>]+)>)/gi, "");
+    str= str.replace(/(<([^>]+)>)/gi, "");
+  str=str.replaceAll("&quot;","");
+    return str
   }
 
   for (var i = 0; i < articles2.length; i++) {

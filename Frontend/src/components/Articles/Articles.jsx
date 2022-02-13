@@ -49,7 +49,6 @@ export default function Articles() {
 
   var settings = {
     dots: true,
-    // infinite: true,
     speed: 500,
     slidesToShow: 3,
     autoplay: true,
@@ -70,7 +69,7 @@ export default function Articles() {
     centerPadding: "20px",
     pauseOnHover: false,
     centerMode: true,
-    infinite: articles2.length > 1,
+    infinite: true,
   };
   var settings3 = {
     dots: true,
@@ -82,7 +81,7 @@ export default function Articles() {
     centerPadding: "20px",
     pauseOnHover: false,
     centerMode: true,
-    infinite: articles2.length > 2,
+    infinite: true,
   };
   useEffect(() => {
     window.innerWidth > 1000

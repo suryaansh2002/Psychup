@@ -120,7 +120,7 @@ function App() {
           />
           <Route path="/team" exact component={() => <Team />} />
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     </div>
     </>

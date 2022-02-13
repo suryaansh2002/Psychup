@@ -34,8 +34,8 @@ export default function AboutUs() {
           </div>
 
           <div className="col-lg-6">
+          <div className="services-h">OUR SERVICES</div>
             <img src={brain} className="brain-img" />
-            <div className="services-h">OUR SERVICES</div>
           </div>
         </div>
       </div>
