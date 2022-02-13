@@ -1,6 +1,6 @@
 import "./PersonalityTest.css";
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Question from "./Question";
 import { AiOutlineArrowRight, AiOutlineDown } from "react-icons/ai";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
@@ -308,6 +308,46 @@ function PersonalityTest() {
     }
   }
 
+  const [wait, setWait] = useState(false);
+  function handleError(c) {
+    if (c == 0) {
+      if (!a1 || !a2 || !a3 || !a4 || !a5 || !a6) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+
+    if (c == 1) {
+      if (!a7 || !a8 || !a9 || !a10 || !a11 || !a12) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+    if (c == 2) {
+      if (!a13 || !a14 || !a15 || !a16 || !a17 || !a18) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+    if (c == 3) {
+      if (!a19 || !a20 || !a21 || !a22 || !a23 || !a24) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+    if (c == 4) {
+      if (!a25 || !a26 || !a27 || !a28 || !a29) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+  }
+
   return (
     <div className="personality-main">
       {count < 5 && <h1>Personality Test</h1>}
@@ -326,13 +366,16 @@ function PersonalityTest() {
       {count < 5 && (
         <>
           <div className="key-res-2">
+            <div className="key-inst">
+              Use the given key to asses your personality
+            </div>
             <button class="accordion" onClick={(e) => toggleKey(e)}>
               <div className="key-h">
                 Key <AiOutlineDown className="down" />
               </div>
             </button>
             <div class="panel" id="pan">
-              <div className="key-div">😡-> Disagree</div>
+              <div className="key-div">😡 -> Disagree</div>
               <div className="key-div">😠 -> Slightly Disagree</div>
               <div className="key-div">😐 -> Neutral</div>
               <div className="key-div">😊 -> Slightly Agree</div>
@@ -476,9 +519,13 @@ function PersonalityTest() {
       {count < 4 && (
         <button
           className="pt-btn"
-          onClick={() => {
-            setCount(count + 1);
-            window.scrollTo(0, 0);
+          onClick={async () => {
+            if (await handleError(count)) {
+              setCount(count + 1);
+              window.scrollTo(0, 0);
+            } else {
+              alert("Fill in all the fields before proceeding!");
+            }
           }}
         >
           Next <AiOutlineArrowRight className="right" />
@@ -486,9 +533,20 @@ function PersonalityTest() {
       )}
 
       {count == 4 && (
-        <button className="pt-btn" onClick={handleSubmit}>
-          Submit
-        </button>
+        <>
+          <button
+            className="pt-btn"
+            onClick={(e) => {
+              setWait(true);
+              handleSubmit(e);
+            }}
+          >
+            Submit
+          </button>
+          {wait && (
+            <div className="wait">Please while we asses your response...</div>
+          )}{" "}
+        </>
       )}
 
       {count == 5 && <h1 id="results">Your Assesment Results</h1>}

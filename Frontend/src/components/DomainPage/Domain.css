@@ -41,6 +41,8 @@
   font-weight: 900;
   text-align: center;
   font-family: "Inter", sans-serif;
+  font-family: "Philosopher", sans-serif;
+
 }
 
 .time {
@@ -61,6 +63,9 @@
   font-size: 0.9rem;
   padding: 1rem;
   font-family: "Inter", sans-serif;
+  font-family: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: italic;
+
   opacity: 0.8;
 }
 

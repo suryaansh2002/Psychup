@@ -22,6 +22,10 @@
   font-size: 1.2rem;
   margin-bottom: 2rem;
   font-family: "Raleway", cursive;
+  font-family: "Raleway", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-weight: normal;
 }
 
 .ptest-c {
@@ -54,6 +58,11 @@
 .ptest-content {
   font-size: 1rem;
   font-family: "Raleway", cursive;
+  font-family: "Raleway", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  
 }
 .ptest-img {
   width: 60px;
@@ -82,7 +91,7 @@
   .ptest-card {
     width: 80vw;
   }
-  .ptest-card:hover{
+  .ptest-card:hover {
     transform: none;
   }
 }

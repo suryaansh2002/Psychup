@@ -24,6 +24,7 @@
   margin-top: 2rem;
   box-shadow: 4px 4px 7px;
   padding-top: 1.8rem;
+  font-family: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding-bottom: 1.5rem;
 }
 
@@ -36,6 +37,9 @@
   font-size: 0.9rem;
   margin: 0.5rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: italic;
+
   color: rgba(3, 88, 84, 0.9);
   font-weight: 700;
 }

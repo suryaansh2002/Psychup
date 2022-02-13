@@ -24,6 +24,10 @@
   text-align: left;
   padding-left: 1rem;
   font-family: "Raleway", cursive;
+  font-family: "Raleway", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-weight: normal;
 }
 
 .about-container {
@@ -221,8 +225,8 @@
 
 @media only screen and (max-width: 480px) {
   .c-2 {
-    width: 170%;
-    margin: -35%;
+    width: 160%;
+    margin: -30%;
     margin-top: -8rem;
   }
   .brain-img {

@@ -72,6 +72,10 @@
   text-align: left;
   margin: 1rem;
   font-family: "Raleway", cursive;
+  font-family: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: italic;
+font-weight: normal;
+
 }
 .comment-image-container {
   text-align: left;

@@ -37,6 +37,7 @@
   background: transparent;
   font-size: 2rem;
   transition: 0.5s;
+ 
 }
 
 .question-c {
@@ -54,14 +55,29 @@
 
 .question-title {
   font-size: 1.25rem;
-  font-family: "Raleway", cursive;
-  font-family: "Cardo",serif;
-font-family: 'Cormorant', serif;
-font-family: 'Istok Web', sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
+  font-style: italic;
+font-weight: normal;
+/* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+/* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+/* font-style: italic; */
   margin-bottom: 0.8rem;
 }
 
+.key-inst{
+  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  font-style: italic;
+font-weight: normal;
+margin: 1rem;
+margin-top: 2rem;
+text-align: center;
+font-size: 1.1rem;
+
+}
 .pt-btn {
   margin-left: 50%;
   transform: translateX(-50%);
@@ -232,8 +248,15 @@ a:hover {
 .key-div {
   font-size: 1.1rem;
   text-align: center;
-  font-family: "Raleway", cursive;
-  font-family: 'Istok Web', sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: italic;
+font-weight: normal;
+
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  
+  /* font-style: italic; */
+
 
   padding: 1rem 0rem;
 }
@@ -248,6 +271,7 @@ a:hover {
   border: none;
   outline: none;
   transition: 0.4s;
+  padding-top: 0;
 }
 .card-1 {
   background-color: rgba(31, 134, 126, 0.33);
@@ -289,9 +313,11 @@ a:hover {
 
 .lc-c {
   font-size: 1rem;
-  font-family: "Raleway", cursive;
+  font-family: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 0rem 1rem;
-  font-family: 'Istok Web', sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  
 
 }
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -316,6 +342,7 @@ a:hover {
   /* margin-left: 50%; */
   transform: translateX(calc(-50% + 10px));
   margin-left: 50%;
+  padding-top: 0.5rem;
 }
 
 #pan {
@@ -373,6 +400,18 @@ a:hover {
   transform: translateX(-50%);
   margin-top: -2rem;
 }
+.wait{
+  font-size: 1.3rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-family: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 1rem;
+  font-style: italic;
+  font-weight: normal;
+  padding-top: 1.5rem;
+  text-align: center;
+
+}
 @media only screen and (max-width: 1150px) {
   .key-box {
     visibility: hidden;
@@ -397,7 +436,12 @@ a:hover {
   .ans-btn {
     margin: auto;
   }
+  .wait{
+    font-size: 1rem;
+    width: 100%;
+    }
 }
+
 @media only screen and (max-width: 520px) {
   .personality-main h1 {
     font-size: 1.75rem;
@@ -442,6 +486,10 @@ a:hover {
     font-size: 3.5vw;
     width: 60vw;
   }
+  .key-inst{
+    font-size: 0.9rem;
+  }
+
 }
 @media only screen and (max-width: 480px) {
   .ans-btn {

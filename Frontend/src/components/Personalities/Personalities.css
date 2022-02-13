@@ -20,6 +20,10 @@
 .pers-c p {
   font-size: 1.1rem;
   font-family: "Raleway", cursive;
+  font-family: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: italic;
+font-weight: normal;
+
 }
 
 .pers-c h2 {
@@ -87,7 +91,7 @@
   }
   .bubble-container {
     display: block;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -95,6 +99,7 @@
     transform: translateX(-50%);
     width: fit-content;
   }
+
 
   .pers-c h1 {
     font-size: 6vw;

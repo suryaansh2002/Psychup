@@ -34,6 +34,10 @@
   text-align: center;
   margin-bottom: 2rem;
   font-family: "Raleway", cursive;
+  font-family: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: italic;
+font-weight: normal;
+
 }
 
 .explore2 {
@@ -73,6 +77,9 @@
   font-size: 0.9rem;
   padding: 0.5rem;
   font-family: "Raleway", cursive;
+  font-family: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: italic;
+font-weight: normal;
 }
 .domain-link {
   color: black;
@@ -93,6 +100,7 @@
   }
   .domain-text {
     font-size: 1rem;
+    font-size: 0.8rem;
   }
   .domain-main {
     padding: 5rem 1rem;
@@ -101,7 +109,9 @@
 .slide{
   padding-bottom: 1.5rem;
 }
-
+.item{
+  width: 100%;
+}
 
 }
 @media only screen and (max-width: 520px) {
@@ -114,9 +124,15 @@
 
 @media only screen and (max-width: 420px) {
   .item {
-    width: 70vw;
+    width: 75vw;
+    margin-bottom: 2.5rem;
+    margin-left: -2.5vw;
+
   }
   .item-about {
     font-size: 0.8rem;
+  }
+  .domain-main {
+    height: max-content;
   }
 }

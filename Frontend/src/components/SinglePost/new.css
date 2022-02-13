@@ -63,6 +63,10 @@
 .a-content {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-family: "Raleway", cursive;
+  font-family: "Raleway", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-weight: normal;
 
   font-size: 1.1rem;
   text-align: justify;
@@ -189,6 +193,10 @@
   }
   .a-content {
     font-family: "Raleway", cursive;
+    font-family: "Raleway", "Lucida Sans", "Lucida Sans Regular",
+      "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: normal;
 
     font-size: 0.85rem;
     text-align: justify;

@@ -118,6 +118,11 @@
   margin: 0.5rem;
   font-size: 1rem;
   font-family: "Raleway", cursive;
+  font-family: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: italic;
+font-weight: normal;
+
+
 }
 
 .checkout-all {

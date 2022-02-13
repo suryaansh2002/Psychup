@@ -5,8 +5,9 @@ export default function Question(props) {
     var elms = document.querySelectorAll(`[id='${id}']`);
 
     for (var i = 0; i < elms.length; i++)
-      elms[i].style.transform = "scale(1.0)"; // <-- whatever you need to do here.
+      elms[i].style.transform = "scale(1.0)";
     e.target.style.transform = "scale(1.5)";
+  
   }
 
   return (
