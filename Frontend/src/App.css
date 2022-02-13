@@ -1,0 +1,35 @@
+.App {
+  visibility: visible;
+}
+
+.app-landscape {
+  visibility: hidden;
+  display: none;
+}
+
+@media only screen and (max-height: 400px) {
+  .App {
+    visibility: hidden;
+    display: none;
+  }
+
+  .app-landscape {
+    visibility: visible;
+    height: 100vh;
+    background-image: url('./images/img1.png');
+    overflow-y: hidden;
+    position: fixed;
+    width: 100vw;
+    display: block;
+  }
+  .land{
+      font-size: 1.2rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+      font-weight: 700;
+      font-style: italic;
+  }
+}

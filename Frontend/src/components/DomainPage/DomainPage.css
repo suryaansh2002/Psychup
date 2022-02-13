@@ -28,6 +28,8 @@
 .main-c h2 {
   font-family: "Philosopher", sans-serif;
   font-size: 1.75rem;
+  text-align: center;
+  margin-bottom:1rem;
 }
 
 .main-c p a {
@@ -39,6 +41,17 @@
 .main-c p {
   font-family: "Raleway", cursive;
   font-size: 1.1rem;
+}
+
+.details-img{
+  width: 30%;
+  margin: 1rem;
+  border-radius: 15px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  height: 15rem;
+  margin-bottom: 3.5rem;
+  
 }
 
 @media only screen and (max-width: 900px) {
@@ -54,6 +67,10 @@
     padding-left: 0rem;
     padding-right: 0rem;
   }
+  .details-img{
+    width: 50vw;
+    height: 30vw;
+    }
 
   .explore-video {
     width: 80vw;
@@ -80,4 +97,5 @@
     padding: 1rem;
     padding-top: 6rem;
   }
+
 }

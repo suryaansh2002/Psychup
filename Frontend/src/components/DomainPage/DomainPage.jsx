@@ -12,6 +12,7 @@ import ArticleCard from "../Articles/ArticleCard";
 import "../Articles/Articles.css";
 import "./DomainPage.css";
 import { details } from "./details";
+import im from '../../images/mhr.jpeg'
 export default function DomainPage() {
   const [articleList, setArticleList] = useState([]);
   const [domainName, setDomainName] = useState("");
@@ -32,8 +33,8 @@ export default function DomainPage() {
   const map = {
     mhr: "Mental Health and Rehabilitation",
     gdp: "Gender Diversity Psychology",
-    iobp: "Industrial/Organizational Behavioural Psychology",
-    cmp: "Consumer/Marketing Psychology",
+    iobp: "Industrial and Organizational Behavioural Psychology",
+    cmp: "Consumer and Marketing Psychology",
     pdpd: "Psychology of Disorders and Preliminary Diagnosis",
   };
   const length = articleList.length;

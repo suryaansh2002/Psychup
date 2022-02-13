@@ -12,7 +12,7 @@ const Contact = (props) => {
             </div>
 
             <div className="form-box">
-              <form action="https://formsubmit.co/contact@psychup.com">
+              <form action="https://formsubmit.co/psychupcontact13@gmail.com">
                 <input
                   type="hidden"
                   name="_subject"

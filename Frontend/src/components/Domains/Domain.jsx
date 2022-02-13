@@ -80,7 +80,7 @@ export default function About() {
           <div>
             <Link to={"/articles/iobp"} className="domain-link">
               <CarouselCard
-                domain="Industrial/Organizational Behavioural Psychology"
+                domain="Industrial and Organizational Behavioural Psychology"
                 about="Psychology at workplaces!? Unexpected right? Well, not so! Industrial-organizational psychology is the branch of psychology that applies psychological theories and principles to organizations. Often referred to as I-O psychology, this field focuses on increasing workplace productivity and related issues such as the physical and mental well-being of employees."
               />
             </Link>
@@ -88,7 +88,7 @@ export default function About() {
           <div>
             <Link to={"/articles/cmp"} className="domain-link">
               <CarouselCard
-                domain="Consumer/Marketing Psychology"
+                domain="Consumer and Marketing Psychology"
                 about="What is meant by consumer behaviour ? Does there exist any uniformity in the behavior pattern of consumers? Consumer psychology refers to the processes used by clients and customers to select, purchase, use and discard products and services.In the business world, Consumer Psychology helps firms improve products, services and marketing strategies in order to bolster sales."
               />
             </Link>
@@ -104,7 +104,6 @@ export default function About() {
         </Slider>
       </div>
 
-      <div></div>
     </div>
   );
 }

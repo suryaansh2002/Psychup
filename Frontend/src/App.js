@@ -33,6 +33,10 @@ function App() {
   const [logToggle, setLogToggle] = useState(false);
   const [cookie, setCookie, removeCookie] = useCookies(["user"]);
   return (
+    <>
+  <div className="app-landscape">
+  <div className="land">Kindly tilt the screen or use a device of a larger height to enjoy the best site experience</div>
+  </div>
     <div className="App">
       {side ? <div className="sidevisible"></div> : null}
       <Router>
@@ -119,6 +123,8 @@ function App() {
         {/* <Footer /> */}
       </Router>
     </div>
+    </>
+
   );
 }
 

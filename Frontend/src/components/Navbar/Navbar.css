@@ -175,6 +175,14 @@
   .nav-box {
     padding-top: 3rem;
   }
+  .input-div{
+    width: 180%;
+    margin-left: -40%;
+  }
+  .modal-text-area{
+    width: 120%;
+    margin-left: -10%;
+  }
 }
 
 @media (max-width: 990px) {
@@ -249,7 +257,7 @@
 }
 .login-button {
   position: absolute;
-  bottom: 6vw;
+  bottom: 3vh;
   left: 0;
   width: 300px;
   z-index: 100;
@@ -279,7 +287,9 @@
     transform: translateX(-50%);
     position: absolute;
     margin-bottom: 2rem;
-    bottom: 2vw;
+    bottom: 2vh;
     width: max-content;
   }
+
+
 }

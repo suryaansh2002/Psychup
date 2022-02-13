@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital@1&display=swap');
+
+
 .personality-main {
   min-height: 100vh;
 
@@ -49,6 +55,10 @@
 .question-title {
   font-size: 1.25rem;
   font-family: "Raleway", cursive;
+  font-family: "Cardo",serif;
+font-family: 'Cormorant', serif;
+font-family: 'Istok Web', sans-serif;
+
   margin-bottom: 0.8rem;
 }
 
@@ -223,6 +233,8 @@ a:hover {
   font-size: 1.1rem;
   text-align: center;
   font-family: "Raleway", cursive;
+  font-family: 'Istok Web', sans-serif;
+
   padding: 1rem 0rem;
 }
 
@@ -279,6 +291,8 @@ a:hover {
   font-size: 1rem;
   font-family: "Raleway", cursive;
   padding: 0rem 1rem;
+  font-family: 'Istok Web', sans-serif;
+
 }
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 

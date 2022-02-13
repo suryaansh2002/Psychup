@@ -40,7 +40,7 @@ export const members = [
   },
   {
     name: "Shourya Gupta",
-    role: "Web-Developer",
+    role: "Co-Founder | Web-Developer",
     imgSrc: sg,
     quote:
       "An avid technology enthusiast interested in Computer Science and Software Engineering. Possesses strong work ethics, be it in independent projects or collaborative projects in a team.",

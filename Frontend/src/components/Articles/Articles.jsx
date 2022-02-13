@@ -30,10 +30,15 @@ export default function Articles() {
   console.log(length);
   const articles2 = articleList.slice(length - 4, length);
   console.log(articles2);
-
+  String.prototype.replaceAll = function (search, replacement) {
+    var target = this;
+    return target.split(search).join(replacement);
+  };
   function removeTags(str) {
     str = str.toString();
-    return str.replace(/(<([^>]+)>)/gi, "");
+    str= str.replace(/(<([^>]+)>)/gi, "");
+  str=str.replaceAll("&quot;","");
+    return str
   }
 
   for (var i = 0; i < articles2.length; i++) {

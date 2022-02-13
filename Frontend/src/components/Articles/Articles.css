@@ -175,7 +175,8 @@
     font-size: 1rem;
   }
   .article-card {
-    width: 80%;
+    width: 90%;
+    height: 28rem;
   }
 }
 

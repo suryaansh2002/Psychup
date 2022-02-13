@@ -93,8 +93,8 @@ export default function Editor(props) {
     const map = {
       mhr: "Mental Health and Rehabilitation",
       gdp: "Gender Diversity Psychology",
-      iobp: "Industrial/Organizational Behavioural Psychology",
-      cmp: "Consumer/Marketing Psychology",
+      iobp: "Industrial and Organizational Behavioural Psychology",
+      cmp: "Consumer and Marketing Psychology",
       pdpd: "Psychology of Disorders and Preliminary Diagnosis",
     };
     const hashvalue = [];
@@ -179,7 +179,7 @@ export default function Editor(props) {
                 <option value={"mhr"}>Mental Health and Rehabiliation</option>
                 <option value={"gdp"}>Gender Diversity Psychology</option>
                 <option value={"iobp"}>
-                  Industrial/Organizational Behavioural Psychology
+                  Industrial and Organizational Behavioural Psychology
                 </option>
                 <option value={"cmp"}>Consumer/Marketing Psychology</option>
                 <option value={"pdpd"}>

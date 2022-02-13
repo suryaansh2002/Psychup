@@ -38,7 +38,7 @@
   border-radius: 15px;
   box-shadow: 4px 10px 10px rgba(35, 58, 57, 0.959);
   padding: 1rem;
-  transform: 1.5s;
+  transition: 0.5s;
 }
 .ptest-card:hover {
   transform: scale(1.1);
@@ -81,5 +81,8 @@
 
   .ptest-card {
     width: 80vw;
+  }
+  .ptest-card:hover{
+    transform: none;
   }
 }

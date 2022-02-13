@@ -245,7 +245,7 @@ function PersonalityTest() {
     //   });
 
     var url = "https://psychup-back.herokuapp.com";
-    // url = "http://localhost:5000";
+    // url = "http://:5000";
 
     axios
       .post(url + "/api/sentino", data)

@@ -155,14 +155,21 @@ export default function NavBar(props) {
       )
       .catch((err) => console.log(err.message));
   }
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <>
-      <Navbar variant="light" expand="lg" className="nav-main">
+      <Navbar
+        variant="light"
+        expand="lg"
+        className="nav-main"
+        expanded={expanded}
+      >
         <Navbar.Brand href="/" className="navbar-header">
           <img className="nav-logo" src={logo}></img>
         </Navbar.Brand>
         <Navbar.Toggle
+          onClick={() => setExpanded(expanded ? false : "expanded")}
           className="nav-button"
           aria-controls="basic-navbar-nav"
         />
@@ -170,39 +177,59 @@ export default function NavBar(props) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="nav-box">
             <Nav.Link href="/" className="nav-link">
-              <Link2 className="n-l" to={"/"}>
+              <Link2
+                className="n-l"
+                to={"/"}
+                onClick={() => setExpanded(false)}
+              >
                 Home
               </Link2>
             </Nav.Link>
             <Nav.Link href="#domains-h" className="nav-link">
-              <Link2 className="n-l" to={"/#domains-h"}>
+              <Link2
+                className="n-l"
+                to={"/#domains-h"}
+                onClick={() => setExpanded(false)}
+              >
                 {" "}
                 Domains
               </Link2>
             </Nav.Link>
             {/* <Nav.Link href="#about-h" className="nav-link">
-              <Link2 className="n-l" to={"/#about-h"}>
+              <Link2 className="n-l" to={"/#about-h"} onClick={() => setExpanded(false)}>
                 {" "}
                 About
               </Link2>
             </Nav.Link> */}
             {/* <Nav.Link href="#articles-h" className="nav-link">
-              <Link2 className="n-l" to={"/#articles-h"}>
+              <Link2 className="n-l" to={"/#articles-h"} onClick={() => setExpanded(false)}>
                 Articles
               </Link2>
             </Nav.Link> */}
             <Nav.Link href="/personality" className="nav-link">
-              <Link2 className="n-l" to={"/personality"}>
+              <Link2
+                className="n-l"
+                to={"/personality"}
+                onClick={() => setExpanded(false)}
+              >
                 Personality Test
               </Link2>
             </Nav.Link>
             <Nav.Link href="#contact-h" className="nav-link">
-              <Link2 className="n-l" to={"/#contact-h"}>
+              <Link2
+                className="n-l"
+                to={"/#contact-h"}
+                onClick={() => setExpanded(false)}
+              >
                 Contact Us
               </Link2>
             </Nav.Link>
             <Nav.Link href="/team" className="nav-link">
-              <Link className="n-l" to={"/team"}>
+              <Link
+                className="n-l"
+                to={"/team"}
+                onClick={() => setExpanded(false)}
+              >
                 Our Team
               </Link>
             </Nav.Link>
@@ -308,24 +335,50 @@ export default function NavBar(props) {
                   ></input>
                 </div>
               ) : null}
+              <form action="https://formsubmit.co/psychupcontact13@gmail.com">
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="Contact form Submission!"
+                />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="box" />
+                {props.cookie.user ? (
+                  <input
+                    type="hidden"
+                    name="name"
+                    className="contact-input"
+                    value={props.cookie.user.name}
+                  ></input>
+                ) : null}
 
-              <div class="modal-body">
-                {/* <div className="modal-text">
+                {props.cookie.user ? (
+                  <input
+                    type="hidden"
+                    name="email"
+                    className="contact-input"
+                    value={props.cookie.user.email}
+                  ></input>
+                ) : null}
+                <div class="modal-body">
+                  {/* <div className="modal-text">
                   Mention in brief how you think you can contribute to{" "}
                   <span className="psych">PsychUp</span> and look forward to
                   hearing from us at the earliest!
                 </div> */}
-                <textarea
-                  className="modal-text-area"
-                  rows="5"
-                  placeholder="Brief Your Ideas..."
-                ></textarea>
-              </div>
-              <div class="modal-footer">
-                <button type="submit" class="btn send-modal ">
-                  Send
-                </button>
-              </div>
+                  <textarea
+                    className="modal-text-area"
+                    rows="5"
+                    placeholder="Brief Your Ideas..."
+                    name="Brief"
+                  ></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn send-modal ">
+                    Send
+                  </button>
+                </div>
+              </form>
             </form>
           </div>
         </div>
