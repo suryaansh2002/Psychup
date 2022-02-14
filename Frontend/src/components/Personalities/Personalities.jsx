@@ -6,12 +6,25 @@ import Campaigner from "./campaigner";
 import Protaginist from "./protaginist";
 import "./Personalities.css";
 
-export default function Personalities() {
+export default function Personalities(props) {
   const [pers, setPers] = useState();
   useEffect(() => {
     const arr = window.location.href.split("/");
     setPers(arr[4]);
   }, []);
+  const handleLogout = async () => {
+    console.log(props.cookie)
+
+    await props.removeCookie("user");
+    // console.log("logging")
+    // console.log(props.removeCookie("user"))
+      window.location.reload();
+
+    try {
+    } catch (error) {
+      alert(error);
+    }
+  };
   return (
     <div className="personalities-main">
       <div className="pers-c">

@@ -4,11 +4,16 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Editor from "./components/Editor/Editor";
+import { CookiesProvider } from "react-cookie";
+
 
 ReactDOM.render(
+  <CookiesProvider>
+
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
+  </CookiesProvider>,
   document.getElementById("root")
 );
 

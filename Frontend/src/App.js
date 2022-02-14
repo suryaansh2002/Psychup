@@ -34,22 +34,25 @@ function App() {
   const [cookie, setCookie, removeCookie] = useCookies(["user"]);
   return (
     <>
-  <div className="app-landscape">
-  <div className="land">Kindly tilt the screen or use a device of a larger height to enjoy the best site experience</div>
-  </div>
-    <div className="App">
-      {side ? <div className="sidevisible"></div> : null}
-      <Router>
-        <NavBar
-          side={side}
-          setSide={setSide}
-          logToggle={logToggle}
-          setLogToggle={setLogToggle}
-          cookie={cookie}
-          removeCookie={removeCookie}
-          setCookie={setCookie}
-        />
-        {/* <Sidebar
+      <div className="app-landscape">
+        <div className="land">
+          Kindly tilt the screen or use a device of a larger height to enjoy the
+          best site experience
+        </div>
+      </div>
+      <div className="App">
+        {side ? <div className="sidevisible"></div> : null}
+        <Router>
+          <NavBar
+            side={side}
+            setSide={setSide}
+            logToggle={logToggle}
+            setLogToggle={setLogToggle}
+            cookie={cookie}
+            removeCookie={removeCookie}
+            setCookie={setCookie}
+          />
+          {/* <Sidebar
           side={side}
           setSide={setSide}
           logToggle={logToggle}
@@ -59,72 +62,76 @@ function App() {
           setCookie={setCookie}
         /> */}
 
-        <Switch>
-          <Route exact path="/">
-            <Home
-              side={side}
-              setSide={setSide}
-              logToggle={logToggle}
-              setLogToggle={setLogToggle}
-              cookie={cookie}
-              removeCookie={removeCookie}
-              setCookie={setCookie}
+          <Switch>
+            <Route exact path="/">
+              <Home
+                side={side}
+                setSide={setSide}
+                logToggle={logToggle}
+                setLogToggle={setLogToggle}
+                cookie={cookie}
+                removeCookie={removeCookie}
+                setCookie={setCookie}
+              />
+              <PTest />
+              <Domains />
+              <AboutUs />
+              <Articles />
+              <Contact cookie={cookie} />
+            </Route>
+            <Route
+              path="/editor"
+              render={() =>
+                cookie.user && cookie.user.editorial ? (
+                  <Editor
+                    cookie={cookie}
+                    removeCookie={removeCookie}
+                    setCookie={setCookie}
+                  />
+                ) : (
+                  <Redirect to="/" />
+                )
+              }
             />
-            <PTest />
-            <Domains />
-            <AboutUs />
-            <Articles />
-            <Contact cookie={cookie} />
-          </Route>
-          <Route
-            path="/editor"
-            render={() =>
-              cookie.user && cookie.user.editorial ? (
-                <Editor
+            <Route
+              path="/article/:id/:name"
+              exact
+              component={() => (
+                <SinglePost
+                  removeCookie={removeCookie}
+                  setCookie={setCookie}
+                  cookie={cookie}
+                />
+              )}
+            />
+            <Route path="/articles" exact component={() => <AllArticles />} />
+            <Route
+              path="/personality"
+              exact
+              component={() => <PersonalityTest />}
+            />
+
+            <Route path="/articles/:domain" component={() => <DomainPage />} />
+            <Route
+              path="/personalities/:type"
+              component={() => (
+                <Personalities
+                  side={side}
+                  setSide={setSide}
+                  logToggle={logToggle}
+                  setLogToggle={setLogToggle}
                   cookie={cookie}
                   removeCookie={removeCookie}
                   setCookie={setCookie}
                 />
-              ) : (
-                <Redirect to="/" />
-              )
-            }
-          />
-          <Route
-            path="/article/:id/:name"
-            exact
-            component={() => (
-              <SinglePost
-                removeCookie={removeCookie}
-                setCookie={setCookie}
-                cookie={cookie}
-              />
-            )}
-          />
-          <Route path="/articles" exact component={() => <AllArticles />} />
-          <Route
-            path="/personality"
-            exact
-            component={() => <PersonalityTest />}
-          />
-
-          <Route
-            path="/articles/:domain"
-            exact
-            component={() => <DomainPage />}
-          />
-          <Route
-            path="/personalities/:type"
-            exact
-            component={() => <Personalities />}
-          />
-          <Route path="/team" exact component={() => <Team />} />
-        </Switch>
-        <Footer />
-      </Router>
-    </div>
+              )}
+            />
+            <Route path="/team" exact component={() => <Team />} />
+          </Switch>
+          <Footer />
+        </Router>
+      </div>
     </>
-
   );
 }
 

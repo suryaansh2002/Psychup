@@ -34,12 +34,25 @@ export default function NavBar(props) {
     return initials.toUpperCase();
   };
 
-  const handleLogout = async () => {
-    await props.removeCookie("user");
-    try {
-      window.location.reload();
-    } catch (error) {}
-  };
+  // const handleLogout = async () => {
+  //   console.log(props.cookie)
+
+  //   await props.removeCookie("user");
+  //   // console.log("logging")
+  //   // console.log(props.removeCookie("user"))
+  //     window.location.reload();
+
+  //   try {
+  //   } catch (error) {
+  //     alert(error);
+  //   }
+  // };
+
+  function handleLogout() {
+    document.cookie="user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    window.location.reload()
+  }
+  
   useEffect(() => {
     props.setLogToggle(true);
   }, []);
