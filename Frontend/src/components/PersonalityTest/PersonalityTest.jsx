@@ -23,7 +23,7 @@ import html2canvas from 'html2canvas';
 import * as htmlToImage from 'html-to-image';
 import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
 import Logician from "../Personalities/logician";
-
+import html2pdf from 'html2pdf.js'
 
 function PersonalityTest(props) {
   //make 30 variables
@@ -128,7 +128,12 @@ function PersonalityTest(props) {
 
 
   
-
+function handleDownload(){
+  var content=document.getElementById("down")
+  console.log(content)
+  // console.log(window)
+  html2pdf().from(content).save()
+}
 
 
   function giveLabel(arr) {
@@ -623,7 +628,7 @@ function PersonalityTest(props) {
         </>
       )}
 {count==5 && <div>
-  <button id="c" onClick={()=>{}}>Download</button>
+  <button id="c" onClick={()=>{handleDownload()}}>Download</button>
   <button>Mail</button>
 
 </div>}
