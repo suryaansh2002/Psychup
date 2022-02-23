@@ -27,6 +27,7 @@ import Team from "./components/Team/Team";
 import PersonalityTest from "./components/PersonalityTest/PersonalityTest";
 import PTest from "./components/PTest/PTest";
 import Personalities from "./components/Personalities/Personalities";
+import StoryForm from "./components/StoryForm/StoryForm";
 
 function App() {
   const [side, setSide] = useState(false);
@@ -79,6 +80,8 @@ function App() {
               <Articles />
               <Contact cookie={cookie} />
             </Route>
+            <Route path="/story" exact component={() => <StoryForm />} />
+
             <Route
               path="/editor"
               render={() =>
@@ -135,6 +138,7 @@ function App() {
               )}
             />
             <Route path="/team" exact component={() => <Team />} />
+
           </Switch>
           <Footer />
         </Router>
