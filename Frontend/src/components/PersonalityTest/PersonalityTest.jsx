@@ -119,7 +119,7 @@ function PersonalityTest(props) {
 
 
 // function handleClick(){
-//     html2canvas(document.getElementById('g')).then(function (canvas) {
+//     html2canvas(document.getElementById('down')).then(function (canvas) {
 //       console.log(canvas)
 //       document.body.appendChild(canvas);
 
@@ -627,7 +627,7 @@ function PersonalityTest(props) {
   <button>Mail</button>
 
 </div>}
-<div id="g">Hello worlddd</div>
+{/* <div id="g">Hello worlddd</div> */}
 
               {props.cookie.user ? <>
                 {count == 5 && <h1 id="results">Hi {props.cookie.user.name}, your Assesment Results are-</h1>}
