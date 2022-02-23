@@ -108,7 +108,15 @@ function App() {
             <Route
               path="/personality"
               exact
-              component={() => <PersonalityTest />}
+              component={() => <PersonalityTest
+                side={side}
+            setSide={setSide}
+            logToggle={logToggle}
+            setLogToggle={setLogToggle}
+            cookie={cookie}
+            removeCookie={removeCookie}
+            setCookie={setCookie}
+               />}
             />
 
             <Route path="/articles/:domain" component={() => <DomainPage />} />

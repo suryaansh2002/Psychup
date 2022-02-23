@@ -16,8 +16,16 @@ import t3 from "../../images/entertainer.png";
 import t4 from "../../images/protagonist.png";
 import t5 from "../../images/campaigner.png";
 import request from "request-promise";
+import {jsPDF} from 'jspdf';
+// import html2canvas from 'html2canvas';
+import html2canvas from 'html2canvas';
 
-function PersonalityTest() {
+import * as htmlToImage from 'html-to-image';
+import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
+import Logician from "../Personalities/logician";
+
+
+function PersonalityTest(props) {
   //make 30 variables
   const [a1, setA1] = useState("");
   const [a2, setA2] = useState("");
@@ -58,6 +66,70 @@ function PersonalityTest() {
   function max(temp) {
     return Math.max.apply(null, temp);
   }
+
+  // function downloadPDF() {
+  //   const input = document.getElementById('divToPrint');
+  //   html2canvas(input)
+  //     .then((canvas) => {
+  //       const imgData = canvas.toDataURL('image/png');
+  //       const pdf = new jsPDF();
+  //       pdf.addImage(imgData, 'JPEG', 0, 0);
+  //       // pdf.output('dataurlnewwindow');
+  //       pdf.save("download.pdf");
+  //     });
+    
+  // }
+
+//   function downloadPDF(){
+//     console.log("in here")
+    
+//       var HTML_Width = document.getElementById("down").offsetWidth;
+//       var HTML_Height = document.getElementById("down").offsetHeight;
+//       var top_left_margin = 15;
+//       var PDF_Width = HTML_Width + (top_left_margin * 2);
+//       var PDF_Height = (PDF_Width * 1.5) + (top_left_margin * 2);
+//       var canvas_image_width = HTML_Width;
+//       var canvas_image_height = HTML_Height;
+  
+//       var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
+//       console.log(totalPDFPages)
+  
+//       html2canvas(document.getElementById("down")).then(function (canvas) {
+//         document.body.appendChild(canvas);
+
+//         // console.log(document.getElementById("down"))
+//         // console.log(canvas)
+
+//         //   var imgData = canvas.toDataURL("image/jpeg");
+//         //   console.log(imgData)
+//         //   var pdf = new jsPDF();
+//         //   pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
+//         //   console.log(totalPDFPages)
+//           // for (var i = 1; i <= totalPDFPages; i++) { 
+//               // pdf.addPage();
+//               // pdf.addImage(imgData, 'JPG', top_left_margin,top_left_margin, canvas_image_width,canvas_image_height);
+//           // }
+//           // pdf.save("Your_PDF_Name.pdf");
+//         //  document.getElementById("down").hide();
+//       });
+  
+  
+
+//   }
+
+
+// function handleClick(){
+//     html2canvas(document.getElementById('g')).then(function (canvas) {
+//       console.log(canvas)
+//       document.body.appendChild(canvas);
+
+//   })
+// }
+
+
+  
+
+
 
   function giveLabel(arr) {
     if (max(arr) == arr[0]) {
@@ -276,7 +348,7 @@ function PersonalityTest() {
       });
   };
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(5);
   // var acc = document.getElementsByClassName("accordion");
   // var i;
 
@@ -350,6 +422,8 @@ function PersonalityTest() {
 
   return (
     <div className="personality-main">
+
+
       {count < 5 && <h1>Personality Test</h1>}
       {count < 5 && <h2>Section: {count + 1} / 5</h2>}
       {count < 5 && (
@@ -544,12 +618,25 @@ function PersonalityTest() {
             Submit
           </button>
           {wait && (
-            <div className="wait">Please while we asses your response...</div>
+            <div className="wait">Please wait while we asses your response...</div>
           )}{" "}
         </>
       )}
+{count==5 && <div>
+  <button id="c" onClick={()=>{}}>Download</button>
+  <button>Mail</button>
 
-      {count == 5 && <h1 id="results">Your Assesment Results</h1>}
+</div>}
+<div id="g">Hello worlddd</div>
+
+              {props.cookie.user ? <>
+                {count == 5 && <h1 id="results">Hi {props.cookie.user.name}, your Assesment Results are-</h1>}
+
+              </> :<>
+                {count == 5 && <h1 id="results">Your Assesment Results</h1>}
+
+              </>}
+              <div id="down">
       {count == 5 && (
         <div>
           <h2 className="res-h1" id="res2">
@@ -560,8 +647,8 @@ function PersonalityTest() {
               <div className="c-1-h">Conscientiousness</div>
               <div className="bar-c">
                 <CircularProgressbar
-                  value={c * 100}
-                  text={`${c * 100}%`}
+                  value={(c * 100).toFixed(2)}
+                  text={`${(c * 100).toFixed(2)}%`}
                   circleRatio={1}
                   strokeWidth={10}
                   strokeLinecap="round"
@@ -582,8 +669,8 @@ function PersonalityTest() {
               <div className="c-1-h">Neuroticism</div>
               <div className="bar-c">
                 <CircularProgressbar
-                  value={n * 100}
-                  text={`${n * 100}%`}
+                  value={(n * 100).toFixed(2)}
+                  text={`${(n * 100).toFixed(2)}%`}
                   circleRatio={1}
                   strokeWidth={10}
                   styles={buildStyles({
@@ -603,8 +690,8 @@ function PersonalityTest() {
               <div className="c-1-h">Extraversion</div>
               <div className="bar-c">
                 <CircularProgressbar
-                  value={e * 100}
-                  text={`${e * 100}%`}
+                  value={(e * 100).toFixed(2)}
+                  text={`${(e * 100).toFixed(2)}%`}
                   circleRatio={1}
                   strokeWidth={10}
                   styles={buildStyles({
@@ -624,8 +711,8 @@ function PersonalityTest() {
               <div className="c-1-h">Openness</div>
               <div className="bar-c">
                 <CircularProgressbar
-                  value={o * 100}
-                  text={`${o * 100}%`}
+                  value={(o * 100).toFixed(2)}
+                  text={`${(o * 100).toFixed(2)}%`}
                   circleRatio={1}
                   strokeWidth={10}
                   styles={buildStyles({
@@ -645,8 +732,8 @@ function PersonalityTest() {
               <div className="c-1-h">Agreeableness</div>
               <div className="bar-c">
                 <CircularProgressbar
-                  value={a * 100}
-                  text={`${a * 100}%`}
+                  value={(a * 100).toFixed(2)}
+                  text={`${(a * 100).toFixed(2)}%`}
                   circleRatio={1}
                   strokeWidth={10}
                   styles={buildStyles({
@@ -718,161 +805,6 @@ function PersonalityTest() {
             </div>
           </div>
 
-          {/* <div className="res-cont">
-            <div className="res-card">
-              <div className="res-h">Conscientiousness</div>
-              <div className="res-con">
-                Conscientiousness is the personality trait of being careful, or
-                diligent. Conscientiousness implies a desire to do a task well,
-                and to take obligations to others seriously. Conscientious
-                people tend to be efficient and organized as opposed to
-                easy-going and disorderly{" "}
-              </div>
-              <div className="bar-c">
-                <CircularProgressbar
-                  value={c * 100}
-                  text={`${c * 100}%`}
-                  circleRatio={1}
-                  strokeWidth={15}
-                  styles={buildStyles({
-                    strokeLinecap: "round",
-                    textSize: "12px",
-                    strokeWidth: 100,
-                    pathColor: `rgb(64, 255, 255)`,
-                    textColor: "red",
-                    trailColor: "#d6d6d6",
-                    backgroundColor: "#3e98c7",
-                  })}
-                />
-              </div>
-            </div>
-
-            <div className="res-card">
-              <div className="res-h">Neuroticism</div>
-              <div className="res-con">
-                Neuroticism is the trait disposition to experience negative
-                affects, including anger, anxiety, self‐consciousness,
-                irritability, emotional instability, and depression1. Persons
-                with elevated levels of neuroticism respond poorly to
-                environmental stress, interpret ordinary situations as
-                threatening, and can experience minor frustrations as hopelessly
-                overwhelming.{" "}
-              </div>
-              <div className="bar-c">
-                <CircularProgressbar
-                  value={n * 100}
-                  text={`${n * 100}%`}
-                  circleRatio={1}
-                  strokeWidth={15}
-                  styles={buildStyles({
-                    // Rotation of path and trail, in number of turns (0-1)
-
-                    // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
-                    strokeLinecap: "round",
-
-                    // Text size
-                    textSize: "12px",
-
-                    // How long animation takes to go from one percentage to another, in seconds
-
-                    // Can specify path transition in more detail, or remove it entirely
-                    // pathTransition: 'none',
-                    strokeWidth: 100,
-                    // Colors
-                    pathColor: `rgb(64, 255, 255)`,
-                    textColor: "red",
-                    trailColor: "#d6d6d6",
-                    backgroundColor: "#3e98c7",
-                  })}
-                />
-              </div>
-            </div>
-
-            <div className="res-card">
-              <div className="res-h">Extraversion</div>
-              <div className="res-con">
-                Extraversion is a measure of how energetic, sociable and
-                friendly a person is. Extraverts are commonly understood as
-                being a 'people's person' drawing energy from being around
-                others directing their energies towards people and the outside
-                world.{" "}
-              </div>
-              <div className="bar-c">
-                <CircularProgressbar
-                  value={e * 100}
-                  text={`${e * 100}%`}
-                  circleRatio={1}
-                  strokeWidth={15}
-                  styles={buildStyles({
-                    strokeLinecap: "round",
-                    textSize: "12px",
-                    strokeWidth: 100,
-                    pathColor: `rgb(64, 255, 255)`,
-                    textColor: "red",
-                    trailColor: "#d6d6d6",
-                    backgroundColor: "#3e98c7",
-                  })}
-                />
-              </div>
-            </div>
-
-            <div className="res-card">
-              <div className="res-h">Openness</div>
-              <div className="res-con">
-                Openness to experience is one of the domains which are used to
-                describe human personality in the Five Factor Model. Openness
-                involves six facets, or dimensions: active imagination,
-                aesthetic sensitivity, attentiveness to inner feelings,
-                preference for variety, intellectual curiosity, and challenging
-                authority{" "}
-              </div>
-              <div className="bar-c">
-                <CircularProgressbar
-                  value={o * 100}
-                  text={`${o * 100}%`}
-                  circleRatio={1}
-                  strokeWidth={15}
-                  styles={buildStyles({
-                    strokeLinecap: "round",
-                    textSize: "12px",
-                    strokeWidth: 100,
-                    pathColor: `rgb(64, 255, 255)`,
-                    textColor: "red",
-                    trailColor: "#d6d6d6",
-                    backgroundColor: "#3e98c7",
-                  })}
-                />
-              </div>
-            </div>
-
-            <div className="res-card">
-              <div className="res-h">Agreeableness</div>
-              <div className="res-con">
-                Agreeableness is one of the five personality traits of the Big
-                Five personality theory. A person with a high level of
-                agreeableness in a personality test is usually warm, friendly,
-                and tactful. They generally have an optimistic view of human
-                nature and get along well with others.{" "}
-              </div>
-              <div className="bar-c">
-                <CircularProgressbar
-                  value={a * 100}
-                  text={`${a * 100}%`}
-                  circleRatio={1}
-                  strokeWidth={15}
-                  styles={buildStyles({
-                    strokeLinecap: "round",
-                    textSize: "12px",
-                    strokeWidth: 100,
-                    pathColor: `rgb(64, 255, 255)`,
-                    textColor: "red",
-                    trailColor: "#d6d6d6",
-                    backgroundColor: "#3e98c7",
-                  })}
-                />
-              </div>
-            </div>
-          </div> */}
           <div className="label-c">
             <h4 className="res-h2">Your Personality Label Is:</h4>
             {/* <div className="label-c"> */}
@@ -952,8 +884,12 @@ function PersonalityTest() {
             {label == "Campaigner" && <Campaigner />}
           </div> */}
           </div>
+          {/* <div><Logician/> </div> */}
+
+
         </div>
       )}
+</div>
     </div>
   );
 }

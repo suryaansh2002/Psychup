@@ -2,15 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,  user-scalable=no"">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+    user-scalable=no"">
 
     <link rel="icon" href="%PUBLIC_URL%/logo.png" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Psychup"
-    />
+    <meta name="description" content="Psychup" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -67,14 +64,21 @@
     <link rel="stylesheet" href="owl-carousel/owl.theme.css" />
   </head>
   <style>
-    html {
+    body {
       width: 100vw;
       overflow-x: hidden;
+      position: static;
+      touch-action: pan-y;
+      -ms-touch-action: pan-y;
     }
+
     @media screen and (max-width: 767px) {
       html,
       body {
         overflow-x: hidden;
+        width: 100vw;
+        touch-action: pan-y;
+        -ms-touch-action: pan-y;
       }
     }
   </style>
@@ -149,6 +153,12 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
       crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+      integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
   </body>
 </html>

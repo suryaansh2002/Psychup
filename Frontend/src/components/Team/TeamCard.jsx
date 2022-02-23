@@ -20,12 +20,12 @@ export default function TeamCard(props) {
             <FaGithub className="t-icon-c" />
           </a>
         )}
-        {props.other && (
+        {
+          /* props.other && (
           <a className="t-icon-c" href={props.other} target={"_blank"}>
-            {/* <FaGithub className="t-icon-c" /> */}
             <GiArchiveResearch className="t-icon-c" />
-          </a>
-        )}
+          </a> )*/
+        }
         <a className="t-icon-c" href={props.linkedin} target={"_blank"}>
           <FaLinkedin className="t-icon-c" />
         </a>{" "}

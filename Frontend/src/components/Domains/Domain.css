@@ -11,10 +11,12 @@
   justify-content: center;
   word-spacing: 1px;
   padding: 5rem;
-  width: 100%;
+  width: 100vw;
   background-color: #8cd3ffc7;
   background-image: url("../../images/img1.png");
   background-size: cover;
+  overflow-x: hidden;
+
 }
 
 .domain-title h2 {

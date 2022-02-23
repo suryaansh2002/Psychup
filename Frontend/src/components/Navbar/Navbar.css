@@ -273,9 +273,6 @@
   transition: 0.5s;
 }
 
-.login-button:hover {
-  transform: scale(1.1);
-}
 
 @media only screen and (max-width: 620px) {
   .login-button {

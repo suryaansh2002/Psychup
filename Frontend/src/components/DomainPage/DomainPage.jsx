@@ -1,5 +1,6 @@
 import { React, useState, useEffect } from "react";
 import axios from "axios";
+import { useLocation } from 'react-router-dom';
 
 import {
   BrowserRouter as Router,
@@ -67,6 +68,12 @@ export default function DomainPage() {
     content.innerHTML = details[domain].content;
     setUrl(details[domain].video);
   }, []);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div id="articles-h">
       {articles2 ? (

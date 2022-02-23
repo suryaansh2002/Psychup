@@ -9,7 +9,7 @@ import { GoSmiley } from "react-icons/go";
 import { HiThumbUp } from "react-icons/hi";
 import { articles } from "../Articles/ArticleList";
 import ArticleCard from "../Articles/ArticleCard";
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 import Comments from "../Comments/Comments";
 import leftImg from "../../images/img20.png";
 import rightImg from "../../images/img19.png";
@@ -81,6 +81,11 @@ export default function SinglePost(props) {
   }
 
   console.log(articles2);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <>

@@ -333,6 +333,7 @@ export default function NavBar(props) {
               />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="box" />
+              <input type="hidden" name="_next" value="https://psychup.org.in"/>
 
               {props.cookie.user ? (
                 <div className="hide">
@@ -348,7 +349,7 @@ export default function NavBar(props) {
                   ></input>
                 </div>
               ) : null}
-              <form action="https://formsubmit.co/psychupcontact13@gmail.com">
+              <form method="post" action="https://formsubmit.co/psychupcontact13@gmail.com">
                 <input
                   type="hidden"
                   name="_subject"

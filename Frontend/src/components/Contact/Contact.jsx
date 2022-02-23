@@ -12,7 +12,7 @@ const Contact = (props) => {
             </div>
 
             <div className="form-box">
-              <form action="https://formsubmit.co/psychupcontact13@gmail.com">
+              <form method="post" action="https://formsubmit.co/psychupcontact13@gmail.com">
                 <input
                   type="hidden"
                   name="_subject"
@@ -20,6 +20,8 @@ const Contact = (props) => {
                 />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="box" />
+                <input type="hidden" name="_next" value="https://psychup.org.in"/>
+
 
                 {/* <label className="contact-label">NAME :</label> */}
                 <div>
