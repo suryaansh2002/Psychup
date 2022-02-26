@@ -5,40 +5,60 @@ import axios from "axios";
 export default function StoryForm(props) {
   const [n, setN] = useState("");
   const [title, setTitle] = useState("");
-  const [imgUrl, setImgUrl] = useState("");
+  const [imgFile, setImgFile] = useState("");
 
   const [msg, setMsg] = useState("");
   const [anonymous, setAnonymous] = useState(false);
+
+  function onFileChange(e) {
+    setImgFile(e.target.files[0]);
+  }
+
   function addImg() {
-    document.getElementById("img-file").click();
+    document.getElementById("imgFile").click();
   }
 
   String.prototype.replaceAll = function (search, replacement) {
     var target = this;
     return target.split(search).join(replacement);
   };
-  function handleSubmit() {
-    const name = anonymous ? "Anonymous" : n;
-    const content = msg.replaceAll("\n", "<br/>");
-    const data = {
-      name,
-      title,
-      imgUrl,
-      content,
-    };
 
-    axios
-      .post("http://localhost:5000/story", data)
-      .then((res) => {
+  const handleSubmit = async (e) => {
+    if (title === "" || n === "" || msg === "") {
+      alert("Please fill all the fields before submitting!");
+      return;
+    }
+    const formData = new FormData();
+    formData.append("imgFile", imgFile);
+    console.log(formData);
+    await axios
+      .post("http://localhost:5000/story/img-upload", formData)
+      .then(async (res) => {
         console.log(res);
-        window.location.reload();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+        console.log(res.data._id);
 
-    console.log(data);
-  }
+        const name = anonymous ? "Anonymous" : n;
+        const content = msg.replaceAll("\n", "<br/>");
+        const imgDetailObj = {
+          imgId: res.data._id,
+          name: name,
+          title: title,
+          content: content,
+        };
+        console.log("Uploaded image!");
+
+        await axios
+          .put("http://localhost:5000/story/", imgDetailObj)
+          .then((res) => {
+            console.log(res);
+            console.log("Uploaded details!");
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      });
+  };
+
   return (
     <div className="sf-c">
       <div className="sf-h">Share Your Story</div>
@@ -71,8 +91,9 @@ export default function StoryForm(props) {
           </button>
           <input
             type={"file"}
-            id="img-file"
+            id="imgFile"
             style={{ display: "none" }}
+            onChange={onFileChange}
           ></input>
           <p className="sf-p">
             (Optional)
@@ -93,3 +114,4 @@ export default function StoryForm(props) {
     </div>
   );
 }
+
