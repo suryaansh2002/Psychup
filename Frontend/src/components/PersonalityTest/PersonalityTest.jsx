@@ -353,7 +353,7 @@ function handleDownload(){
       });
   };
 
-  const [count, setCount] = useState(5);
+  const [count, setCount] = useState(0);
   // var acc = document.getElementsByClassName("accordion");
   // var i;
 
