@@ -16,14 +16,14 @@ import t3 from "../../images/entertainer.png";
 import t4 from "../../images/protagonist.png";
 import t5 from "../../images/campaigner.png";
 import request from "request-promise";
-import {jsPDF} from 'jspdf';
+import { jsPDF } from "jspdf";
 // import html2canvas from 'html2canvas';
-import html2canvas from 'html2canvas';
+import html2canvas from "html2canvas";
 
-import * as htmlToImage from 'html-to-image';
-import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
+import * as htmlToImage from "html-to-image";
+import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
 import Logician from "../Personalities/logician";
-import html2pdf from 'html2pdf.js'
+import html2pdf from "html2pdf.js";
 
 function PersonalityTest(props) {
   //make 30 variables
@@ -77,64 +77,58 @@ function PersonalityTest(props) {
   //       // pdf.output('dataurlnewwindow');
   //       pdf.save("download.pdf");
   //     });
-    
+
   // }
 
-//   function downloadPDF(){
-//     console.log("in here")
-    
-//       var HTML_Width = document.getElementById("down").offsetWidth;
-//       var HTML_Height = document.getElementById("down").offsetHeight;
-//       var top_left_margin = 15;
-//       var PDF_Width = HTML_Width + (top_left_margin * 2);
-//       var PDF_Height = (PDF_Width * 1.5) + (top_left_margin * 2);
-//       var canvas_image_width = HTML_Width;
-//       var canvas_image_height = HTML_Height;
-  
-//       var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
-//       console.log(totalPDFPages)
-  
-//       html2canvas(document.getElementById("down")).then(function (canvas) {
-//         document.body.appendChild(canvas);
+  //   function downloadPDF(){
+  //     console.log("in here")
 
-//         // console.log(document.getElementById("down"))
-//         // console.log(canvas)
+  //       var HTML_Width = document.getElementById("down").offsetWidth;
+  //       var HTML_Height = document.getElementById("down").offsetHeight;
+  //       var top_left_margin = 15;
+  //       var PDF_Width = HTML_Width + (top_left_margin * 2);
+  //       var PDF_Height = (PDF_Width * 1.5) + (top_left_margin * 2);
+  //       var canvas_image_width = HTML_Width;
+  //       var canvas_image_height = HTML_Height;
 
-//         //   var imgData = canvas.toDataURL("image/jpeg");
-//         //   console.log(imgData)
-//         //   var pdf = new jsPDF();
-//         //   pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
-//         //   console.log(totalPDFPages)
-//           // for (var i = 1; i <= totalPDFPages; i++) { 
-//               // pdf.addPage();
-//               // pdf.addImage(imgData, 'JPG', top_left_margin,top_left_margin, canvas_image_width,canvas_image_height);
-//           // }
-//           // pdf.save("Your_PDF_Name.pdf");
-//         //  document.getElementById("down").hide();
-//       });
-  
-  
+  //       var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
+  //       console.log(totalPDFPages)
 
-//   }
+  //       html2canvas(document.getElementById("down")).then(function (canvas) {
+  //         document.body.appendChild(canvas);
 
+  //         // console.log(document.getElementById("down"))
+  //         // console.log(canvas)
 
-// function handleClick(){
-//     html2canvas(document.getElementById('down')).then(function (canvas) {
-//       console.log(canvas)
-//       document.body.appendChild(canvas);
+  //         //   var imgData = canvas.toDataURL("image/jpeg");
+  //         //   console.log(imgData)
+  //         //   var pdf = new jsPDF();
+  //         //   pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
+  //         //   console.log(totalPDFPages)
+  //           // for (var i = 1; i <= totalPDFPages; i++) {
+  //               // pdf.addPage();
+  //               // pdf.addImage(imgData, 'JPG', top_left_margin,top_left_margin, canvas_image_width,canvas_image_height);
+  //           // }
+  //           // pdf.save("Your_PDF_Name.pdf");
+  //         //  document.getElementById("down").hide();
+  //       });
 
-//   })
-// }
+  //   }
 
+  // function handleClick(){
+  //     html2canvas(document.getElementById('down')).then(function (canvas) {
+  //       console.log(canvas)
+  //       document.body.appendChild(canvas);
 
-  
-function handleDownload(){
-  var content=document.getElementById("down")
-  console.log(content)
-  // console.log(window)
-  html2pdf().from(content).save()
-}
+  //   })
+  // }
 
+  function handleDownload() {
+    var content = document.getElementById("down");
+    console.log(content);
+    // console.log(window)
+    html2pdf().from(content).save();
+  }
 
   function giveLabel(arr) {
     if (max(arr) == arr[0]) {
@@ -427,8 +421,6 @@ function handleDownload(){
 
   return (
     <div className="personality-main">
-
-
       {count < 5 && <h1>Personality Test</h1>}
       {count < 5 && <h2>Section: {count + 1} / 5</h2>}
       {count < 5 && (
@@ -623,278 +615,293 @@ function handleDownload(){
             Submit
           </button>
           {wait && (
-            <div className="wait">Please wait while we asses your response...</div>
+            <div className="wait">
+              Please wait while we asses your response...
+            </div>
           )}{" "}
         </>
       )}
-{count==5 && <div>
-  <button id="c" onClick={()=>{handleDownload()}}>Download</button>
-  <button>Mail</button>
-
-</div>}
-{/* <div id="g">Hello worlddd</div> */}
-
-              {props.cookie.user ? <>
-                {count == 5 && <h1 id="results">Hi {props.cookie.user.name}, your Assesment Results are-</h1>}
-
-              </> :<>
-                {count == 5 && <h1 id="results">Your Assesment Results</h1>}
-
-              </>}
-              <div id="down">
       {count == 5 && (
         <div>
-          <h2 className="res-h1" id="res2">
-            Characteristics:
-          </h2>
-          <div className="cardss">
-            <div className="card-1 c1">
-              <div className="c-1-h">Conscientiousness</div>
-              <div className="bar-c">
-                <CircularProgressbar
-                  value={(c * 100).toFixed(2)}
-                  text={`${(c * 100).toFixed(2)}%`}
-                  circleRatio={1}
-                  strokeWidth={10}
-                  strokeLinecap="round"
-                  styles={buildStyles({
-                    strokeLinecap: "round",
-                    textSize: "14px",
-                    strokeWidth: 100,
-                    pathColor: `#745074`,
-                    textColor: "black",
-                    trailColor: "#d6d6d6",
-                    backgroundColor: "#3e98c7",
-                  })}
-                />
+          <button
+            id="c"
+            onClick={() => {
+              handleDownload();
+            }}
+          >
+            Download
+          </button>
+          <button>Mail</button>
+        </div>
+      )}
+      {/* <div id="g">Hello worlddd</div> */}
+
+      {props.cookie.user ? (
+        <>
+          {count == 5 && (
+            <h1 id="results">
+              Hi {props.cookie.user.name}, your Assesment Results are-
+            </h1>
+          )}
+        </>
+      ) : (
+        <>{count == 5 && <h1 id="results">Your Assesment Results</h1>}</>
+      )}
+      <div id="down">
+        {count == 5 && (
+          <div>
+            <h2 className="res-h1" id="res2">
+              Characteristics:
+            </h2>
+            <div className="cardss">
+              <div className="card-1 c1">
+                <div className="c-1-h">Conscientiousness</div>
+                <div className="bar-c">
+                  <CircularProgressbar
+                    value={(c * 100).toFixed(2)}
+                    text={`${(c * 100).toFixed(2)}%`}
+                    circleRatio={1}
+                    strokeWidth={10}
+                    strokeLinecap="round"
+                    styles={buildStyles({
+                      strokeLinecap: "round",
+                      textSize: "14px",
+                      strokeWidth: 100,
+                      pathColor: `#745074`,
+                      textColor: "black",
+                      trailColor: "#d6d6d6",
+                      backgroundColor: "#3e98c7",
+                    })}
+                  />
+                </div>
+              </div>
+
+              <div className="card-1 c2">
+                <div className="c-1-h">Neuroticism</div>
+                <div className="bar-c">
+                  <CircularProgressbar
+                    value={(n * 100).toFixed(2)}
+                    text={`${(n * 100).toFixed(2)}%`}
+                    circleRatio={1}
+                    strokeWidth={10}
+                    styles={buildStyles({
+                      strokeLinecap: "round",
+                      textSize: "14px",
+                      strokeWidth: 100,
+                      pathColor: `#ad826c`,
+                      textColor: "black",
+                      trailColor: "#d6d6d6",
+                      backgroundColor: "#3e98c7",
+                    })}
+                  />
+                </div>
+              </div>
+
+              <div className="card-1 c3">
+                <div className="c-1-h">Extraversion</div>
+                <div className="bar-c">
+                  <CircularProgressbar
+                    value={(e * 100).toFixed(2)}
+                    text={`${(e * 100).toFixed(2)}%`}
+                    circleRatio={1}
+                    strokeWidth={10}
+                    styles={buildStyles({
+                      strokeLinecap: "round",
+                      textSize: "14px",
+                      strokeWidth: 100,
+                      pathColor: `#627962`,
+                      textColor: "black",
+                      trailColor: "#d6d6d6",
+                      backgroundColor: "#3e98c7",
+                    })}
+                  />
+                </div>
+              </div>
+
+              <div className="card-1 c4">
+                <div className="c-1-h">Openness</div>
+                <div className="bar-c">
+                  <CircularProgressbar
+                    value={(o * 100).toFixed(2)}
+                    text={`${(o * 100).toFixed(2)}%`}
+                    circleRatio={1}
+                    strokeWidth={10}
+                    styles={buildStyles({
+                      strokeLinecap: "round",
+                      textSize: "14px",
+                      strokeWidth: 100,
+                      pathColor: `#96965a`,
+                      textColor: "black",
+                      trailColor: "#d6d6d6",
+                      backgroundColor: "#3e98c7",
+                    })}
+                  />
+                </div>
+              </div>
+
+              <div className="card-1 c5">
+                <div className="c-1-h">Agreeableness</div>
+                <div className="bar-c">
+                  <CircularProgressbar
+                    value={(a * 100).toFixed(2)}
+                    text={`${(a * 100).toFixed(2)}%`}
+                    circleRatio={1}
+                    strokeWidth={10}
+                    styles={buildStyles({
+                      strokeLinecap: "round",
+                      textSize: "14px",
+                      strokeWidth: 100,
+                      pathColor: `#58868d`,
+                      textColor: "black",
+                      trailColor: "#d6d6d6",
+                      backgroundColor: "#3e98c7",
+                    })}
+                  />
+                </div>
               </div>
             </div>
 
-            <div className="card-1 c2">
-              <div className="c-1-h">Neuroticism</div>
-              <div className="bar-c">
-                <CircularProgressbar
-                  value={(n * 100).toFixed(2)}
-                  text={`${(n * 100).toFixed(2)}%`}
-                  circleRatio={1}
-                  strokeWidth={10}
-                  styles={buildStyles({
-                    strokeLinecap: "round",
-                    textSize: "14px",
-                    strokeWidth: 100,
-                    pathColor: `#ad826c`,
-                    textColor: "black",
-                    trailColor: "#d6d6d6",
-                    backgroundColor: "#3e98c7",
-                  })}
-                />
+            <div className="long-card lc1 c1">
+              <div className="lc-h">Conscientiousness</div>
+              <div className="lc-c">
+                Conscientiousness is the personality trait of being careful, or
+                diligent. Conscientiousness implies a desire to do a task well,
+                and to take obligations to others seriously. Conscientious
+                people tend to be efficient and organized as opposed to
+                easy-going and disorderly
               </div>
             </div>
 
-            <div className="card-1 c3">
-              <div className="c-1-h">Extraversion</div>
-              <div className="bar-c">
-                <CircularProgressbar
-                  value={(e * 100).toFixed(2)}
-                  text={`${(e * 100).toFixed(2)}%`}
-                  circleRatio={1}
-                  strokeWidth={10}
-                  styles={buildStyles({
-                    strokeLinecap: "round",
-                    textSize: "14px",
-                    strokeWidth: 100,
-                    pathColor: `#627962`,
-                    textColor: "black",
-                    trailColor: "#d6d6d6",
-                    backgroundColor: "#3e98c7",
-                  })}
-                />
+            <div className="long-card lc2 c2">
+              <div className="lc-h">Neuroticism</div>
+              <div className="lc-c">
+                Neuroticism is the trait disposition to experience negative
+                affects, including anger, anxiety, self‐consciousness,
+                irritability, emotional instability, and depression1. Persons
+                with elevated levels of neuroticism respond poorly to
+                environmental stress, interpret ordinary situations as
+                threatening, and can experience minor frustrations as hopelessly
+                overwhelming.
               </div>
             </div>
 
-            <div className="card-1 c4">
-              <div className="c-1-h">Openness</div>
-              <div className="bar-c">
-                <CircularProgressbar
-                  value={(o * 100).toFixed(2)}
-                  text={`${(o * 100).toFixed(2)}%`}
-                  circleRatio={1}
-                  strokeWidth={10}
-                  styles={buildStyles({
-                    strokeLinecap: "round",
-                    textSize: "14px",
-                    strokeWidth: 100,
-                    pathColor: `#96965a`,
-                    textColor: "black",
-                    trailColor: "#d6d6d6",
-                    backgroundColor: "#3e98c7",
-                  })}
-                />
+            <div className="long-card lc1 c3">
+              <div className="lc-h">Extraversion</div>
+              <div className="lc-c">
+                Extraversion is a measure of how energetic, sociable and
+                friendly a person is. Extraverts are commonly understood as
+                being a 'people's person' drawing energy from being around
+                others directing their energies towards people and the outside
+                world.
               </div>
             </div>
 
-            <div className="card-1 c5">
-              <div className="c-1-h">Agreeableness</div>
-              <div className="bar-c">
-                <CircularProgressbar
-                  value={(a * 100).toFixed(2)}
-                  text={`${(a * 100).toFixed(2)}%`}
-                  circleRatio={1}
-                  strokeWidth={10}
-                  styles={buildStyles({
-                    strokeLinecap: "round",
-                    textSize: "14px",
-                    strokeWidth: 100,
-                    pathColor: `#58868d`,
-                    textColor: "black",
-                    trailColor: "#d6d6d6",
-                    backgroundColor: "#3e98c7",
-                  })}
-                />
+            <div className="long-card lc2 c4">
+              <div className="lc-h">Openness</div>
+              <div className="lc-c">
+                Openness to experience is one of the domains which are used to
+                describe human personality in the Five Factor Model. Openness
+                involves six facets, or dimensions: active imagination,
+                aesthetic sensitivity, attentiveness to inner feelings,
+                preference for variety, intellectual curiosity, and challenging
+                authority
               </div>
             </div>
-          </div>
 
-          <div className="long-card lc1 c1">
-            <div className="lc-h">Conscientiousness</div>
-            <div className="lc-c">
-              Conscientiousness is the personality trait of being careful, or
-              diligent. Conscientiousness implies a desire to do a task well,
-              and to take obligations to others seriously. Conscientious people
-              tend to be efficient and organized as opposed to easy-going and
-              disorderly
+            <div className="long-card lc1 c5">
+              <div className="lc-h">Agreeableness</div>
+              <div className="lc-c">
+                Agreeableness is one of the five personality traits of the Big
+                Five personality theory. A person with a high level of
+                agreeableness in a personality test is usually warm, friendly,
+                and tactful. They generally have an optimistic view of human
+                nature and get along well with others.
+              </div>
             </div>
-          </div>
 
-          <div className="long-card lc2 c2">
-            <div className="lc-h">Neuroticism</div>
-            <div className="lc-c">
-              Neuroticism is the trait disposition to experience negative
-              affects, including anger, anxiety, self‐consciousness,
-              irritability, emotional instability, and depression1. Persons with
-              elevated levels of neuroticism respond poorly to environmental
-              stress, interpret ordinary situations as threatening, and can
-              experience minor frustrations as hopelessly overwhelming.
-            </div>
-          </div>
+            <div className="label-c">
+              <h4 className="res-h2">Your Personality Label Is:</h4>
+              {/* <div className="label-c"> */}
+              {label == "Logician" && (
+                <>
+                  <div>
+                    <img className="label-img" src={t1} />
+                  </div>
+                  <div className="res-h3"> Logician- INTP</div>
 
-          <div className="long-card lc1 c3">
-            <div className="lc-h">Extraversion</div>
-            <div className="lc-c">
-              Extraversion is a measure of how energetic, sociable and friendly
-              a person is. Extraverts are commonly understood as being a
-              'people's person' drawing energy from being around others
-              directing their energies towards people and the outside world.
-            </div>
-          </div>
+                  <a href="/personalities/logician">
+                    <button className="label-btn">
+                      Read about your personality
+                    </button>
+                  </a>
+                </>
+              )}
+              {label == "Logistician" && (
+                <>
+                  <div>
+                    <img className="label-img" src={t2} />
+                  </div>
+                  <div className="res-h3"> Logistician- ISTJ</div>
 
-          <div className="long-card lc2 c4">
-            <div className="lc-h">Openness</div>
-            <div className="lc-c">
-              Openness to experience is one of the domains which are used to
-              describe human personality in the Five Factor Model. Openness
-              involves six facets, or dimensions: active imagination, aesthetic
-              sensitivity, attentiveness to inner feelings, preference for
-              variety, intellectual curiosity, and challenging authority
-            </div>
-          </div>
-
-          <div className="long-card lc1 c5">
-            <div className="lc-h">Agreeableness</div>
-            <div className="lc-c">
-              Agreeableness is one of the five personality traits of the Big
-              Five personality theory. A person with a high level of
-              agreeableness in a personality test is usually warm, friendly, and
-              tactful. They generally have an optimistic view of human nature
-              and get along well with others.
-            </div>
-          </div>
-
-          <div className="label-c">
-            <h4 className="res-h2">Your Personality Label Is:</h4>
-            {/* <div className="label-c"> */}
-            {label == "Logician" && (
-              <>
-                <div>
-                  <img className="label-img" src={t1} />
-                </div>
-                <div className="res-h3"> Logician- INTP</div>
-
-                <a href="/personalities/logician">
-                  <button className="label-btn">
-                    Read about your personality
-                  </button>
-                </a>
-              </>
-            )}
-            {label == "Logistician" && (
-              <>
-                <div>
-                  <img className="label-img" src={t2} />
-                </div>
-                <div className="res-h3"> Logistician- ISTJ</div>
-
-                <a href="/personalities/logistician">
-                  <button className="label-btn">
-                    Read about your personality
-                  </button>
-                </a>
-              </>
-            )}
-            {label == "Entertainer" && (
-              <>
-                <div>
-                  <img className="label-img" src={t3} />
-                </div>
-                <div className="res-h3"> Entertainer-ESFP</div>
-                <a href="/personalities/entertainer">
-                  <button className="label-btn">
-                    Read about your personality
-                  </button>
-                </a>
-              </>
-            )}
-            {label == "Protagonist" && (
-              <>
-                <div className="img-div">
-                  <img className="label-img" src={t4} />
-                </div>
-                <div className="res-h3"> Protaginist-ENFJ</div>
-                <a href="/personalities/protagonist">
-                  <button className="label-btn">
-                    Read about your personality
-                  </button>
-                </a>
-              </>
-            )}
-            {label == "Campaigner" && (
-              <>
-                <div>
-                  <img className="label-img" src={t5} />
-                </div>
-                <div className="res-h3"> Campaigner-ENFP</div>
-                <a href="/personalities/campaigner">
-                  <button className="label-btn">
-                    Read about your personality
-                  </button>
-                </a>
-              </>
-            )}
-            {/* </div> */}
-            {/* <div className="label-c">
+                  <a href="/personalities/logistician">
+                    <button className="label-btn">
+                      Read about your personality
+                    </button>
+                  </a>
+                </>
+              )}
+              {label == "Entertainer" && (
+                <>
+                  <div>
+                    <img className="label-img" src={t3} />
+                  </div>
+                  <div className="res-h3"> Entertainer-ESFP</div>
+                  <a href="/personalities/entertainer">
+                    <button className="label-btn">
+                      Read about your personality
+                    </button>
+                  </a>
+                </>
+              )}
+              {label == "Protagonist" && (
+                <>
+                  <div className="img-div">
+                    <img className="label-img" src={t4} />
+                  </div>
+                  <div className="res-h3"> Protaginist-ENFJ</div>
+                  <a href="/personalities/protagonist">
+                    <button className="label-btn">
+                      Read about your personality
+                    </button>
+                  </a>
+                </>
+              )}
+              {label == "Campaigner" && (
+                <>
+                  <div>
+                    <img className="label-img" src={t5} />
+                  </div>
+                  <div className="res-h3"> Campaigner-ENFP</div>
+                  <a href="/personalities/campaigner">
+                    <button className="label-btn">
+                      Read about your personality
+                    </button>
+                  </a>
+                </>
+              )}
+              {/* </div> */}
+              {/* <div className="label-c">
             {label == "Logician" && <Logician />}
             {label == "Logistician" && <Logistician />}
             {label == "Entertainer" && <Entertainer />}
             {label == "Protagonist" && <Protaginist />}
             {label == "Campaigner" && <Campaigner />}
           </div> */}
+            </div>
+            {/* <div><Logician/> </div> */}
           </div>
-          {/* <div><Logician/> </div> */}
-
-
-        </div>
-      )}
-</div>
+        )}
+      </div>
     </div>
   );
 }

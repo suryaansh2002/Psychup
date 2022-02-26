@@ -4,18 +4,17 @@ const StorySchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      default:""
+      default: "",
     },
 
     title: {
       type: String,
-      default:"",
-      
+      default: "",
     },
 
     imgUrl: {
       type: String,
-      default:""
+      default: "",
     },
     content: {
       type: String,

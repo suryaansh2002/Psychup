@@ -38,8 +38,9 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 
+app.use("/story-imgs", express.static("story-imgs"));
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
 app.use("/comments", commentsRoute);

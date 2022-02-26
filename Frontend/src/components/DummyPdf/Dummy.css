@@ -1,0 +1,51 @@
+.dum-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-c {
+  margin: 1rem;
+}
+
+.main-pdf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-pdf h1 {
+  margin-bottom: 4rem;
+}
+
+.label-c {
+  margin-left: 0;
+  width: 30rem;
+}
+
+.c-1-h {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.pers {
+  margin-top: 40rem;
+}
+
+.div-cards {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .dum-cards {
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+  }
+}

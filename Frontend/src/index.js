@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import Editor from "./components/Editor/Editor";
+import StoryForm from "./components/StoryForm/StoryForm";
 import { CookiesProvider } from "react-cookie";
 
 

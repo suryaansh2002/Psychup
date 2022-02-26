@@ -28,6 +28,7 @@ import PersonalityTest from "./components/PersonalityTest/PersonalityTest";
 import PTest from "./components/PTest/PTest";
 import Personalities from "./components/Personalities/Personalities";
 import StoryForm from "./components/StoryForm/StoryForm";
+import Dummy from "./components/DummyPdf/Dummy";
 
 function App() {
   const [side, setSide] = useState(false);
@@ -122,6 +123,8 @@ function App() {
                />}
             />
 
+            <Route path="/dummy" exact component={() => <Dummy />} />
+
             <Route path="/articles/:domain" component={() => <DomainPage />} />
             <Route
               path="/personalities/:type"
@@ -137,6 +140,7 @@ function App() {
                 />
               )}
             />
+
             <Route path="/team" exact component={() => <Team />} />
 
           </Switch>
