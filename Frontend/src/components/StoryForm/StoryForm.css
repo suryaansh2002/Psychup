@@ -1,26 +1,42 @@
-.sf-c{
-    /* min-height: calc(100vh - 5rem); */
+/* .sf-c{
+    min-height: calc(100vh - 80px);
     background-image: url("../../images/img1.png");
     background-size: cover;
     padding-bottom: 2rem;
-
+    padding-bottom: 3rem;
+    background-color: aqua;
   
 }
 
+.b-inp{
+    width: 60%;
+    margin-left: 40%;
+    background-color: #9D6A4B;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    margin-top: 4.5rem;
+    color: white;
+    background-color: #9d6b4b81;
+    font-size: 1.1rem;
+    color: rgb(48, 37, 35);
+
+}
+.b-inp::placeholder, .sf-t::placeholder{
+    color: rgb(48, 37, 35);
+
+}
 .sf-box{
     width: 35rem;
     position: static;
-    /* top: 50%; */
     margin-left: 50%;
     transform: translateX(-50%);
-    background-color: rgb(255, 255, 255,0.6);
     border-radius: 10px;
-    box-shadow: 1px 2px 2px;
     padding: 1rem;
 }
 
 .sf-h{
-    font-size: 3rem;
+    font-size: 2.5rem;
   font-family: "Philosopher", sans-serif;
 text-align: center;
 padding: 2rem 0rem;
@@ -39,11 +55,31 @@ padding: 2rem 0rem;
 .sf-an{
     font-size: 0.9rem;
     text-align: center;
-    padding: 1rem
+    padding: 1rem;
+    padding-bottom: 0rem;
+    margin-left: 40%;
+    color: rgb(48, 37, 35);
+    font-weight: 600;
+
+}
+#an-resp{
+    margin-top: 2.5rem;
+}
+.sf-an input{
+    margin-right: 10px;
 }
 .sf-p{
     text-align: center;
     font-size: 0.85rem;
+    color: rgb(48, 37, 35);
+    font-weight: 500;
+    width: 50%;
+    margin-left: 45%;
+    margin-top: 0.5rem;
+}
+
+#title{
+    margin-top: 3.5rem;
 }
 .sf-btn{
     width: 50%;
@@ -55,8 +91,20 @@ padding: 2rem 0rem;
     border-radius: 15px;
     background-color: rgba(139, 204, 209, 0.5);
     
+    
 }
 
+.sf-li{
+    width: 80%;
+    margin-left: 20%;
+    margin-top: 5rem;
+}
+
+.sf-ri{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
 .sf-ta{
     width: 80%;
     margin-left: 10%;
@@ -65,6 +113,17 @@ padding: 2rem 0rem;
     border-radius: 10px;
     border: none;
     background-color: white;   
+}
+.sf-t{
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+    width: 55%;
+    background-color: #9d6b4b81;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    color: rgb(48, 37, 35);
+
 }
 
 .sf-submit{
@@ -77,3 +136,43 @@ padding: 2rem 0rem;
     border-radius: 15px;
     background-color: rgba(87, 168, 161, 0.685);   
 }
+.sf-bg{
+    position: absolute;
+    width: 20rem;
+    margin-left: 10%;
+    margin-top: 8rem;
+}
+.mobile{
+    display: none;
+    visibility: hidden;
+}
+@media only screen and (max-width: 620px) {
+    .sf-box{
+    width: 50%;
+    }
+.sf-input{
+width: 90%;
+margin-left: 5%;
+
+}
+.sf-h{
+font-size: 7vw;
+}
+.sf-input{
+font-size: 1rem;
+}
+
+.sf-ta{
+    width: 90%;
+    margin-left: 5%;
+    
+}
+.laptop{
+    display: none;
+    visibility: hidden;
+}
+.mobile{
+    display: block;
+    visibility: visible;
+}
+} */

@@ -1,0 +1,79 @@
+.sf-c{
+    /* min-height: calc(100vh - 5rem); */
+    background-image: url("../../images/img1.png");
+    background-size: cover;
+    padding-bottom: 2rem;
+
+  
+}
+
+.sf-box{
+    width: 35rem;
+    position: static;
+    /* top: 50%; */
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 255, 255,0.6);
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px;
+    padding: 1rem;
+}
+
+.sf-h{
+    font-size: 3rem;
+  font-family: "Philosopher", sans-serif;
+text-align: center;
+padding: 2rem 0rem;
+}
+
+.sf-input{
+    width: 80%;
+    margin-left: 10%;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+}
+
+.sf-an{
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem
+}
+.sf-p{
+    text-align: center;
+    font-size: 0.85rem;
+}
+.sf-btn{
+    width: 50%;
+    margin: 1rem;
+    margin-left: 25%;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(139, 204, 209, 0.5);
+    
+}
+
+.sf-ta{
+    width: 80%;
+    margin-left: 10%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: white;   
+}
+
+.sf-submit{
+    width: 50%;
+    margin: 1rem;
+    margin-left: 25%;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(87, 168, 161, 0.685);   
+}

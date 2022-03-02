@@ -123,11 +123,22 @@ function PersonalityTest(props) {
   //   })
   // }
 
-  function handleDownload() {
+  async function handleDownload() {
     var content = document.getElementById("down");
+    content.style.visibility = "visible";
+    content.style.display = "block";
     console.log(content);
     // console.log(window)
-    html2pdf().from(content).save();
+    // await setTimeout(()=>{}, 5000);
+    if (content.style.visibility == "visible") {
+      await setTimeout(async () => {
+        await html2pdf().from(content).save();
+        await setTimeout(() => {
+          content.style.visibility = "hidden";
+          content.style.display = "none";
+        }, 2000);
+      }, 1000);
+    }
   }
 
   function giveLabel(arr) {
@@ -267,6 +278,7 @@ function PersonalityTest(props) {
     ],
     profile: { inventories: ["big5"], indices: ["withdrawal"] },
   };
+
   //data.facts[i].item not getting referenced
   const [c, setC] = useState(0.871);
   const [n, setN] = useState(0.521);
@@ -295,26 +307,6 @@ function PersonalityTest(props) {
       },
     };
 
-    // axios
-    //   .post("https://sentino.org/api/v2/person/profile", data, {
-    //     headers: {
-    //       "cache-control": "no-cache",
-    //       "Content-Type": "application/json",
-    //       Authorization: `Token ${token}`,
-    //       "Access-Control-Allow-Origin": "*",
-    //       "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-    //       "Access-Control-Allow-Headers":
-    //         "append,delete,entries,foreach,get,has,keys,set,values,Authorization",
-    //     },
-    //   })
-    //   .then(function (response) {
-    //     console.log(response);
-    //     // res.status(200).json(response);
-    //   })
-    //   .catch(function (err) {
-    //     console.log(err);
-    //   });
-
     var url = "https://psychup-back.herokuapp.com";
     // url = "http://:5000";
 
@@ -341,7 +333,6 @@ function PersonalityTest(props) {
         ];
         setLabel(giveLabel(arr2));
       })
-
       .catch((err) => {
         console.log(err);
       });
@@ -622,16 +613,18 @@ function PersonalityTest(props) {
         </>
       )}
       {count == 5 && (
-        <div>
+        <div className="btn-cont">
           <button
             id="c"
             onClick={() => {
               handleDownload();
             }}
           >
-            Download
+            Download Assesment Result
           </button>
-          <button>Mail</button>
+          <a href="/#contact-h">
+            <button>Reach out to us with suggestions</button>
+          </a>
         </div>
       )}
       {/* <div id="g">Hello worlddd</div> */}
@@ -647,7 +640,7 @@ function PersonalityTest(props) {
       ) : (
         <>{count == 5 && <h1 id="results">Your Assesment Results</h1>}</>
       )}
-      <div id="down">
+      <div>
         {count == 5 && (
           <div>
             <h2 className="res-h1" id="res2">
@@ -819,86 +812,290 @@ function PersonalityTest(props) {
               </div>
             </div>
 
-            <div className="label-c">
-              <h4 className="res-h2">Your Personality Label Is:</h4>
-              {/* <div className="label-c"> */}
-              {label == "Logician" && (
-                <>
-                  <div>
-                    <img className="label-img" src={t1} />
-                  </div>
-                  <div className="res-h3"> Logician- INTP</div>
+            <div className="label-cc">
+              <div className="label-c" id="lc-c">
+                <h4 className="res-h2">Your Personality Label Is:</h4>
+                {/* <div className="label-c"> */}
+                {label == "Logician" && (
+                  <>
+                    <div>
+                      <img className="label-img" src={t1} />
+                    </div>
+                    <div className="res-h3"> Logician- INTP</div>
 
-                  <a href="/personalities/logician">
-                    <button className="label-btn">
-                      Read about your personality
-                    </button>
-                  </a>
-                </>
-              )}
-              {label == "Logistician" && (
-                <>
-                  <div>
-                    <img className="label-img" src={t2} />
-                  </div>
-                  <div className="res-h3"> Logistician- ISTJ</div>
+                    <a href="/personalities/logician">
+                      <button className="label-btn">
+                        Read about your personality
+                      </button>
+                    </a>
+                  </>
+                )}
+                {label == "Logistician" && (
+                  <>
+                    <div>
+                      <img className="label-img" src={t2} />
+                    </div>
+                    <div className="res-h3"> Logistician- ISTJ</div>
 
-                  <a href="/personalities/logistician">
-                    <button className="label-btn">
-                      Read about your personality
-                    </button>
-                  </a>
-                </>
-              )}
-              {label == "Entertainer" && (
-                <>
-                  <div>
-                    <img className="label-img" src={t3} />
-                  </div>
-                  <div className="res-h3"> Entertainer-ESFP</div>
-                  <a href="/personalities/entertainer">
-                    <button className="label-btn">
-                      Read about your personality
-                    </button>
-                  </a>
-                </>
-              )}
-              {label == "Protagonist" && (
-                <>
-                  <div className="img-div">
-                    <img className="label-img" src={t4} />
-                  </div>
-                  <div className="res-h3"> Protaginist-ENFJ</div>
-                  <a href="/personalities/protagonist">
-                    <button className="label-btn">
-                      Read about your personality
-                    </button>
-                  </a>
-                </>
-              )}
-              {label == "Campaigner" && (
-                <>
-                  <div>
-                    <img className="label-img" src={t5} />
-                  </div>
-                  <div className="res-h3"> Campaigner-ENFP</div>
-                  <a href="/personalities/campaigner">
-                    <button className="label-btn">
-                      Read about your personality
-                    </button>
-                  </a>
-                </>
-              )}
-              {/* </div> */}
-              {/* <div className="label-c">
+                    <a href="/personalities/logistician">
+                      <button className="label-btn">
+                        Read about your personality
+                      </button>
+                    </a>
+                  </>
+                )}
+                {label == "Entertainer" && (
+                  <>
+                    <div>
+                      <img className="label-img" src={t3} />
+                    </div>
+                    <div className="res-h3"> Entertainer-ESFP</div>
+                    <a href="/personalities/entertainer">
+                      <button className="label-btn">
+                        Read about your personality
+                      </button>
+                    </a>
+                  </>
+                )}
+                {label == "Protagonist" && (
+                  <>
+                    <div className="img-div">
+                      <img className="label-img" src={t4} />
+                    </div>
+                    <div className="res-h3"> Protaginist-ENFJ</div>
+                    <a href="/personalities/protagonist">
+                      <button className="label-btn">
+                        Read about your personality
+                      </button>
+                    </a>
+                  </>
+                )}
+                {label == "Campaigner" && (
+                  <>
+                    <div>
+                      <img className="label-img" src={t5} />
+                    </div>
+                    <div className="res-h3"> Campaigner-ENFP</div>
+                    <a href="/personalities/campaigner">
+                      <button className="label-btn">
+                        Read about your personality
+                      </button>
+                    </a>
+                  </>
+                )}
+                {/* </div> */}
+                {/* <div className="label-c">
             {label == "Logician" && <Logician />}
             {label == "Logistician" && <Logistician />}
             {label == "Entertainer" && <Entertainer />}
             {label == "Protagonist" && <Protaginist />}
             {label == "Campaigner" && <Campaigner />}
           </div> */}
+              </div>
             </div>
+
             {/* <div><Logician/> </div> */}
+          </div>
+        )}
+      </div>
+
+      <div id="down">
+        {props.cookie.user ? (
+          <>
+            {count == 5 && (
+              <h1 id="results">
+                Hi {props.cookie.user.name}, your Assesment Results are-
+              </h1>
+            )}
+          </>
+        ) : (
+          <>{count == 5 && <h1 id="results">Your Assesment Results</h1>}</>
+        )}
+        {count == 5 && (
+          <div>
+            <h2 className="res-h1" id="res2">
+              Characteristics:
+            </h2>
+            <div className="cardss" id="c3">
+              <div className="card-1 c1">
+                <div className="c-1-h">Conscientiousness</div>
+                <div className="bar-c">
+                  <CircularProgressbar
+                    value={(c * 100).toFixed(2)}
+                    text={`${(c * 100).toFixed(2)}%`}
+                    circleRatio={1}
+                    strokeWidth={10}
+                    strokeLinecap="round"
+                    styles={buildStyles({
+                      strokeLinecap: "round",
+                      textSize: "14px",
+                      strokeWidth: 100,
+                      pathColor: `#745074`,
+                      textColor: "black",
+                      trailColor: "#d6d6d6",
+                      backgroundColor: "#3e98c7",
+                    })}
+                  />
+                </div>
+              </div>
+
+              <div className="card-1 c2">
+                <div className="c-1-h">Neuroticism</div>
+                <div className="bar-c">
+                  <CircularProgressbar
+                    value={(n * 100).toFixed(2)}
+                    text={`${(n * 100).toFixed(2)}%`}
+                    circleRatio={1}
+                    strokeWidth={10}
+                    styles={buildStyles({
+                      strokeLinecap: "round",
+                      textSize: "14px",
+                      strokeWidth: 100,
+                      pathColor: `#ad826c`,
+                      textColor: "black",
+                      trailColor: "#d6d6d6",
+                      backgroundColor: "#3e98c7",
+                    })}
+                  />
+                </div>
+              </div>
+              <div className="card-1 c3">
+                <div className="c-1-h">Extraversion</div>
+                <div className="bar-c">
+                  <CircularProgressbar
+                    value={(e * 100).toFixed(2)}
+                    text={`${(e * 100).toFixed(2)}%`}
+                    circleRatio={1}
+                    strokeWidth={10}
+                    styles={buildStyles({
+                      strokeLinecap: "round",
+                      textSize: "14px",
+                      strokeWidth: 100,
+                      pathColor: `#627962`,
+                      textColor: "black",
+                      trailColor: "#d6d6d6",
+                      backgroundColor: "#3e98c7",
+                    })}
+                  />
+                </div>
+              </div>
+
+              <div className="card-1 c4">
+                <div className="c-1-h">Openness</div>
+                <div className="bar-c">
+                  <CircularProgressbar
+                    value={(o * 100).toFixed(2)}
+                    text={`${(o * 100).toFixed(2)}%`}
+                    circleRatio={1}
+                    strokeWidth={10}
+                    styles={buildStyles({
+                      strokeLinecap: "round",
+                      textSize: "14px",
+                      strokeWidth: 100,
+                      pathColor: `#96965a`,
+                      textColor: "black",
+                      trailColor: "#d6d6d6",
+                      backgroundColor: "#3e98c7",
+                    })}
+                  />
+                </div>
+              </div>
+
+              <div className="card-1 c5">
+                <div className="c-1-h">Agreeableness</div>
+                <div className="bar-c">
+                  <CircularProgressbar
+                    value={(a * 100).toFixed(2)}
+                    text={`${(a * 100).toFixed(2)}%`}
+                    circleRatio={1}
+                    strokeWidth={10}
+                    styles={buildStyles({
+                      strokeLinecap: "round",
+                      textSize: "14px",
+                      strokeWidth: 100,
+                      pathColor: `#58868d`,
+                      textColor: "black",
+                      trailColor: "#d6d6d6",
+                      backgroundColor: "#3e98c7",
+                    })}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="label-cc">
+              <div className="label-c" id="lc-c">
+                <h4 className="res-h2">Your Personality Label Is:</h4>
+                {/* <div className="label-c"> */}
+                {label == "Logician" && (
+                  <>
+                    <div>
+                      <img className="label-img" src={t1} />
+                    </div>
+                    <div className="res-h3"> Logician- INTP</div>
+
+                    <a href="/personalities/logician">
+                      <button className="label-btn">
+                        Read about your personality
+                      </button>
+                    </a>
+                  </>
+                )}
+                {label == "Logistician" && (
+                  <>
+                    <div>
+                      <img className="label-img" src={t2} />
+                    </div>
+                    <div className="res-h3"> Logistician- ISTJ</div>
+
+                    <a href="/personalities/logistician">
+                      <button className="label-btn">
+                        Read about your personality
+                      </button>
+                    </a>
+                  </>
+                )}
+                {label == "Entertainer" && (
+                  <>
+                    <div>
+                      <img className="label-img" src={t3} />
+                    </div>
+                    <div className="res-h3"> Entertainer-ESFP</div>
+                    <a href="/personalities/entertainer">
+                      <button className="label-btn">
+                        Read about your personality
+                      </button>
+                    </a>
+                  </>
+                )}
+                {label == "Protagonist" && (
+                  <>
+                    <div className="img-div">
+                      <img className="label-img" src={t4} />
+                    </div>
+                    <div className="res-h3"> Protaginist-ENFJ</div>
+                    <a href="/personalities/protagonist">
+                      <button className="label-btn">
+                        Read about your personality
+                      </button>
+                    </a>
+                  </>
+                )}
+                {label == "Campaigner" && (
+                  <>
+                    <div>
+                      <img className="label-img" src={t5} />
+                    </div>
+                    <div className="res-h3"> Campaigner-ENFP</div>
+                    <a href="/personalities/campaigner">
+                      <button className="label-btn">
+                        Read about your personality
+                      </button>
+                    </a>
+                  </>
+                )}
+              </div>
+            </div>
           </div>
         )}
       </div>

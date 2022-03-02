@@ -27,7 +27,7 @@ import Team from "./components/Team/Team";
 import PersonalityTest from "./components/PersonalityTest/PersonalityTest";
 import PTest from "./components/PTest/PTest";
 import Personalities from "./components/Personalities/Personalities";
-import StoryForm from "./components/StoryForm/StoryForm";
+import StoryForm from "./components/StoryForm2/StoryForm";
 import Dummy from "./components/DummyPdf/Dummy";
 
 function App() {

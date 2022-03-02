@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./StoryForm.css";
 import axios from "axios";
-import bg from "../../images/stories.png";
 
 export default function StoryForm(props) {
   const [n, setN] = useState("");
@@ -33,7 +32,7 @@ export default function StoryForm(props) {
     formData.append("imgFile", imgFile);
     console.log(formData);
     await axios
-      .post("http://localhost:4000/story/img-upload", formData)
+      .post("http://localhost:5000/story/img-upload", formData)
       .then(async (res) => {
         console.log(res);
         console.log(res.data._id);
@@ -49,7 +48,7 @@ export default function StoryForm(props) {
         console.log("Uploaded image!");
 
         await axios
-          .put("http://localhost:4000/story/", imgDetailObj)
+          .put("http://localhost:5000/story/", imgDetailObj)
           .then((res) => {
             console.log(res);
             console.log("Uploaded details!");
@@ -62,79 +61,7 @@ export default function StoryForm(props) {
 
   return (
     <div className="sf-c">
-      <div className="sf-h">We would love to hear your experiences! 😊</div>
-      {/* <img src={bg} className='sf-bg'/> */}
-
-      <div className="row laptop">
-        <div className="col-lg-4">
-          <img
-            src="https://i.postimg.cc/1X7sNdYr/ladki.png"
-            className="sf-li"
-          />
-        </div>
-        <div className="col-lg-8">
-          <img
-            src="https://i.postimg.cc/MH9VfWS3/kitaab-againn.png"
-            className="sf-ri"
-          />
-          <div className="row">
-            <div className="col-lg-6">
-           {!anonymous &&   <input
-                type={"text"}
-                className="b-inp"
-                placeholder="Enter Name"
-                onChange={(e) => setN(e.target.value)}
-              ></input>}
-              <div className="sf-an" id={anonymous ? "an-resp":""}>
-                <input
-                  type={"checkbox"}
-                  checked={anonymous}
-                  onChange={() => setAnonymous(!anonymous)}
-                ></input>
-                Share Anonymously
-              </div>
-              <input
-                type={"file"}
-                id="imgFile"
-                style={{ display: "none" }}
-                onChange={onFileChange}
-              ></input>
-
-              <input
-                type={"text"}
-                className="b-inp"
-                id="title"
-                placeholder="Enter Title"
-                onChange={(e) => setTitle(e.target.value)}
-              ></input>
-
-              <button
-                type={"button"}
-                className="b-inp"
-                onClick={() => addImg()}
-              >
-                Add an Image
-              </button>
-              <p className="sf-p">
-                (Optional)
-                <br />
-                It can be your image or an image relating to your story
-              </p>
-            </div>
-            <div className="col-lg-6">
-              <textarea
-                className="b-inp2"
-                rows={15}
-                className="sf-t"
-                onChange={(e) => setMsg(e.target.value)}
-                placeholder="Share your story..."
-              ></textarea>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mobile">
-       
+      <div className="sf-h">Share Your Story</div>
       <div className="sf-box">
         {!anonymous && (
           <input
@@ -183,8 +110,6 @@ export default function StoryForm(props) {
         <button className="sf-submit" onClick={() => handleSubmit()}>
           Submit
         </button>
-      </div> 
-    
       </div>
     </div>
   );
