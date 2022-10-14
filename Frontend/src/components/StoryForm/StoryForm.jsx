@@ -5,7 +5,7 @@ import axios from "axios";
 export default function StoryForm(props) {
   const [n, setN] = useState("");
   const [title, setTitle] = useState("");
-  const [imgFile, setImgFile] = useState("");
+  const [imgFile, setImgFile] = useState();
 
   const [msg, setMsg] = useState("");
   const [anonymous, setAnonymous] = useState(false);
@@ -24,7 +24,10 @@ export default function StoryForm(props) {
   };
 
   const handleSubmit = async (e) => {
-    if (title === "" || n === "" || msg === "") {
+    if(anonymous){
+      setN("Anonymous")
+    }
+    if (((title === "" || msg === "") && anonymous) || (!anonymous && (title === "" || msg === ""|| n==""))) {
       alert("Please fill all the fields before submitting!");
       return;
     }

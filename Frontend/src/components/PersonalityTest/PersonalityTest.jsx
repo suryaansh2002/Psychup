@@ -131,7 +131,6 @@ function PersonalityTest(props) {
 function handleDownload(){
   var content=document.getElementById("down")
   console.log(content)
-  // console.log(window)
   html2pdf().from(content).save()
 }
 
@@ -302,7 +301,7 @@ function handleDownload(){
     };
 
     // axios
-    //   .post("https://sentino.org/api/v2/person/profile", data, {
+      // .post("https://sentino.org/api/v2/person/profile", data, {
     //     headers: {
     //       "cache-control": "no-cache",
     //       "Content-Type": "application/json",
@@ -322,7 +321,7 @@ function handleDownload(){
     //   });
 
     var url = "https://psychup-back.herokuapp.com";
-    // url = "http://:5000";
+    url = "http://localhost:5000";
 
     axios
       .post(url + "/api/sentino", data)
@@ -354,24 +353,6 @@ function handleDownload(){
   };
 
   const [count, setCount] = useState(0);
-  // var acc = document.getElementsByClassName("accordion");
-  // var i;
-
-  // for (i = 0; i < acc.length; i++) {
-  //   acc[i].addEventListener("click", function() {
-  //     /* Toggle between adding and removing the "active" class,
-  //     to highlight the button that controls the panel */
-  //     this.classList.toggle("active");
-
-  //     /* Toggle between hiding and showing the active panel */
-  //     var panel = this.nextElementSibling;
-  //     if (panel.style.display === "block") {
-  //       panel.style.display = "none";
-  //     } else {
-  //       panel.style.display = "block";
-  //     }
-  //   });
-  // }
 
   function toggleKey(e) {
     e.target.classList.toggle("active");
