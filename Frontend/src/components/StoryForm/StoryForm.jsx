@@ -35,7 +35,7 @@ export default function StoryForm(props) {
     formData.append("imgFile", imgFile);
     console.log(formData);
     await axios
-      .post("http://localhost:5000/story/img-upload", formData)
+      .post("https://psychup-back.herokuapp.com/story/img-upload", formData)
       .then(async (res) => {
         console.log(res);
         console.log(res.data._id);
@@ -51,7 +51,7 @@ export default function StoryForm(props) {
         console.log("Uploaded image!");
 
         await axios
-          .put("http://localhost:5000/story/", imgDetailObj)
+          .put("https://psychup-back.herokuapp.com/story/", imgDetailObj)
           .then((res) => {
             console.log(res);
             console.log("Uploaded details!");
