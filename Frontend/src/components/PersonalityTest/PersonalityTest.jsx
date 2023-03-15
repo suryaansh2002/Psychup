@@ -216,7 +216,7 @@ function PersonalityTest(props) {
     console.log(data.facts);
 
 
-    var url = "https://psychup-back.herokuapp.com";
+    var url = "https://psychup-backend.vercel.app";
     console.log("Sending request");
 
     axios

@@ -9,7 +9,7 @@ export default function Comments(props) {
   const currentUserId = 1;
   useEffect(() => {
     axios
-      .get("https://psychup-back.herokuapp.com/comments")
+      .get("https://psychup-backend.vercel.app/comments")
       .then((res) => setComments(res.data.reverse()));
   }, []);
   console.log(comments);
@@ -39,7 +39,7 @@ export default function Comments(props) {
       postId: props.post._id,
     };
     axios
-      .post("https://psychup-back.herokuapp.com/comments", data)
+      .post("https://psychup-backend.vercel.app/comments", data)
       .then((comment) => window.location.reload());
   };
 
@@ -48,7 +48,7 @@ export default function Comments(props) {
     console.log(commentId);
     if (window.confirm("Are you sure you want to delete this comment?")) {
       axios
-        .delete("https://psychup-back.herokuapp.com/comments/" + commentId)
+        .delete("https://psychup-backend.vercel.app/comments/" + commentId)
         .then((res) => window.location.reload());
     }
   };
@@ -57,7 +57,7 @@ export default function Comments(props) {
       body: text,
     };
     axios
-      .put("https://psychup-back.herokuapp.com/comments/" + commentId, data)
+      .put("https://psychup-backend.vercel.app/comments/" + commentId, data)
       .then((response) => window.location.reload());
   };
   return (

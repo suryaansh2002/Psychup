@@ -35,7 +35,7 @@ export default function StoryForm(props) {
     formData.append("imgFile", imgFile);
     console.log(formData);
     await axios
-      .post("https://psychup-back.herokuapp.com/story/img-upload", formData)
+      .post("https://psychup-backend.vercel.app/story/img-upload", formData)
       .then(async (res) => {
         console.log(res);
         console.log(res.data._id);
@@ -51,7 +51,7 @@ export default function StoryForm(props) {
         console.log("Uploaded image!");
 
         await axios
-          .put("https://psychup-back.herokuapp.com/story/", imgDetailObj)
+          .put("https://psychup-backend.vercel.app/story/", imgDetailObj)
           .then((res) => {
             console.log(res);
             console.log("Uploaded details!");

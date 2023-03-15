@@ -97,7 +97,8 @@ export default function NavBar(props) {
     });
   }
 
-  const url = "https://psychup-back.herokuapp.com";
+  const url = "https://psychup-backend.vercel.app";
+  // https://psychup-backend.vercel.app
   // Can replace this url of wherever backend deployed so that dont have
   // to replace it everywhere
   let history = useHistory();

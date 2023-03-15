@@ -23,7 +23,7 @@ export default function DomainPage() {
   console.log(domain);
   useEffect( async() => {
     await axios
-      .get("https://psychup-back.herokuapp.com/api/posts/")
+      .get("https://psychup-backend.vercel.app/api/posts/")
       .then((response) => {
         setArticleList(response.data);
       })

@@ -16,8 +16,7 @@ export default function AllArticles() {
   const splitArr = window.location.pathname.split("/");
   const domain = splitArr[2];
   console.log(domain);
-  // const url="https://psychup-back.herokuapp.com/api/posts/"
-  const url="http://localhost:5000/api/posts/"
+  const url="https://psychup-backend.vercel.app/api/posts/"
 
   useEffect(() => {
     axios

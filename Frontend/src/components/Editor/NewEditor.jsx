@@ -99,7 +99,7 @@ export default function Editor(props) {
     console.log(username);
 
     axios
-      .post("https://psychup-back.herokuapp.com/api/posts", data, {
+      .post("https://psychup-backend.vercel.app/api/posts", data, {
         headers: headers,
       })
       .then((res) => {
