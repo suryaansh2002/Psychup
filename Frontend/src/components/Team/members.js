@@ -2,6 +2,7 @@ import sr from "../../images/sr.png";
 import tj from "../../images/tj.png";
 import om from "../../images/om.png";
 import sg from "../../images/sg.png";
+import shivang from "../../images/shivang.jpeg";
 
 export const members = [
   {
@@ -47,6 +48,17 @@ export const members = [
     github: "https://github.com/shourya2002-geek",
     linkedin: "",
     mail: "mailto:",
+    other: "",
+  },
+
+  {
+    name: "Shivang Gupta",
+    role: "Co-founder |  Community Head",
+    imgSrc: shivang,
+    quote:
+      "Bridge engineer working on long span structures. When I am not analysing structures, you can find me analysing movements in the Bouldering gym!",
+    linkedin: "https://www.linkedin.com/in/shivang720/",
+    mail: "mailto:shivang070@gmail.com",
     other: "",
   },
 ];
