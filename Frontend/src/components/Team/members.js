@@ -50,15 +50,4 @@ export const members = [
     mail: "mailto:",
     other: "",
   },
-
-  {
-    name: "Shivang Gupta",
-    role: "Co-founder |  Community Head",
-    imgSrc: shivang,
-    quote:
-      "Bridge engineer working on long span structures. When I am not analysing structures, you can find me analysing movements in the Bouldering gym!",
-    linkedin: "https://www.linkedin.com/in/shivang720/",
-    mail: "mailto:shivang070@gmail.com",
-    other: "",
-  },
 ];
